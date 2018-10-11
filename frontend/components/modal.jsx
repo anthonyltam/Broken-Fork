@@ -1,14 +1,15 @@
 import React from 'react';
-import { closeModal } from '../../actions/modal_actions';
+import { closeModal } from '../actions/modal_actions';
 import { connect } from 'react-redux';
-import LogInFormContainer from '../session_form/login_form_container';
-import SignUpFormContainer from '../session_form/signup_form_container';
+import LogInFormContainer from './session_form/login_form_container';
+import SignUpFormContainer from './session_form/signup_form_container';
 
 function Modal({modal, closeModal}) {
   if (!modal) {
     return null;
+  }
 
-  let component:
+  let component;
   switch (modal) {
     case 'login':
       component = <LogInFormContainer />;
@@ -31,6 +32,7 @@ function Modal({modal, closeModal}) {
 
 
 const msp = state => {
+
   return {
     modal: state.ui.modal
   };

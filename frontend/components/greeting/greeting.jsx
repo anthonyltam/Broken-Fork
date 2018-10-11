@@ -1,16 +1,12 @@
 import React from 'react';
 // import {Link} from 'react-router-dom';
 
-const Greeting = ({ currentUser, signOut }) => {
-
-  // handleSubmit(e) {
-  //
-  // }
+const Greeting = ({ currentUser, signOut, openModal }) => {
 
   const sessionLinks = () => (
     <nav className="login-buttons">
-      <button className='sign-up'onClick={ () => console.log('sign up button was clicked')} >Sign up</button>
-      <button className='sign-in' onClick={ () => console.log('sign in button was clicked')} >Sign in</button>
+      <button className='sign-up'onClick={ () => openModal('signup') }  >Sign up</button>
+      <button className='sign-in' onClick={ () => openModal('login') } >Sign in</button>
     </nav>
   );
   const personalGreeting = () => (
