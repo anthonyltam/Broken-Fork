@@ -3,27 +3,33 @@ import React from 'react';
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {username: '', password: ''};
+    this.state = {email: 'email', password: 'password'};
 
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.clearField = this.clearField.bind(this);
   }
 
   update(field) {
     return (e) => {
-      this.setState({[field]: e.target.value});
+      this.setState( {[field]: e.target.value} );
     };
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(this.state);
+    this.props.processForm(this.state).then(this.props.closeModal())
   }
 
+  clearField(field) {
+    return (e) => {
+      this.setState({[field]: ''});
+    }
+  }
   render() {
     let form =
       <div className='modal-child'>
-        <input type='text' value='Enter Email'></input>
+        <input onChange={this.update('email')} type='text' value='Enter Email'></input>
       </div>;
 
     return (
@@ -31,10 +37,10 @@ class SessionForm extends React.Component {
 
         <form className='sesh-form' onSubmit={this.handleSubmit}>
           <span className='form-name'>{this.props.formType}</span>
-            <input onChange={ this.update('username')} type='text' value=' Email'/>
-            <input onChange={ this.update('password')} type='text' value=' Password'/>
+            <input onFocus={ this.clearField('email')} onChange={ this.update('email')} type='text' value={this.state.email}/>
+            <input onFocus={ this.clearField('password')} onChange={ this.update('password')} type='text' value={this.state.password}/>
           <button>{this.props.submitButton}</button>
-          {form}
+
         </form>
       </div>
     )
