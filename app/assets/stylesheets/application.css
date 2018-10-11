@@ -13,3 +13,60 @@
  *= require_tree .
  *= require_self
  */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif;
+  /* border: 1px solid black; */
+  align-items: center;
+}
+
+.login-buttons {
+  display: block;
+  margin: 5px;
+  padding-right: 5px;
+  text-align: right;
+
+}
+
+.sign-up {
+  background-color: #237b98;
+  color: white;
+  border-radius: 5px;
+  height: 40px;
+  width: 80px;
+  font-size: 15px;
+}
+
+.sign-in {
+  height: 40px;
+  width: 80px;
+  font-size: 15px;
+  border: none;
+}
+
+
+.main-picture {
+  display: block;
+  height: 420px;
+  width: 100%;
+  /* opacity: 0.8;/s/ */
+  z-index: 1;
+}
+
+.pic-container p {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: sans-serif;
+  font-size: 3rem;
+}
+
+.pic-container {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
