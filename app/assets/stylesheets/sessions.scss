@@ -110,7 +110,7 @@ span {
 }
 
 .link-but-google {
-  cursor: pointer; 
+  cursor: pointer;
   display: flex;
   justify-content: center;
   border-radius: 4px;
@@ -159,9 +159,15 @@ p {
   margin-top: 15px;
 }
 
-// .bottom-text  {
-//   color: #da3743;
-// }
+.demo-login {
+  margin-left: 5%;
+  background-color: orange;
+  border-radius: 4px;
+  width: 165px;
+  height: 40px;
+  color: white;
+  border-color: orange;
+}
 
 .bottom-link {
   border: none;

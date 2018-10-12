@@ -29,7 +29,6 @@ class SessionForm extends React.Component {
   }
 
   demoLogin(e) {
-    console.log(this.props.signIn)
     e.preventDefault;
     const user = { email: 'DemoUser', password: 'starwars' };
     this.props.signIn(user);
@@ -43,7 +42,7 @@ class SessionForm extends React.Component {
               <button className='bottom-link' onClick={this.props.otherForm}>Create an account</button>
             </div>
         } else {
-          link = <button onClick={this.demoLogin}>Demo Login</button>
+          link = <button className='demo-login' onClick={this.demoLogin}>Demo Login</button>
           // link = null;
         }
 
@@ -56,7 +55,7 @@ class SessionForm extends React.Component {
             <div className='input-field'>
               <input className='field email' onFocus={ this.clearField('email')} onChange={ this.update('email')} type='text' value={this.state.email}/>
               <input className='field pw' onFocus={ this.clearField('password')} onChange={ this.update('password')} type='text' value={this.state.password}/>
-              <a href="https://github.com/anthonyltam/Broken-Fork">Broken Forgot Password Link?</a>
+              <a href="https://github.com/anthonyltam/Broken-Fork">View the Github Repo</a>
               <button className="submit-button">{this.props.submitButton}</button>
             </div>
 
