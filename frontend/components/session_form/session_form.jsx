@@ -27,10 +27,15 @@ class SessionForm extends React.Component {
     }
   }
   render() {
-    let form =
-      <div className='modal-child'>
-        <input onChange={this.update('email')} type='text' value='Enter Email'></input>
-      </div>;
+      let link;
+        if (this.props.formType === 'Please sign in') {
+          link = <div>
+            <span>New to BrokenFork?</span>
+            <button className='bottom-link' onClick={this.props.otherForm}>Create an account</button>
+            </div>
+        } else {
+          link = null
+        }
 
     return (
       <div>
@@ -38,11 +43,30 @@ class SessionForm extends React.Component {
         <form className='sesh-form' onSubmit={this.handleSubmit}>
           <h3 className='form-name'>{this.props.formType}</h3>
           <hr></hr>
-            <input className='field email' onFocus={ this.clearField('email')} onChange={ this.update('email')} type='text' value={this.state.email}/>
-            <input className='field pw' onFocus={ this.clearField('password')} onChange={ this.update('password')} type='text' value={this.state.password}/>
-            <a href="https://github.com/anthonyltam/Broken-Fork">Broken Forgot Password Link?</a>
-          <button className="submit-button">{this.props.submitButton}</button>
+            <div className='input-field'>
+              <input className='field email' onFocus={ this.clearField('email')} onChange={ this.update('email')} type='text' value={this.state.email}/>
+              <input className='field pw' onFocus={ this.clearField('password')} onChange={ this.update('password')} type='text' value={this.state.password}/>
+              <a href="https://github.com/anthonyltam/Broken-Fork">Broken Forgot Password Link?</a>
+              <button className="submit-button">{this.props.submitButton}</button>
+            </div>
+
           <hr></hr>
+          <div className='bottom-column'>
+            <span>Don't want to complete the form?</span>
+            <div className='other-links'>
+              <button className='link-but-facebook'>
+                <div className='facebook-logo'></div>
+                <p>Continue with Facebook</p>
+              </button>
+              <button className='link-but-google'>
+                <div className='google-logo'></div>
+                <p>Continue with Google</p>
+              </button>
+            </div>
+          </div>
+          <div className='bottom-text'>
+            {link}
+          </div>
         </form>
       </div>
     )
@@ -50,3 +74,4 @@ class SessionForm extends React.Component {
 }
 
 export default SessionForm;
+// <a href="https://github.com/anthonyltam/Broken-Fork">Create an account</a>

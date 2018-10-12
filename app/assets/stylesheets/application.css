@@ -72,6 +72,10 @@
 .home-text {
   border: none;
   text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+  margin-left: 0;
  }
 
 .login-buttons {
@@ -81,6 +85,7 @@
 }
 
 .sign-up {
+  cursor: pointer;
   background-color: #237b98;
   color: white;
   border-radius: 5px;
@@ -90,6 +95,7 @@
 }
 
 .sign-in {
+  cursor: pointer;
   height: 40px;
   width: 80px;
   font-size: 15px;
@@ -106,20 +112,11 @@
 }
 
 .box-container {
-/* color: white;
-  position: relative;
-  width: 500px;
-  height: 200px;
-  left: 10%;
-  top: 25%; */
-  /* font-family: sans-serif;
-  display: flex; */
-  justify-content: space-around;
   padding: 10px;
-  margin: 15px;
+  margin: 10px;
   text-align: center;
   justify-content: center;
-  max-width: 90%;
+  width: 90%;
   margin: auto;
 }
 
@@ -143,25 +140,25 @@ p {
 }
 
 .box-dropdowns {
-
+  display: flex;
 }
 
 .date {
   height: 50px;
-  width: 200px;
+  width: 33%;
   /* border-radius: 4px; */
 }
 
 .time {
   height: 50px;
-  width: 200px;
+  width: 33%;
   /* border-radius: 4px; */
   font-size: 13px;
 }
 
 .box-num-guests {
   height: 50px;
-  width: 200px;
+  width: 33%;
   /* border-radius: 4px; */
   font-size: 13px;
 }
