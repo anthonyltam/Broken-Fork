@@ -8,6 +8,7 @@ class SessionForm extends React.Component {
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.clearField = this.clearField.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   update(field) {
@@ -26,15 +27,24 @@ class SessionForm extends React.Component {
       this.setState({[field]: ''});
     }
   }
+
+  demoLogin(e) {
+    console.log(this.props.signIn)
+    e.preventDefault;
+    const user = { email: 'DemoUser', password: 'starwars' };
+    this.props.signIn(user);
+  }
+
   render() {
       let link;
         if (this.props.formType === 'Please sign in') {
           link = <div>
-            <span>New to BrokenFork?</span>
-            <button className='bottom-link' onClick={this.props.otherForm}>Create an account</button>
+              <span>New to BrokenFork?</span>
+              <button className='bottom-link' onClick={this.props.otherForm}>Create an account</button>
             </div>
         } else {
-          link = null
+          link = <button onClick={this.demoLogin}>Demo Login</button>
+          // link = null;
         }
 
     return (
@@ -74,4 +84,5 @@ class SessionForm extends React.Component {
 }
 
 export default SessionForm;
+
 // <a href="https://github.com/anthonyltam/Broken-Fork">Create an account</a>

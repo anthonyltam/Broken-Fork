@@ -167,6 +167,7 @@ p {
 /* RIGHT SIDE */
 
 .box-go {
+  cursor: pointer;
   height: 50px;
   width: 110px;
   background-color: #da3743;

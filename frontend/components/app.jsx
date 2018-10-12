@@ -52,7 +52,7 @@ const App = () => (
             </select>
 
           </div>
-          <input className='box-search' type='text' value='Location, Restaurant, or Cuisine'></input>
+          <input className='box-search' type='text'></input>
           <button className='box-go'>Let's Go</button>
 
         </div>
