@@ -3,7 +3,7 @@ import React from 'react';
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {email: 'email', password: 'password'};
+    this.state = {email: '', password: ''};
 
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -59,8 +59,8 @@ class SessionForm extends React.Component {
           <h3 className='form-name'>{this.props.formType}</h3>
           <hr></hr>
             <div className='input-field'>
-              <input className='field email' onFocus={ this.clearField('email')} onChange={ this.update('email')} type='text' value={this.state.email}/>
-              <input className='field pw' onFocus={ this.clearField('password')} onChange={ this.update('password')} type='text' value={this.state.password}/>
+              <input className='field email' onFocus={ this.clearField('email')} onChange={ this.update('email')} type='text' placeholder='email' value={this.state.email}/>
+              <input className='field pw' onFocus={ this.clearField('password')} onChange={ this.update('password')} type='text' placeholder='password' value={this.state.password}/>
               <a href="https://github.com/anthonyltam/Broken-Fork">View the Github Repo</a>
               <button className="submit-button">{this.props.submitButton}</button>
             </div>
