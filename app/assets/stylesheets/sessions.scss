@@ -5,12 +5,23 @@
 
 .sesh-form {
   display: flex;
-  height: 90%;
+  height: 80%;
   width: 90%;
   border: 1px solid black;
   padding: 20px;
   font-family: helvetica;
   flex-direction: column;
+}
+
+.signup-form {
+  display: flex;
+  height: 80%;
+  width: 90%;
+  border: 1px solid black;
+  padding: 20px;
+  font-family: helvetica;
+  flex-direction: column;
+  background-color: white;
 }
 
 hr {

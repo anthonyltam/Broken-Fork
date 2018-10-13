@@ -18,7 +18,7 @@ const App = () => (
     <div className='nav'>
       <Link to='/' className='nav-left'>
         <div className='parent-home-icon'>
-          <img className='home-icon' src='http://brand.opentable.com/wp-content/uploads/2015/03/OTLogo_rationalizationhor-r1c-01.png'></img>
+          <img className='home-icon' src={window.images.logo}></img>
         </div>
         <span className='home-text'>BrokenFork</span>
       </Link>

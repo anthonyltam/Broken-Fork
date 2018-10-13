@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import SessionForm from './session_form';
+import SignUpForm from './signup_form';
 import { signIn, signUp } from '../../actions/session_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
@@ -21,4 +21,4 @@ const mdp = dispatch => {
   }
 }
 
-export default connect(msp, mdp)(SessionForm);
+export default connect(msp, mdp)(SignUpForm);

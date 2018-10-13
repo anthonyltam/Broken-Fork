@@ -1,9 +1,15 @@
 import React from 'react';
 
-class SessionForm extends React.Component {
+class SignUpForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {email: 'email', password: 'password'};
+    this.state = {
+      email: 'email',
+      password: 'password',
+      first_name: 'first name',
+      last_name: 'last name',
+      location: 'location'
+    };
 
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -40,6 +46,8 @@ class SessionForm extends React.Component {
     this.props.signIn(user);
   }
 
+
+
   render() {
       let link;
         if (this.props.formType === 'Please sign in') {
@@ -55,11 +63,14 @@ class SessionForm extends React.Component {
     return (
       <div>
 
-        <form className='sesh-form' onSubmit={this.handleSubmit}>
+        <form className='signup-form' onSubmit={this.handleSubmit}>
           <h3 className='form-name'>{this.props.formType}</h3>
           <hr></hr>
             <div className='input-field'>
               <input className='field email' onFocus={ this.clearField('email')} onChange={ this.update('email')} type='text' value={this.state.email}/>
+              <input className='field first_name' onFocus={ this.clearField('first_name')} onChange={ this.update('first_name')} type='text' value={this.state.first_name}/>
+              <input className='field last_name' onFocus={ this.clearField('last_name')} onChange={ this.update('last_name')} type='text' value={this.state.last_name}/>
+              <input className='field location' onFocus={ this.clearField('location')} onChange={ this.update('location')} type='text' value={this.state.location}/>
               <input className='field pw' onFocus={ this.clearField('password')} onChange={ this.update('password')} type='text' value={this.state.password}/>
               <a href="https://github.com/anthonyltam/Broken-Fork">View the Github Repo</a>
               <button className="submit-button">{this.props.submitButton}</button>
@@ -88,4 +99,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default SessionForm;
+export default SignUpForm;
