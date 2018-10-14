@@ -30,7 +30,7 @@ body {
   display: flex;
   height: 420px;
   width: 100%;
-  background-image: url('https://cache.marriott.com/marriottassets/marriott/SNADP/snadp-dining-0103-hor-feat.jpg?downsize=1024px:*');
+  background-image: url('https:cache.marriott.com/marriottassets/marriott/SNADP/snadp-dining-0103-hor-feat.jpg?downsize=1024px:*');
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -141,7 +141,7 @@ body {
   display: flex;
   height: 420px;
   width: 100%;
-  background-image: url('https://cache.marriott.com/marriottassets/marriott/SNADP/snadp-dining-0103-hor-feat.jpg?downsize=1024px:*');
+  background-image: url('https:cache.marriott.com/marriottassets/marriott/SNADP/snadp-dining-0103-hor-feat.jpg?downsize=1024px:*');
   background-size: cover;
 }
 
@@ -204,7 +204,7 @@ p {
 .box-go {
   cursor: pointer;
   height: 50px;
-  width: 110px;
+  width: 144px;
   background-color: #da3743;
   border: 1px solid #da3743;
   border-radius: 4px;
@@ -215,8 +215,34 @@ p {
 
 .box-search {
   height: 50px;
-  width: 200px;
+  width: 290px;
   border-radius: 4px;
   font-size: 13px;
   border: none;
 }
+
+ @media screen and (max-width: 970px) {
+   .box-form {
+     width: 480px;
+     display: flex;
+     align-items: : center;
+     /* flex-wrap: wrap; */
+     /* margin-top: 10px; */
+   }
+ }
+
+ @media screen and (max-width: 970px) {
+   .box-dropdowns {
+     width: 100%;
+   }
+
+   .box-go {
+     width: 100%;
+     margin-top: 10px;
+   }
+
+   .box-search {
+     width: 100%;
+     margin-top: 10px;
+   }
+ }

@@ -30,7 +30,7 @@ const Splash = (props) => (
             </select>
 
         </div>
-        <input className='box-search' type='text' placeholder='  San Francisco'></input>
+        <input className='box-search' type='text' placeholder='Location, Restaurant, or Cuisine'></input>
         <button className='box-go'>Let's Go</button>
 
         </div>
