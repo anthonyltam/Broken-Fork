@@ -26,6 +26,18 @@ body {
   margin-left: 40px;
 }
 
+.transparent-container {
+  display: flex;
+  height: 420px;
+  width: 100%;
+  background-image: url('https://cache.marriott.com/marriottassets/marriott/SNADP/snadp-dining-0103-hor-feat.jpg?downsize=1024px:*');
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background: rgba(100, 100, 100, 0.3);
+  opacity: 0.8;
+}
+
 .modal-background {
   position: fixed;
   top: 0;
