@@ -15,3 +15,27 @@ User.create(
     location: 'sf',
   }
 );
+
+######## RESTAURANTS #########
+
+Restaurant.create(
+  {
+    name: 'feebos',
+    description: 'the best food on the planet!',
+    location: 'millbrae',
+    cuisines: 'whatever you heart desires',
+    hours_of_operation: '12:00-1:00',
+    tables: 1
+  }
+)
+
+Restaurant.create(
+  {
+    name: 'ceces',
+    description: 'pretty good food',
+    location: 'sf',
+    cuisines: 'spaghetti and meatballs',
+    hours_of_operation: '1:00-2:00',
+    tables: 2
+  }
+)
