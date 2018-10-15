@@ -9,12 +9,12 @@ export const receiveRestaurant = restaraunt => ({
 });
 
 export const fetchRestaurants = () => dispatch => {
-    APIUtil.fetchRestaurants().then(rests => (
+    APIUtil.fetchRestaurants().then(rests => {
       dispatch({
         type: RECEIVE_RESTAURANTS,
         restaurants: rests
       })
-    ))
+    })
 }
 
 export const fetchRestaurant = (id) => dispatch => (

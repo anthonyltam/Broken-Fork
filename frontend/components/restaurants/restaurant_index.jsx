@@ -2,23 +2,20 @@ import React from 'react';
 import RestaurantIndexItem from './restaurant_index_item';
 
 class RestaurantIndex extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     this.props.fetchRestaurants();
+    // console.log(this.state)
   }
 
   render() {
-    {console.log(this.props)}
-    return <h1>Hello</h1>;
+    return <>
+      {this.props.restaurants.map(res => <h2>{res.name}</h2>)}
+      <h1>Hello</h1>
+    </>
   }
 }
-
-// {console.log('in rest index')}
-// {this.props.restaurants.map( restaurant => {
-//   <RestaurantItem restaurant={restaurant}/>
-// })}
-
+  // {console.log(this.props)}
+  // {this..restaurants.map( restaurant => {
+  //   return <RestaurantIndexItem restaurant={restaurant}/>
+  // })}
 export default RestaurantIndex;

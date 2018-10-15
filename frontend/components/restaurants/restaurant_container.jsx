@@ -3,7 +3,11 @@ import { connect } from 'react-redux';
 import { fetchRestaurants } from '../../actions/restaurant_actions';
 import RestaurantIndex from './restaurant_index';
 
-const msp = state => ({...state})
+const msp = state => {
+  return {
+    restaurants: state.restaurants.restaurants
+  };
+};
 
 const mdp = dispatch => {
   return {
