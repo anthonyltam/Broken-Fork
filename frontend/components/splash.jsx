@@ -1,6 +1,21 @@
 import React from 'react';
 
-const Splash = (props) => (
+
+// const Splash = (props) => (
+class Splash extends React.Component {
+  constructor(props) {
+    super(props);
+
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.history.push('/restaurants');
+  }
+
+  render() {
+    return(
+
 
   <div className='jumbo-container'>
     <div className='transparent-container'>
@@ -31,12 +46,14 @@ const Splash = (props) => (
 
         </div>
         <input className='box-search' type='text' placeholder='Location, Restaurant, or Cuisine'></input>
-        <button className='box-go'>Let's Go</button>
+        <button  onClick={ this.handleSubmit.bind(this) } className='box-go'>Let's Go</button>
 
         </div>
       </div>
     </div>
   </div>
 );
+}
+}
 
 export default Splash;
