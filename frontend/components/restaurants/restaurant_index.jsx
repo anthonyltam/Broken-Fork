@@ -6,7 +6,7 @@ class RestaurantIndex extends React.Component {
     this.props.fetchRestaurants();
   }
 
-  // {console.log(this.props)}
+
   render() {
     return (
 

@@ -8,7 +8,8 @@ const msp = state => {
     // console.log(state)
   return {
 
-    restaurants: state.restaurants.restaurants
+    // restaurants: (state.restaurants)
+    restaurants: Object.values(state.restaurants)
     // restaurants: getAllRestaurants(state.restaurants)
   };
 };

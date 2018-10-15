@@ -4,10 +4,10 @@ export const RECEIVE_RESTAURANTS = 'RECEIVE_RESTAURANTS';
 export const RECEIVE_RESTAURANT = 'RECEIVE_RESTAURANT';
 
 export const fetchRestaurants = () => dispatch => {
-  APIUtil.fetchRestaurants().then(rests => {
+  APIUtil.fetchRestaurants().then(payload => {
     dispatch({
       type: RECEIVE_RESTAURANTS,
-      restaurants: rests
+      restaurants: payload.restaurants
     })
   })
 }

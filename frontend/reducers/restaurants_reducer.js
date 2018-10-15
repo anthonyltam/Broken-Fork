@@ -1,27 +1,22 @@
 import { RECEIVE_RESTAURANT, RECEIVE_RESTAURANTS } from '../actions/restaurant_actions';
 import { merge } from 'lodash';
 
-const DEFAULT_STATE = {
-  restaurants: []
-}
-const restaurantsReducer = (state = DEFAULT_STATE, action) => {
+
+const restaurantsReducer = (state = {}, action) => {
   Object.freeze(state);
   // console.log(action.restaurant)
+  let newState = merge({}, state);
   switch(action.type) {
     case RECEIVE_RESTAURANTS:
-    return merge({}, state, { restaurants: action.restaurants });
-      // return {
-      //   ...state,
-      //   restaurants: action.restaurants
-      // }
+
+    action.restaurants.forEach( restaurant => {
+      newState[restaurant.id] = restaurant;
+    })
+
+    return newState;
     case RECEIVE_RESTAURANT:
-      // console.log('helo')
-      // debugger
-      // return merge({}, state, { [action.restaurant.id]: action.restaurant });
-      let newState =  merge({}, action.restaurant)
-      // return merge({}, state, action.restaurant)
-      // console.log(newState)
-      return action.restaurant;
+      newState[action.restaurant.id] = action.restaurant;
+      return newState;
     default:
       return state;
   }

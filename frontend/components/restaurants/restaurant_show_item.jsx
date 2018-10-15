@@ -7,9 +7,15 @@ class RestaurantShowItem extends React.Component {
   }
 
   render() {
+    if (this.props.restaurant === undefined) {
+      return null
+    }
+    // this.count ? this.count += 1 : this.count = 0;
+
     return (
 
       <ul>
+        {console.log(this.props)}
         <h2>{this.props.restaurant.name}</h2>
         <li>Description: {this.props.restaurant.description}</li>
         <li>Location: {this.props.restaurant.location}</li>

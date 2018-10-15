@@ -55,6 +55,7 @@ group :development do
   gem 'pry-rails'
   gem 'annotate'
   gem 'faker'
+  gem "aws-sdk-s3"
 end
 
 group :test do
