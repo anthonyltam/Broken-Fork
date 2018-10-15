@@ -6,15 +6,22 @@ const DEFAULT_STATE = {
 }
 const restaurantsReducer = (state = DEFAULT_STATE, action) => {
   Object.freeze(state);
+  // console.log(action.restaurant)
   switch(action.type) {
     case RECEIVE_RESTAURANTS:
-    return merge({}, state, { restaurants: action.restaurants })
+    return merge({}, state, { restaurants: action.restaurants });
       // return {
       //   ...state,
       //   restaurants: action.restaurants
       // }
     case RECEIVE_RESTAURANT:
-      return merge({}, state, { [action.restaurant.id]: action.restaurant });
+      // console.log('helo')
+      // debugger
+      // return merge({}, state, { [action.restaurant.id]: action.restaurant });
+      let newState =  merge({}, action.restaurant)
+      // return merge({}, state, action.restaurant)
+      // console.log(newState)
+      return action.restaurant;
     default:
       return state;
   }

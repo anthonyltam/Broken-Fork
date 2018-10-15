@@ -2,10 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchRestaurants } from '../../actions/restaurant_actions';
 import RestaurantIndex from './restaurant_index';
+// import { getAllRestaurants } from '../../reducers/selectors';
 
 const msp = state => {
+    // console.log(state)
   return {
+
     restaurants: state.restaurants.restaurants
+    // restaurants: getAllRestaurants(state.restaurants)
   };
 };
 

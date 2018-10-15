@@ -7,6 +7,7 @@ import LeftNav from './left_nav';
 import GreetingContainer from './greeting/greeting_container';
 import Splash from './splash';
 import RestaurantContainer from './restaurants/restaurant_container';
+import RestaurantShowContainer from './restaurants/restaurant_show_container';
 
 import {
   Route,
@@ -26,11 +27,12 @@ const App = () => (
 
 
     <Switch>
-      <Route exact path='/' component={Splash} />
-      <Route path='/restaurants' component={RestaurantContainer} />
+      <Route exact path="/" component={Splash} />
+      <Route exact path="/restaurants" component={RestaurantContainer} />
+      <Route path="/restaurants/:id" component={RestaurantShowContainer} />
     </Switch>
   </div>
 
 );
-  // <Route path="/signup" component={ SignUpFormContainer } />
+
 export default App;
