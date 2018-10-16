@@ -1,6 +1,19 @@
 import React from 'react';
 
-const Greeting = ({ currentUser, signOut, openModal }) => {
+const Greeting = ({ currentUser, signOut, signIn, openModal }) => {
+
+  // this.demoLogin = this.demoLogin.bind(this);
+  //
+  // demoLogin(e) {
+  //   e.preventDefault;
+  //   const user = {
+  //     email: 'DemoUser',
+  //     first_name: 'Demo',
+  //     password: 'starwars',
+  //   }
+  //   this.props.signIn(user);
+  // }
+  // <button className='demo-login' onClick={this.demoLogin}>Demo Login</button>
 
   const sessionLinks = () => (
     <nav className="login-buttons">

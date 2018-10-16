@@ -32,6 +32,7 @@ class SignUpForm extends React.Component {
     this.props.processForm(this.state).then(() => {this.props.closeModal()},
       () => {
         this.props.closeModal();
+        // this.props.clearErrors();
         setTimeout(this.props.openModal, 100)
       });
   }
@@ -51,6 +52,8 @@ class SignUpForm extends React.Component {
       password: 'starwars',
     }
     this.props.signIn(user);
+    // this.props.clearErrors();
+    this.props.closeModal();
   }
 
   render() {
@@ -61,8 +64,7 @@ class SignUpForm extends React.Component {
               <button className='bottom-link' onClick={this.props.otherForm}>Create an account</button>
             </div>
         } else {
-          link =
-          <button className='demo-login' onClick={this.demoLogin}>Demo Login</button>
+          link = null
         }
 
     return (
@@ -95,6 +97,7 @@ class SignUpForm extends React.Component {
                 <p>Continue with Google</p>
               </button>
             </div>
+            <button className='demo-login' onClick={this.demoLogin}>Demo Login</button>
           </div>
           <div className='bottom-text'>
             {link}

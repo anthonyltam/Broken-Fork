@@ -9,6 +9,7 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.clearField = this.clearField.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
+    this.otherForm = this.otherForm.bind(this);
   }
 
   update(field) {
@@ -44,13 +45,18 @@ class SessionForm extends React.Component {
     this.props.signIn(user);
   }
 
+  otherForm() {
+    this.props.otherForm();
+    this.props.clearErrors();
+  }
+
   render() {
       // console.log('i am the forms props', this.props)
       let link;
         if (this.props.formType === 'Please sign in') {
           link = <div>
               <span>New to BrokenFork?</span>
-              <button className='bottom-link' onClick={this.props.otherForm}>Create an account</button>
+              <button className='bottom-link' onClick={this.otherForm}>Create an account</button>
             </div>
         } else {
           link =

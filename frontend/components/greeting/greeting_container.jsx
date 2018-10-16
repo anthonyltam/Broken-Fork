@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { signOut } from '../../actions/session_actions';
+import { signOut, signIn } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
 import Greeting from './greeting';
 
@@ -12,7 +12,8 @@ const msp = ({ session, entities: { users } }) => {
 const mdp = dispatch => {
   return {
     signOut: () => dispatch(signOut()),
-    openModal: modal => dispatch(openModal(modal))
+    openModal: modal => dispatch(openModal(modal)),
+    singIn: (user) => dispatch(signIn(user))
   }
 }
 

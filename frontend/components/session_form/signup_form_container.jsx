@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import SignUpForm from './signup_form';
-import { signIn, signUp } from '../../actions/session_actions';
+import { signIn, signUp, clearErrors } from '../../actions/session_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
 const msp = ({ errors }) => {
@@ -18,7 +18,8 @@ const mdp = dispatch => {
     otherForm: () =>  dispatch(openModal('login')),
     closeModal: () => dispatch(closeModal()),
     signIn: (user) => dispatch(signIn(user)),
-    openModal: () => dispatch(openModal('signup'))
+    openModal: () => dispatch(openModal('signup')),
+    clearErrors: () => dispatch(clearErrors())
   }
 }
 
