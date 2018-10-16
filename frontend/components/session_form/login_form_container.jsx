@@ -17,6 +17,7 @@ const mdp = dispatch => {
     processForm: (user) => dispatch(signIn(user)),
     closeModal: () => dispatch(closeModal()),
     otherForm: () =>  dispatch(openModal('signup')),
+    openModal: () => dispatch(openModal('login'))
   };
 };
 

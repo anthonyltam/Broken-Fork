@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.login-errors {
+  color: rgb(211, 3, 3);
+  font-family: helvetica;
+  font-size: 14px;
+}
 
 .sesh-form {
   display: flex;
