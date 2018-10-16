@@ -17,6 +17,7 @@ class RestaurantShowItem extends React.Component {
       <ul>
 
         {console.log(this.props)}
+        <img className='rest-image' src={this.props.restaurant.photo_url} ></img>
         <h2>{this.props.restaurant.name}</h2>
         <li>Description: {this.props.restaurant.description}</li>
         <li>Location: {this.props.restaurant.location}</li>

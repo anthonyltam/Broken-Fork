@@ -7,15 +7,17 @@ class RestaurantIndexItem extends React.Component {
   }
 
   render() {
+    console.log(this.props)
     return (
 
       <>
         <div className='search-container'>
 
           <div className="rest-container">
-            <div className="rest-image"></div>
+            <img className='rest-image' src={this.props.restaurant.photo_url} ></img>
             <Link to={`/restaurants/${this.props.restaurant.id}`} className="rest-name">{this.props.restaurant.name}</Link>
               <ul>
+
                 <li>Description: {this.props.restaurant.description}</li>
                 <li>Location: {this.props.restaurant.location}</li>
                 <li>Cuisines: {this.props.restaurant.cuisines}</li>

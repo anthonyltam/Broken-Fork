@@ -5,12 +5,10 @@ import RestaurantShowItem from './restaurant_show_item';
 // import { getAllRestaurants } from '../../reducers/selectors';
 
 const msp = (state, ownProps) => {
-  // console.log("CONTAINER'S PROPS", ownProps);
-  console.log(state)
+  // console.log(state)
   // debugger;
   return {
     restaurant: state.restaurants[ownProps.match.params.id]
-    // restaurant: state.restaurants[1]
   };
 };
 

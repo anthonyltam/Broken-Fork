@@ -20,10 +20,10 @@ User.create(
 
 Restaurant.create(
   {
-    name: 'feebos',
-    description: 'the best food on the planet!',
-    location: 'millbrae',
-    cuisines: 'whatever you heart desires',
+    name: 'Feebos',
+    description: 'The best food on the planet!',
+    location: 'Millbrae',
+    cuisines: 'Whatever you heart desires',
     hours_of_operation: '12:00-1:00',
     tables: 1
   }
@@ -31,11 +31,33 @@ Restaurant.create(
 
 Restaurant.create(
   {
-    name: 'ceces',
-    description: 'pretty good food',
-    location: 'sf',
-    cuisines: 'spaghetti and meatballs',
-    hours_of_operation: '1:00-2:00',
+    name: 'Ceces',
+    description: 'Pretty good food',
+    location: 'San Francisco',
+    cuisines: 'Italian',
+    hours_of_operation: '12:00-2:00',
     tables: 2
   }
 )
+
+# Restaurant.create(
+#   {
+#     name: 'Tobys',
+#     description: 'Meh food',
+#     location: 'New York',
+#     cuisines: 'Spaghetti and Meatballs',
+#     hours_of_operation: '3:00-6:00',
+#     tables: 3
+#   }
+# )
+#
+# Restaurant.create(
+#   {
+#     name: 'Gigis',
+#     description: 'do not eat here',
+#     location: 'Chicago',
+#     cuisines: 'American',
+#     hours_of_operation: '5:00-8:00',
+#     tables: 4
+#   }
+# )

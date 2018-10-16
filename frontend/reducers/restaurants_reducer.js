@@ -8,12 +8,10 @@ const restaurantsReducer = (state = {}, action) => {
   let newState = merge({}, state);
   switch(action.type) {
     case RECEIVE_RESTAURANTS:
-
-    action.restaurants.forEach( restaurant => {
-      newState[restaurant.id] = restaurant;
-    })
-
-    return newState;
+    // action.restaurants.forEach( restaurant => {
+    //   newState[restaurant.id] = restaurant;
+    // })
+    return merge(newState, action.restaurants);
     case RECEIVE_RESTAURANT:
       newState[action.restaurant.id] = action.restaurant;
       return newState;
