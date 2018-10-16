@@ -15,6 +15,7 @@ class RestaurantShowItem extends React.Component {
     return (
 
       <ul>
+
         {console.log(this.props)}
         <h2>{this.props.restaurant.name}</h2>
         <li>Description: {this.props.restaurant.description}</li>

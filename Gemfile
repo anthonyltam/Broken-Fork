@@ -34,6 +34,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 gem 'jquery-rails'
 
+gem "aws-sdk-s3", require: false
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -55,7 +56,6 @@ group :development do
   gem 'pry-rails'
   gem 'annotate'
   gem 'faker'
-  gem "aws-sdk-s3"
 end
 
 group :test do

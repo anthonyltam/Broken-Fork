@@ -5,12 +5,8 @@ import RestaurantIndex from './restaurant_index';
 // import { getAllRestaurants } from '../../reducers/selectors';
 
 const msp = state => {
-    // console.log(state)
   return {
-
-    // restaurants: (state.restaurants)
     restaurants: Object.values(state.restaurants)
-    // restaurants: getAllRestaurants(state.restaurants)
   };
 };
 

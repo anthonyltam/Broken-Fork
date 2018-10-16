@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-// const Splash = (props) => (
 class Splash extends React.Component {
   constructor(props) {
     super(props);

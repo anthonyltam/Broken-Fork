@@ -12,3 +12,77 @@ hr {
   background-color: rgba(0, 0, 0, 0.12);
   border: 0;
 }
+
+.link-nav {
+  height: 40px;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  margin-left: 20px;
+  font-size: 12px;
+  font-family: Helvetica;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  // border-top-color: rgba(0, 0, 0, 0.08);
+}
+
+.link-nav-child {
+
+  margin-right: -30px;
+}
+
+.index-nav {
+  height: 80px;
+  // border: 1px solid blue;
+  background-color: grey;
+  background-image: url('https://us.123rf.com/450wm/masyaka/masyaka1705/masyaka170500007/77905103-black-wooden-background-horizontal-textured-oak-planks.jpg?ver=6');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent-container {
+  width: 910px;
+  height: 800px;
+  display: flex;
+  justify-content: space-around;
+  // align-items: center;
+  border: 1px solid red;
+  margin-top: 20px;
+  margin-right: 20%;
+  margin-left: 15%;
+}
+
+.search-container {
+  width: 670px;
+  // height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+}
+
+.filter-container {
+  width: 190px;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.rest-container {
+  height: 170px;
+  width: 640px;
+  display: flex;
+  padding: 14px;
+}
+
+.rest-name {
+  color: #247f9e;
+  font-size: 18px;
+}
+
+.rest-image {
+  height: 170px;
+  width: 170px;
+  background-color: orange;
+  margin-right: 10px;
+  border-radius: 4px;
+}
