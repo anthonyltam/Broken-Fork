@@ -16,6 +16,7 @@ class RestaurantIndex extends React.Component {
           <Link className='link-nav-child' to='/'>Home</Link>
           <span className='link-nav-child'>Location</span>
         </div>
+
         <div className='index-nav'>
           <div className='box-form'>
             <div className='box-dropdowns'>
@@ -67,11 +68,23 @@ class RestaurantIndex extends React.Component {
 
         <div className='parent-container'>
           <div className='filter-container'></div>
-          <ul>
-            {this.props.restaurants.map( restaurant => {
-              return <RestaurantIndexItem key={restaurant.id} restaurant={restaurant}/>
-            })}
-          </ul>
+          <div className='results-container'>
+
+            <div className='tables-match'>
+              <span>{this.props.restaurants.length} TABLES AVAILABLE</span>
+              <select className='right-filter'>
+                <option value='Best Match'>Best Match</option>
+                <option value='A-Z'>A-Z</option>
+                <option value='Highest Rated'>Highest Rated</option>
+              </select>
+            </div>
+            
+            <ul>
+              {this.props.restaurants.map( restaurant => {
+                return <RestaurantIndexItem key={restaurant.id} restaurant={restaurant}/>
+              })}
+            </ul>
+          </div>
         </div>
       </>
     )

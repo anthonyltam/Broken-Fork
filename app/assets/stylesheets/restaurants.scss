@@ -26,8 +26,38 @@ hr {
 }
 
 .link-nav-child {
-
   margin-right: -30px;
+}
+
+.tables-match {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid purple;
+}
+
+.tables-match span {
+  font-family: Helvetica;
+  font-size: 14.4px;
+  font-weight: 600;
+  color: rgb(45, 51, 63);
+  padding-left: 5px;
+}
+
+.right-filter {
+  width: 200px;
+  font-family: Helvetica;
+  align-items: flex-start;
+  max-width: 300px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .index-nav {
