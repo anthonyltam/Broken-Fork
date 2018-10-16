@@ -23,10 +23,19 @@ class SignUpForm extends React.Component {
     };
   }
 
+  // handleSubmit(e) {
+  //   e.preventDefault();
+  //   this.props.processForm(this.state).then(this.props.closeModal())
+  // }
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(this.state).then(this.props.closeModal())
+    this.props.processForm(this.state).then(() => {this.props.closeModal()},
+      () => {
+        this.props.closeModal();
+        setTimeout(this.props.openModal, 100)
+      });
   }
+
 
   clearField(field) {
     return (e) => {
@@ -62,6 +71,7 @@ class SignUpForm extends React.Component {
         <form className='signup-form' onSubmit={this.handleSubmit}>
           <h3 className='form-name'>{this.props.formType}</h3>
           <hr></hr>
+          <span className='login-errors'>{this.props.errors}</span>
             <div className='input-field'>
               <input className='field email' onFocus={ this.clearField('email')} onChange={ this.update('email')} type='text' value={this.state.email} placeholder='email'/>
               <input className='field first_name' onFocus={ this.clearField('first_name')} onChange={ this.update('first_name')} type='text' placeholder='first name' value={this.state.first_name}/>
