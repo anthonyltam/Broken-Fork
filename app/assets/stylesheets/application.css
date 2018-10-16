@@ -223,7 +223,7 @@ p {
    .box-form {
      width: 480px;
      display: flex;
-     align-items: : center;
+     align-items: center;
      /* flex-wrap: wrap; */
      /* margin-top: 10px; */
    }
