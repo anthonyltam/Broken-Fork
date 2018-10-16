@@ -130,7 +130,7 @@ span {
 }
 
 .google-logo {
-  background-image: url('https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-512.png');
+  background-image: image-url('new-google-favicon-512.png');
   background-size: cover;
   height: 20px;
   width: 20px;
@@ -139,7 +139,7 @@ span {
 }
 
 .facebook-logo {
-  background-image: url('https://cdn3.iconfinder.com/data/icons/facebook-ui-flat/48/Facebook_UI-03-512.png');
+  background-image: image-url('Facebook_UI-03-512.png');
   background-size: cover;
   height: 32px;
   width: 32px;
