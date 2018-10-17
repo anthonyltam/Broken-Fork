@@ -9,7 +9,7 @@ import Splash from './splash';
 import RestaurantContainer from './restaurants/restaurant_container';
 import RestaurantShowContainer from './restaurants/restaurant_show_container';
 import NoMatch from './no_match';
-
+import Body from './main_body/body';
 import {
   Route,
   Redirect,
@@ -33,6 +33,8 @@ const App = () => (
       <Route path="/restaurants/:id" component={RestaurantShowContainer} />
       <Route path="/" component={NoMatch} />
     </Switch>
+
+    <Body />
   </div>
 
 );

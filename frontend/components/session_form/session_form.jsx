@@ -7,8 +7,8 @@ class SessionForm extends React.Component {
 
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.clearField = this.clearField.bind(this);
-    this.demoLogin = this.demoLogin.bind(this);
+    // this.clearField = this.clearField.bind(this);
+    // this.demoLogin = this.demoLogin.bind(this);
     this.otherForm = this.otherForm.bind(this);
   }
 
@@ -26,24 +26,12 @@ class SessionForm extends React.Component {
         setTimeout(this.props.openModal, 100)
       });
   }
-
-  clearField(field) {
-    return (e) => {
-      this.setState({[field]: ''});
-    }
-  }
-
-  demoLogin(e) {
-    e.preventDefault;
-    const user = {
-      email: 'DemoUser',
-      first_name: 'Demo',
-      last_name: 'User',
-      password: 'starwars',
-      location: 'sf',
-    }
-    this.props.signIn(user);
-  }
+  //
+  // clearField(field) {
+  //   return (e) => {
+  //     this.setState({[field]: ''});
+  //   }
+  // }
 
   otherForm() {
     this.props.otherForm();
@@ -51,7 +39,6 @@ class SessionForm extends React.Component {
   }
 
   render() {
-      // console.log('i am the forms props', this.props)
       let link;
         if (this.props.formType === 'Please sign in') {
           link = <div>
@@ -59,8 +46,8 @@ class SessionForm extends React.Component {
               <button className='bottom-link' onClick={this.otherForm}>Create an account</button>
             </div>
         } else {
-          link =
-          <button className='demo-login' onClick={this.demoLogin}>Demo Login</button>
+          link = null;
+          // <button className='demo-login' onClick={this.demoLogin}>Demo Login</button>
         }
 
     return (
@@ -71,8 +58,8 @@ class SessionForm extends React.Component {
           <hr></hr>
             <span className='sign-errors'>{this.props.errors}</span>
             <div className='input-field'>
-              <input className='field email' onFocus={ this.clearField('email')} onChange={ this.update('email')} type='text' placeholder='email' value={this.state.email}/>
-              <input className='field pw' onFocus={ this.clearField('password')} onChange={ this.update('password')} type='password' placeholder='password' value={this.state.password}/>
+              <input className='field email' onChange={ this.update('email')} type='text' placeholder='email' value={this.state.email}/>
+              <input className='field pw' onChange={ this.update('password')} type='password' placeholder='password' value={this.state.password}/>
               <a href="https://github.com/anthonyltam/Broken-Fork">View the Github Repo</a>
               <button className="submit-button">{this.props.submitButton}</button>
             </div>

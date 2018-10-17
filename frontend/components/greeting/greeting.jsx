@@ -6,6 +6,7 @@ class Greeting extends React.Component {
   constructor(props) {
     super(props);
     this.state = { dropdown: false }
+    // this.handleDropDown = this.handleDropDown.bind(this);
   }
 
   handleDropDown(e) {
@@ -28,7 +29,7 @@ class Greeting extends React.Component {
       <header>
 
         <div className="profile-dropdown" onClick={ (e) => this.handleDropDown(e) }>Hi, {currentUser && currentUser.first_name}
-          {this.state.dropdown && <DropDownProfile signOut={() => signOut()}/>}
+          {this.state.dropdown && <DropDownProfile signOut={signOut} />}
         </div>
 
       </header>

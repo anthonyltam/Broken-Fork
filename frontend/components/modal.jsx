@@ -38,7 +38,6 @@ function Modal({modal, closeModal, clearErrors}) {
 
 
 const msp = state => {
-
   return {
     modal: state.ui.modal
   };
