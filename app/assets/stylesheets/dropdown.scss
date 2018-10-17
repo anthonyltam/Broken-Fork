@@ -1,8 +1,21 @@
 .dropdown-content {
   display: flex;
-  border: 1px solid black;
+  // border: 1px solid black;
+  position: absolute;
+  right: 0px;
+  flex-direction: column;
+  width: inherit;
+  padding-left: 0px;
+  border-radius: 4px;
 }
 
 .dd-content {
-  border: 1px solid red;
+  // border: 1px solid red;
+  z-index: 1;
+}
+
+.profile-dropdown {
+  // border: 1px solid green;
+  width: 150px;
+  text-align: center;
 }
