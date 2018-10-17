@@ -97,7 +97,6 @@ class SignUpForm extends React.Component {
                 <p>Continue with Google</p>
               </button>
             </div>
-            <button className='demo-login' onClick={this.demoLogin}>Demo Login</button>
           </div>
           <div className='bottom-text'>
             {link}
@@ -108,4 +107,5 @@ class SignUpForm extends React.Component {
   }
 }
 
+// <button className='demo-login' onClick={this.demoLogin}>Demo Login</button>
 export default SignUpForm;
