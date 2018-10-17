@@ -13,8 +13,7 @@ class SignUpForm extends React.Component {
 
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.clearField = this.clearField.bind(this);
-    this.demoLogin = this.demoLogin.bind(this);
+    // this.demoLogin = this.demoLogin.bind(this);
   }
 
   update(field) {
@@ -38,23 +37,26 @@ class SignUpForm extends React.Component {
   }
 
 
-  clearField(field) {
-    return (e) => {
-      this.setState({[field]: ''});
-    }
-  }
+  // clearField(field) {
+  //   return (e) => {
+  //     this.setState({[field]: ''});
+  //   }
+  // }
 
-  demoLogin(e) {
-    e.preventDefault;
-    const user = {
-      email: 'DemoUser',
-      first_name: 'Demo',
-      password: 'starwars',
-    }
-    this.props.signIn(user);
-    // this.props.clearErrors();
-    this.props.closeModal();
-  }
+  // USE IN INPUT Tag //
+  // onFocus={ this.clearField('password')}
+  //
+  // demoLogin(e) {
+  //   e.preventDefault;
+  //   const user = {
+  //     email: 'DemoUser',
+  //     first_name: 'Demo',
+  //     password: 'starwars',
+  //   }
+  //   this.props.signIn(user);
+  //   // this.props.clearErrors();
+  //   this.props.closeModal();
+  // }
 
   render() {
       let link;
@@ -75,11 +77,11 @@ class SignUpForm extends React.Component {
           <hr></hr>
           <span className='login-errors'>{this.props.errors}</span>
             <div className='input-field'>
-              <input className='field email' onFocus={ this.clearField('email')} onChange={ this.update('email')} type='text' value={this.state.email} placeholder='email'/>
-              <input className='field first_name' onFocus={ this.clearField('first_name')} onChange={ this.update('first_name')} type='text' placeholder='first name' value={this.state.first_name}/>
-              <input className='field last_name' onFocus={ this.clearField('last_name')} onChange={ this.update('last_name')} type='text' value={this.state.last_name} placeholder='last name'/>
-              <input className='field location' onFocus={ this.clearField('location')} onChange={ this.update('location')} type='text' value={this.state.location} placeholder='primary dining location'/>
-              <input className='field pw' onFocus={ this.clearField('password')} onChange={ this.update('password')} type='password' value={this.state.password} placeholder='password'/>
+              <input className='field email' onChange={ this.update('email')} type='text' value={this.state.email} placeholder='email'/>
+              <input className='field first_name' onChange={ this.update('first_name')} type='text' placeholder='first name' value={this.state.first_name}/>
+              <input className='field last_name' onChange={ this.update('last_name')} type='text' value={this.state.last_name} placeholder='last name'/>
+              <input className='field location' onChange={ this.update('location')} type='text' value={this.state.location} placeholder='primary dining location'/>
+              <input className='field pw' onChange={ this.update('password')} type='password' value={this.state.password} placeholder='password'/>
               <a href="https://github.com/anthonyltam/Broken-Fork">View the Github Repo</a>
               <button className="submit-button">{this.props.submitButton}</button>
             </div>
