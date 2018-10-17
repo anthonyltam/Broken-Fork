@@ -13,7 +13,8 @@ const mdp = dispatch => {
   return {
     signOut: () => dispatch(signOut()),
     openModal: modal => dispatch(openModal(modal)),
-    singIn: (user) => dispatch(signIn(user))
+    singIn: (user) => dispatch(signIn(user)),
+    demoLogin: () => dispatch(signIn({email: 'DemoUser', password: 'starwars' }))
   }
 }
 

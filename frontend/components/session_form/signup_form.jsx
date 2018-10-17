@@ -79,7 +79,7 @@ class SignUpForm extends React.Component {
               <input className='field first_name' onFocus={ this.clearField('first_name')} onChange={ this.update('first_name')} type='text' placeholder='first name' value={this.state.first_name}/>
               <input className='field last_name' onFocus={ this.clearField('last_name')} onChange={ this.update('last_name')} type='text' value={this.state.last_name} placeholder='last name'/>
               <input className='field location' onFocus={ this.clearField('location')} onChange={ this.update('location')} type='text' value={this.state.location} placeholder='primary dining location'/>
-              <input className='field pw' onFocus={ this.clearField('password')} onChange={ this.update('password')} type='text' value={this.state.password} placeholder='password'/>
+              <input className='field pw' onFocus={ this.clearField('password')} onChange={ this.update('password')} type='password' value={this.state.password} placeholder='password'/>
               <a href="https://github.com/anthonyltam/Broken-Fork">View the Github Repo</a>
               <button className="submit-button">{this.props.submitButton}</button>
             </div>

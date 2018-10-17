@@ -72,7 +72,7 @@ class SessionForm extends React.Component {
             <span className='login-errors'>{this.props.errors}</span>
             <div className='input-field'>
               <input className='field email' onFocus={ this.clearField('email')} onChange={ this.update('email')} type='text' placeholder='email' value={this.state.email}/>
-              <input className='field pw' onFocus={ this.clearField('password')} onChange={ this.update('password')} type='text' placeholder='password' value={this.state.password}/>
+              <input className='field pw' onFocus={ this.clearField('password')} onChange={ this.update('password')} type='password' placeholder='password' value={this.state.password}/>
               <a href="https://github.com/anthonyltam/Broken-Fork">View the Github Repo</a>
               <button className="submit-button">{this.props.submitButton}</button>
             </div>
