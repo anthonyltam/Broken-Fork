@@ -20,11 +20,12 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(this.state).then(() => {this.props.closeModal()},
-      () => {
-        this.props.closeModal();
-        setTimeout(this.props.openModal, 100)
-      });
+    this.props.processForm(this.state).then( () => {this.props.closeModal() })
+    // .then(() => {this.props.closeModal()},
+    //   () => {
+    //     this.props.closeModal();
+    //     setTimeout(this.props.openModal, 100)
+    //   });
   }
   //
   // clearField(field) {
