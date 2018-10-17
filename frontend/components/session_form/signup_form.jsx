@@ -59,6 +59,10 @@ class SignUpForm extends React.Component {
   // }
 
   render() {
+
+      let errors = this.props.errors ? <p className='login-errors'>{this.props.errors}</p> : null
+      // <p className='login-errors'>{this.props.errors}</p>
+
       let link;
         if (this.props.formType === 'Please sign in') {
           link = <div>
@@ -75,7 +79,7 @@ class SignUpForm extends React.Component {
         <form className='signup-form' onSubmit={this.handleSubmit}>
           <h3 className='form-name'>{this.props.formType}</h3>
           <hr></hr>
-          <span className='login-errors'>{this.props.errors}</span>
+            {errors}
             <div className='input-field'>
               <input className='field email' onChange={ this.update('email')} type='text' value={this.state.email} placeholder='email'/>
               <input className='field first_name' onChange={ this.update('first_name')} type='text' placeholder='first name' value={this.state.first_name}/>

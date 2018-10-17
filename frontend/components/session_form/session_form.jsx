@@ -69,7 +69,7 @@ class SessionForm extends React.Component {
         <form className='sesh-form' onSubmit={this.handleSubmit}>
           <h3 className='form-name'>{this.props.formType}</h3>
           <hr></hr>
-            <span className='login-errors'>{this.props.errors}</span>
+            <span className='sign-errors'>{this.props.errors}</span>
             <div className='input-field'>
               <input className='field email' onFocus={ this.clearField('email')} onChange={ this.update('email')} type='text' placeholder='email' value={this.state.email}/>
               <input className='field pw' onFocus={ this.clearField('password')} onChange={ this.update('password')} type='password' placeholder='password' value={this.state.password}/>

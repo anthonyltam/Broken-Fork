@@ -6,6 +6,9 @@
   color: rgb(211, 3, 3);
   font-family: helvetica;
   font-size: 14px;
+  // margin: 0;
+  padding-left: 22px;
+  margin-bottom: -10px;
 }
 
 .sesh-form {
@@ -92,9 +95,18 @@ a {
   width: 100%;
 }
 
+.sign-errors {
+  color: rgb(211, 3, 3);
+  font-family: helvetica;
+  font-size: 14px;
+  // margin: 0;
+  padding-left: 10px;
+  margin-bottom: -10px;
+}
+
 span {
   margin: 10px;
-  margin-left: 5%;
+  // margin-left: 5%;
   font-weight: 200;
   margin-top: 15px;
   margin-bottom: 15px;
