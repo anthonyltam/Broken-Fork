@@ -27,12 +27,6 @@ class SessionForm extends React.Component {
     //     setTimeout(this.props.openModal, 100)
     //   });
   }
-  //
-  // clearField(field) {
-  //   return (e) => {
-  //     this.setState({[field]: ''});
-  //   }
-  // }
 
   otherForm() {
     this.props.otherForm();
