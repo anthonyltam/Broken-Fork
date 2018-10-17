@@ -1,24 +1,41 @@
 import React from 'react';
+import DropDownProfile from '../dropdowns/dropdown_profile';
 
-const Greeting = ({ currentUser, signOut, signIn, openModal, demoLogin }) => {
+// const Greeting = ({ currentUser, signOut, signIn, openModal, demoLogin }) => {
+class Greeting extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { dropdown: false }
+  }
 
-  console.log(this)
-  const sessionLinks = () => (
-    <nav className="login-buttons">
-      <button className='demo-login' onClick={demoLogin}>Demo</button>
-      <button className='sign-up'onClick={ () => openModal('signup') }  >Sign up</button>
-      <button className='sign-in' onClick={ () => openModal('login') } >Sign in</button>
-    </nav>
-  );
-  const personalGreeting = () => (
-    <header>
-      <select className="profile-dropdown">Hi, {currentUser.first_name}</select>
+  handleDropDown(e) {
+    e.preventDefault;
+    this.setState({ dropdown: !this.state.dropdown})
+  }
 
-      <button className='logout-button' onClick={signOut}>Log Out</button>
-    </header>
-  );
+  render() {
+    const { currentUser, signOut, signIn, openModal, demoLogin } = this.props;
 
-  return currentUser ? personalGreeting() : sessionLinks();
+    const sessionLinks = (
+      <nav className="login-buttons">
+        <button className='demo-login' onClick={demoLogin}>Demo</button>
+        <button className='sign-up'onClick={ () => openModal('signup') }  >Sign up</button>
+        <button className='sign-in' onClick={ () => openModal('login') } >Sign in</button>
+      </nav>
+    );
+
+    const personalGreeting = (
+      <header>
+
+        <div className="profile-dropdown" onClick={ (e) => this.handleDropDown(e) }>Hi, {currentUser && currentUser.first_name}
+          {this.state.dropdown && <DropDownProfile signOut={() => signOut()}/>}
+        </div>
+
+      </header>
+    );
+
+    return !!currentUser ? personalGreeting : sessionLinks;
+  }
 };
 
 export default Greeting;
