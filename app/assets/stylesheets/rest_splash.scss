@@ -1,0 +1,22 @@
+.grid-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  // margin-left: 5%
+  // overflow: hidden;
+}
+
+.rest-splash {
+  border: 1px solid rgba(0, 0, 0, 0.12);;
+  width: 25%;
+  margin-right: 2%;
+  border-radius: 5px;
+  background-image: cover;
+  overflow: hidden;
+}
+
+.rest-splash-img {
+  border: 1px solid green;
+  width: 100%;
+  height: 132px;
+}

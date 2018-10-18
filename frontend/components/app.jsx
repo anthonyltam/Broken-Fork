@@ -1,15 +1,4 @@
 import React from 'react';
-
-import Modal from './modal';
-import LeftNav from './left_nav';
-// import LogInFormContainer from './session_form/login_form_container';
-// import SignUpFormContainer from './session_form/signup_form_container';
-import GreetingContainer from './greeting/greeting_container';
-import Splash from './splash';
-import RestaurantContainer from './restaurants/restaurant_container';
-import RestaurantShowContainer from './restaurants/restaurant_show_container';
-import NoMatch from './no_match';
-import Body from './main_body/body';
 import {
   Route,
   Redirect,
@@ -17,6 +6,25 @@ import {
   Link,
   HashRouter
 } from 'react-router-dom';
+
+// import LogInFormContainer from './session_form/login_form_container';
+// import SignUpFormContainer from './session_form/signup_form_container';
+import NoMatch from './no_match';
+
+// NAV //
+import LeftNav from './left_nav';
+import Modal from './modal';
+import GreetingContainer from './greeting/greeting_container';
+
+// SPLASH //
+import Splash from './splash';
+
+//RESTAURANTS//
+import RestaurantContainer from './restaurants/restaurant_container';
+import RestaurantShowContainer from './restaurants/restaurant_show_container';
+
+// BODY //
+import BodyContainer from './body/body_container';
 
 const App = () => (
   <div>
@@ -34,7 +42,7 @@ const App = () => (
       <Route path="/" component={NoMatch} />
     </Switch>
 
-    <Body />
+    <BodyContainer/>
   </div>
 
 );
