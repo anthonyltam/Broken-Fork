@@ -2,6 +2,7 @@ import React from 'react';
 import CurrentLocation from './current_location';
 import PopularRestaurants from './popular_restaurants';
 import RestaurantSplashItem from './restaurant_splash_item';
+import TopCuisines from './top_cuisines';
 
 class Body extends React.Component {
   constructor(props) {
@@ -23,6 +24,8 @@ class Body extends React.Component {
                 return <RestaurantSplashItem key={rest.id} rest={rest} />
               })}
             </div>
+
+          <TopCuisines />
         </div>
       </>
     )

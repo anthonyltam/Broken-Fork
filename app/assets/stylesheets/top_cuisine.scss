@@ -1,0 +1,19 @@
+.everything-cuisine {
+  border: 1px solid black;
+}
+
+.splash {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  width: 25%;
+  height: 210px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 3px;
+  margin-left: 3px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.everything-cuisine {
+  background-image: url('https://s3-us-west-1.amazonaws.com/brokenfork-dev/everything-png.jpg');
+}

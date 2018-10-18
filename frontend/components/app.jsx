@@ -45,5 +45,5 @@ const App = () => (
   </div>
 
 );
-// asd
+
 export default App;
