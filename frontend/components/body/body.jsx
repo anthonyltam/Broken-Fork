@@ -18,11 +18,11 @@ class Body extends React.Component {
         <div className='body'>
           <CurrentLocation />
           <PopularRestaurants />
-          <div className="grid-container">
-            {this.props.restaurants.map( rest => {
-              return <RestaurantSplashItem key={rest.id} rest={rest} />
-            })}
-          </div>
+            <div className="grid-container">
+              {this.props.restaurants.map( rest => {
+                return <RestaurantSplashItem key={rest.id} rest={rest} />
+              })}
+            </div>
         </div>
       </>
     )
