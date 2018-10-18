@@ -88,7 +88,7 @@ class SignUpForm extends React.Component {
 
           <hr></hr>
           <div className='bottom-column'>
-            <span>Don't want to complete the form?</span>
+            <span className='dont-complete-form'>Don't want to complete the form?</span>
             <div className='other-links'>
               <button className='link-but-facebook'>
                 <div className='facebook-logo'></div>

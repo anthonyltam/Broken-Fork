@@ -45,10 +45,9 @@ class SessionForm extends React.Component {
         if (this.props.formType === 'Please sign in') {
           link = <>
             <div>
-              <span>New to BrokenFork?</span>
+              <span className='new-to-broken'>New to BrokenFork?</span>
               <button className='bottom-link' onClick={this.otherForm}>Create an account</button>
               </div>
-              <button className='signin-demo-login' onClick={this.handleDemoLogin}>Demo Login</button>
             </>
         } else {
           link = null;
@@ -66,11 +65,12 @@ class SessionForm extends React.Component {
               <input className='field pw' onChange={ this.update('password')} type='password' placeholder='password' value={this.state.password}/>
               <a href="https://github.com/anthonyltam/Broken-Fork">View the Github Repo</a>
               <button className="submit-button">{this.props.submitButton}</button>
+              <button className='signin-demo-login' onClick={this.handleDemoLogin}>Demo</button>
             </div>
 
           <hr></hr>
           <div className='bottom-column'>
-            <span>Don't want to complete the form?</span>
+            <span className='dont-complete-form'>Don't want to complete the form?</span>
             <div className='other-links'>
               <button className='link-but-facebook'>
                 <div className='facebook-logo'></div>
