@@ -18,7 +18,8 @@ const mdp = dispatch => {
     closeModal: () => dispatch(closeModal()),
     otherForm: () =>  dispatch(openModal('signup')),
     openModal: () => dispatch(openModal('login')),
-    clearErrors: () => dispatch(clearErrors())
+    clearErrors: () => dispatch(clearErrors()),
+    demoLogin: () => dispatch(signIn({email: 'DemoUser', password: 'starwars'}))
   };
 };
 

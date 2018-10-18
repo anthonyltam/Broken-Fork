@@ -8,7 +8,7 @@ class SessionForm extends React.Component {
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     // this.clearField = this.clearField.bind(this);
-    // this.demoLogin = this.demoLogin.bind(this);
+    this.handleDemoLogin = this.handleDemoLogin.bind(this);
     this.otherForm = this.otherForm.bind(this);
   }
 
@@ -28,6 +28,13 @@ class SessionForm extends React.Component {
     //   });
   }
 
+  handleDemoLogin(e) {
+    e.preventDefault();
+    this.props.demoLogin();
+    console.log('made it here')
+    this.props.closeModal();
+  }
+
   otherForm() {
     this.props.otherForm();
     this.props.clearErrors();
@@ -36,13 +43,15 @@ class SessionForm extends React.Component {
   render() {
       let link;
         if (this.props.formType === 'Please sign in') {
-          link = <div>
+          link = <>
+            <div>
               <span>New to BrokenFork?</span>
               <button className='bottom-link' onClick={this.otherForm}>Create an account</button>
-            </div>
+              </div>
+              <button className='signin-demo-login' onClick={this.handleDemoLogin}>Demo Login</button>
+            </>
         } else {
           link = null;
-          // <button className='demo-login' onClick={this.demoLogin}>Demo Login</button>
         }
 
     return (
