@@ -1,4 +1,6 @@
 import React from 'react';
+import CurrentLocation from './current_location';
+import PopularRestaurants from './popular_restaurants';
 
 class Body extends React.Component {
   constructor(props) {
@@ -8,12 +10,9 @@ class Body extends React.Component {
   render() {
     return (
       <>
-        <div className='current-location'>
-          <div className='curr-location'>Look's like you're in Feeboland. Not correct?</div>
-          <div className='curr-location-lookup'>
-            <div className='location-icon'></div>
-            <div>Get current location.</div>
-          </div>
+        <div className='body'>
+          <CurrentLocation />
+          <PopularRestaurants />
         </div>
       </>
     )

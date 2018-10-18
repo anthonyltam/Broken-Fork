@@ -1,0 +1,44 @@
+.current-location-parent {
+  display: flex;
+  margin-top: 20px;
+  font-family: helvetica;
+  margin-left: 0px;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
+
+
+.curr-location {
+  margin-right: 10px;
+  padding-top: 5px;
+}
+
+.curr-location-lookup {
+  display: flex;
+  width: 300px;
+}
+
+.l-icon-text {
+  padding-top: 5px;
+  margin-left: 5px;
+  color: rgb(218, 55, 67);
+}
+
+.location-icon {
+  // border: 1px solid green;
+  width: 30px;
+  height: 30px;
+  background-image: image-url('best-red-arrow.png');
+  background-size: contain;
+}
+
+.body-hr {
+  height: 1px;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.12);
+  border: 0;
+  margin-bottom: 10px;
+}

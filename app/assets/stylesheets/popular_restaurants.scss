@@ -1,0 +1,21 @@
+.popular-restaurants {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pop-rests {
+  font-family: helvetica;
+  font-weight: 600;
+  font-size: 24px;
+  color: rgb(45, 51, 63);
+}
+
+.pop-rest-view {
+  color: #da3743;
+  padding-top: 25px;
+  font-family: helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: end;
+  margin-right: 0;
+}
