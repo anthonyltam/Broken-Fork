@@ -40,24 +40,24 @@ Restaurant.create(
   }
 )
 
-# Restaurant.create(
-#   {
-#     name: 'The Crooked Spoon',
-#     description: 'Meh food',
-#     location: 'New York',
-#     cuisines: 'American',
-#     hours_of_operation: '3:00-6:00',
-#     tables: 3
-#   }
-# )
-#
-# Restaurant.create(
-#   {
-#     name: 'Gigis',
-#     description: 'do not eat here',
-#     location: 'Los Angeles',
-#     cuisines: 'Mexican',
-#     hours_of_operation: '5:00-8:00',
-#     tables: 4
-#   }
-# )
+Restaurant.create(
+  {
+    name: 'The Crooked Spoon',
+    description: 'Meh food',
+    location: 'New York',
+    cuisines: 'American',
+    hours_of_operation: '3:00-6:00',
+    tables: 3
+  }
+)
+
+Restaurant.create(
+  {
+    name: 'Gigis',
+    description: 'do not eat here',
+    location: 'Los Angeles',
+    cuisines: 'Mexican',
+    hours_of_operation: '5:00-8:00',
+    tables: 4
+  }
+)
