@@ -8,9 +8,12 @@ class RestaurantSplashItem extends React.Component {
         <div className='rest-splash'>
           <img className='rest-splash-img' src={this.props.rest.photo_url}></img>
           <div className='rest-splash-info'>
-            <h3 className='rest-splash-name'>{this.props.rest.name}</h3>
+            <div className='rest-splash-name'>{this.props.rest.name}</div>
+            <div className='rest-star-review'>
+              <div className='rest-star-icon'></div>
+              <div className='num-reviews'>100+ reviews</div>
+            </div>
             <div className='rest-splash-description'>{this.props.rest.cuisines} *$* {this.props.rest.location}</div>
-
             <div className='book-today'>Book Today</div>
           </div>
         </div>

@@ -34,7 +34,6 @@ const App = () => (
       <GreetingContainer className='nav-right' />
     </div>
 
-
     <Switch>
       <Route exact path="/" component={Splash} />
       <Route exact path="/restaurants" component={RestaurantContainer} />

@@ -14,7 +14,7 @@
   overflow: hidden;
 }
 
-rest-splash-description {
+.rest-splash-description {
   font-size: 14px;
 }
 
@@ -24,6 +24,33 @@ rest-splash-description {
   height: 132px;
 }
 
+.rest-splash-name {
+  font-size: 18px;
+  font-weight: 600px;
+}
+
+.rest-splash-info {
+  background-color: white;
+}
+
+.rest-star-review {
+  display: flex;
+}
+
+.num-reviews {
+  font-size: 13px;
+}
+
+.rest-star-icon {
+  height: 17px;
+  width: 50%;
+  background-image: image-url('stars-rating.png');
+  background-size: contain;
+  background-color: white;
+  background-repeat: no-repeat;
+}
+
 .book-today {
   font-weight: 600;
+  font-size: 14px;
 }

@@ -23,7 +23,7 @@ Restaurant.create(
     name: 'Feebos',
     description: 'The best food on the planet!',
     location: 'Millbrae',
-    cuisines: 'Whatever you heart desires',
+    cuisines: 'Everything',
     hours_of_operation: '12:00-1:00',
     tables: 1
   }
@@ -42,10 +42,10 @@ Restaurant.create(
 
 # Restaurant.create(
 #   {
-#     name: 'Tobys',
+#     name: 'The Crooked Spoon',
 #     description: 'Meh food',
 #     location: 'New York',
-#     cuisines: 'Spaghetti and Meatballs',
+#     cuisines: 'American',
 #     hours_of_operation: '3:00-6:00',
 #     tables: 3
 #   }
@@ -55,8 +55,8 @@ Restaurant.create(
 #   {
 #     name: 'Gigis',
 #     description: 'do not eat here',
-#     location: 'Chicago',
-#     cuisines: 'American',
+#     location: 'Los Angeles',
+#     cuisines: 'Mexican',
 #     hours_of_operation: '5:00-8:00',
 #     tables: 4
 #   }
