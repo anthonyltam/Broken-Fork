@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+User.destroy_all
 User.create(
   {
     email: 'DemoUser',
@@ -18,18 +18,20 @@ User.create(
 
 ######## RESTAURANTS #########
 
-Restaurant.create(
+Restaurant.destroy_all
+rest1 = Restaurant.create(
   {
     name: 'Feebos',
     description: 'The best food on the planet!',
     location: 'Millbrae',
     cuisines: 'Everything',
     hours_of_operation: '12:00-1:00',
-    tables: 1
+    tables: 1,
   }
 )
+rest1.photo.attach(io: File.open('app/assets/images/feebo-restaurant.jpg'), filename: 'feebo.jpg')
 
-Restaurant.create(
+rest2 = Restaurant.create(
   {
     name: 'Ceces',
     description: 'Pretty good food',
@@ -39,8 +41,9 @@ Restaurant.create(
     tables: 2
   }
 )
+rest2.photo.attach(io: File.open('app/assets/images/italian.jpg'), filename: 'italian.jpg')
 
-Restaurant.create(
+rest3 = Restaurant.create(
   {
     name: 'The Crooked Spoon',
     description: 'Meh food',
@@ -50,8 +53,9 @@ Restaurant.create(
     tables: 3
   }
 )
+rest3.photo.attach(io: File.open('app/assets/images/spoon.jpg'), filename: 'spoon.jpg')
 
-Restaurant.create(
+rest4 = Restaurant.create(
   {
     name: 'Gigis',
     description: 'do not eat here',
@@ -61,3 +65,4 @@ Restaurant.create(
     tables: 4
   }
 )
+rest4.photo.attach(io: File.open('app/assets/images/gigis.jpg'), filename: 'gigis.jpg')

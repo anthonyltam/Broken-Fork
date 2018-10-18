@@ -52,6 +52,7 @@ hr {
   width: 90%;
   background-color: rgba(0, 0, 0, 0.12);
   border: 0;
+  margin-bottom: 6px;
 }
 
 .form-name {
@@ -79,7 +80,7 @@ hr {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 6px;
   margin-bottom: 20px;
 }
 
@@ -111,16 +112,18 @@ a {
   font-family: helvetica;
   font-size: 14px;
   // margin: 0;
-  padding-left: 10px;
-  margin-bottom: -10px;
+  // padding-left: 10px;
+  // margin-bottom: -10px;
+  // margin-bottom: 3px;
+// padding-left: 0;
+  font-weight: 200;
+  margin-left: 5%;
 }
 
 span {
-  margin: 10px;
-  margin-left: 5%;
-  font-weight: 200;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  // margin: 10px;
+  // margin-top: 15px;
+  // margin-bottom: 15px;
 }
 
 .other-links {
