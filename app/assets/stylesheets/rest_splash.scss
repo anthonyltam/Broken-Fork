@@ -2,8 +2,7 @@
   margin-top: 20px;
   display: flex;
   flex-direction: row;
-  // margin-left: 5%
-  // overflow: hidden;
+  font-family: helvetica;
 }
 
 .rest-splash {
@@ -15,8 +14,16 @@
   overflow: hidden;
 }
 
+rest-splash-description {
+  font-size: 14px;
+}
+
+
 .rest-splash-img {
-  border: 1px solid green;
   width: 100%;
   height: 132px;
+}
+
+.book-today {
+  font-weight: 600;
 }
