@@ -1,0 +1,24 @@
+.foot-container {
+  margin-top: 5%;
+  background-color: #333;
+  border-top: 1px solid rgba(0,0,0,.12);
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.button-to-opentable {
+  margin-top: 5%;
+  border-radius: 4px;
+  height: 50px;
+  width: 25%;
+  background-color: orange;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+}
+
+.link-to-opentable {
+  color: white;
+  font-size: 18px;
+}

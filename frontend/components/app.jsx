@@ -25,6 +25,7 @@ import RestaurantShowContainer from './restaurants/restaurant_show_container';
 
 // BODY //
 import BodyContainer from './body/body_container';
+import Footer from './body/footer';
 
 const App = () => (
   <div>
@@ -42,6 +43,7 @@ const App = () => (
     </Switch>
 
     <Route exact path='/' component={BodyContainer}/>
+    <Route exact path='/' component={Footer}/>
   </div>
 
 );
