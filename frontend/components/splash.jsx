@@ -43,7 +43,7 @@ class Splash extends React.Component {
             </select>
 
         </div>
-        <input className='box-search' type='text' placeholder='Location, Restaurant, or Cuisine'></input>
+        <input className='box-search' type='text' placeholder='       Location, Restaurant, or Cuisine'></input>
         <button  onClick={ this.handleSubmit.bind(this) } className='box-go'>Let's Go</button>
 
         </div>

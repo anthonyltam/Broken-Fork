@@ -1,7 +1,5 @@
 import React from 'react';
-// import everything from '../../../app/assets/images/everything-png.jpg';
-// <img src={everything} className='everything-cuisine splash'></img>
-// /Users/anthonytam/desktop/broken_fork/app/assets/images/everything-png.jpg
+
 
 class TopCuisines extends React.Component {
 
