@@ -35,7 +35,7 @@ BrokenFork is a single page application inspired by OpenTable. It is a full-stac
 
 * `Users can search restaurants`
 
-![](readme_images/search-bar.png)
+![](readme_images/search_bar.gif)
 
 * `Users can select featured restaurants`
 
