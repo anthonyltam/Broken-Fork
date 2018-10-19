@@ -1,6 +1,6 @@
-.everything-cuisine {
-  border: 1px solid black;
-}
+// .everything-cuisine {
+//   border: 1px solid black;
+// }
 
 .splash {
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -10,10 +10,46 @@
   overflow: hidden;
   margin-right: 3px;
   margin-left: 3px;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 13.6;
 }
 
 .everything-cuisine {
-  background-image: url('https://s3-us-west-1.amazonaws.com/brokenfork-dev/everything-png.jpg');
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ), url('https://s3-us-west-1.amazonaws.com/brokenfork-dev/everything-png.jpg');
+  text-align: center;
+}
+
+.italian-cuisine {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ), url('https://s3-us-west-1.amazonaws.com/brokenfork-dev/italian-cuisine.jpg');
+  text-align: center;
+}
+
+.american-cuisine {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ), url('https://s3-us-west-1.amazonaws.com/brokenfork-dev/american-cuisine.jpg');
+  text-align: center;
+}
+
+.mexican-cuisine {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ), url('https://s3-us-west-1.amazonaws.com/brokenfork-dev/chipotle.jpg');
+  text-align: center;
 }

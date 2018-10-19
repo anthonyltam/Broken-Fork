@@ -12,9 +12,9 @@ class TopCuisines extends React.Component {
         <div className='body-hr'></div>
           <div className="grid-container">
             <div className='everything-cuisine splash'>Everything</div>
-            <div className='everything-italian splash'>Italian</div>
-            <div className='everything-merican splash'>American</div>
-            <div className='everything-mexican splash'>Mexican</div>
+            <div className='italian-cuisine splash'>Italian</div>
+            <div className='american-cuisine splash'>American</div>
+            <div className='mexican-cuisine splash'>Mexican</div>
           </div>
       </>
     )
