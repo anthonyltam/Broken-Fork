@@ -43,7 +43,6 @@ header span {
   height: 100%;
   width: 100%;
   background: rgba(100, 100, 100, 0.3);
-  /* opacity: 0.8; */
 }
 
 .modal-background {
@@ -97,12 +96,8 @@ header span {
 .home-icon {
   width: 115%;
   height: 115%;
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
-  /* padding-right: 5px; */
 }
 .parent-home-icon {
-  /* overflow: hidden; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,7 +197,6 @@ p {
 .time {
   height: 50px;
   width: 33%;
-  /* border-radius: 4px; */
   font-size: 13px;
   border: transparent;
 }

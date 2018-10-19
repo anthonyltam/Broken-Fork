@@ -3,6 +3,7 @@ import CurrentLocation from './current_location';
 import PopularRestaurants from './popular_restaurants';
 import RestaurantSplashItem from './restaurant_splash_item';
 import TopCuisines from './top_cuisines';
+import Footer from './footer';
 
 class Body extends React.Component {
   constructor(props) {
@@ -26,6 +27,7 @@ class Body extends React.Component {
             </div>
 
           <TopCuisines />
+          <Footer />
         </div>
       </>
     )
