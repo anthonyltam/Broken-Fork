@@ -43,7 +43,7 @@ const App = () => (
     </Switch>
 
     <Route exact path='/' component={BodyContainer}/>
-    <Route exact path='/' component={Footer}/>
+    <Route path='/' component={Footer}/>
   </div>
 
 );

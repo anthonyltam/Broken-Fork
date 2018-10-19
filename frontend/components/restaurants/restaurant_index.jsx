@@ -2,12 +2,12 @@ import React from 'react';
 import RestaurantIndexItem from './restaurant_index_item';
 import { Link } from 'react-router-dom';
 
+// <div className='map-icon'></div>
 
 class RestaurantIndex extends React.Component {
   componentDidMount() {
     this.props.fetchRestaurants();
   }
-
 
   render() {
     return (
@@ -67,18 +67,39 @@ class RestaurantIndex extends React.Component {
 
 
         <div className='parent-container'>
-          <div className='filter-container'></div>
+
+          <div className='filter-container'>
+
+
+            <div className='map-cont'>
+              <div className='map-text'>Map</div>
+            </div>
+            <div className='price-filter'>
+              <div className='price-text'>Price</div>
+              <div className='price-ranges'>
+                <div className='price-amount'>$</div>
+                <div className='price-amount'>$$</div>
+                <div className='price-amount'>$$$</div>
+              </div>
+            </div>
+            <div className='filter-hr'></div>
+
+            <div>
+            </div>
+          </div>
+
+
           <div className='results-container'>
 
             <div className='tables-match'>
-              <span>{this.props.restaurants.length} TABLES AVAILABLE</span>
+              <span>{this.props.restaurants.length} RESTAURANTS AVAILABLE</span>
               <select className='right-filter'>
                 <option value='Best Match'>Best Match</option>
                 <option value='A-Z'>A-Z</option>
                 <option value='Highest Rated'>Highest Rated</option>
               </select>
             </div>
-            
+
             <ul>
               {this.props.restaurants.map( restaurant => {
                 return <RestaurantIndexItem key={restaurant.id} restaurant={restaurant}/>
