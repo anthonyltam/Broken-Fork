@@ -41,7 +41,7 @@ const App = () => (
       <Route path="/" component={NoMatch} />
     </Switch>
 
-    <BodyContainer/>
+    <Route exact path='/' component={BodyContainer}/>
   </div>
 
 );
