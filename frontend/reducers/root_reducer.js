@@ -11,4 +11,4 @@ export default combineReducers({
   errors,
   ui,
   restaurants
-})
+});

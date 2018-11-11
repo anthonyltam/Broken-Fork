@@ -13,7 +13,7 @@ function Modal({modal, closeModal, clearErrors}) {
   const closeSession = () => {
     closeModal();
     clearErrors();
-  }
+  };
 
   let component;
   switch (modal) {

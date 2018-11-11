@@ -24,35 +24,7 @@ class SignUpForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state).then( () => {this.props.closeModal() })
-    // ,
-    //   () => {
-    //     this.props.closeModal();
-    //     // this.props.clearErrors();
-    //     setTimeout(this.props.openModal, 100)
-    //   });
   }
-
-
-  // clearField(field) {
-  //   return (e) => {
-  //     this.setState({[field]: ''});
-  //   }
-  // }
-
-  // USE IN INPUT Tag //
-  // onFocus={ this.clearField('password')}
-  //
-  // demoLogin(e) {
-  //   e.preventDefault;
-  //   const user = {
-  //     email: 'DemoUser',
-  //     first_name: 'Demo',
-  //     password: 'starwars',
-  //   }
-  //   this.props.signIn(user);
-  //   // this.props.clearErrors();
-  //   this.props.closeModal();
-  // }
 
   render() {
 
@@ -64,9 +36,9 @@ class SignUpForm extends React.Component {
           link = <div>
               <span>New to BrokenFork?</span>
               <button className='bottom-link' onClick={this.props.otherForm}>Create an account</button>
-            </div>
+            </div>;
         } else {
-          link = null
+          link = null;
         }
 
     return (
@@ -82,7 +54,7 @@ class SignUpForm extends React.Component {
               <input className='field last_name' onChange={ this.update('last_name')} type='text' value={this.state.last_name} placeholder='last name'/>
               <input className='field location' onChange={ this.update('location')} type='text' value={this.state.location} placeholder='primary dining location'/>
               <input className='field pw' onChange={ this.update('password')} type='password' value={this.state.password} placeholder='password'/>
-              <a href="https://github.com/anthonyltam/Broken-Fork">View the Github Repo</a>
+              <a className='view-github' href="https://github.com/anthonyltam/Broken-Fork">View the Github Repo</a>
               <button className="submit-button">{this.props.submitButton}</button>
             </div>
 

@@ -3,11 +3,13 @@ import React from 'react';
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {email: '', password: ''}//, errors: this.props.errors};
+    this.state = {
+      email: '', 
+      password: ''
+    };
 
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.clearField = this.clearField.bind(this);
     this.handleDemoLogin = this.handleDemoLogin.bind(this);
     this.otherForm = this.otherForm.bind(this);
   }
@@ -20,18 +22,12 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(this.state).then( () => {this.props.closeModal() })
-    // .then(() => {this.props.closeModal()},
-    //   () => {
-    //     this.props.closeModal();
-    //     setTimeout(this.props.openModal, 100)
-    //   });
+    this.props.processForm(this.state).then( () => {this.props.closeModal(); });
   }
 
   handleDemoLogin(e) {
     e.preventDefault();
     this.props.demoLogin();
-    console.log('made it here')
     this.props.closeModal();
   }
 
@@ -48,7 +44,7 @@ class SessionForm extends React.Component {
               <span className='new-to-broken'>New to BrokenFork?</span>
               <button className='bottom-link' onClick={this.otherForm}>Create an account</button>
               </div>
-            </>
+            </>;
         } else {
           link = null;
         }
@@ -63,7 +59,7 @@ class SessionForm extends React.Component {
             <div className='input-field'>
               <input className='field email' onChange={ this.update('email')} type='text' placeholder='email' value={this.state.email}/>
               <input className='field pw' onChange={ this.update('password')} type='password' placeholder='password' value={this.state.password}/>
-              <a href="https://github.com/anthonyltam/Broken-Fork">View the Github Repo</a>
+              <a className = 'view-github' href="https://github.com/anthonyltam/Broken-Fork">View the Github Repo</a>
               <button className="submit-button">{this.props.submitButton}</button>
               <button className='signin-demo-login' onClick={this.handleDemoLogin}>Demo</button>
             </div>
@@ -87,7 +83,7 @@ class SessionForm extends React.Component {
           </div>
         </form>
       </div>
-    )
+    );
   }
 }
 

@@ -9,6 +9,6 @@ const modalReducer = function(state = {modal: null}, action) {
     default:
       return state;
   }
-}
+};
 
 export default modalReducer;

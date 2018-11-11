@@ -21,7 +21,7 @@ export const receiveErrors = errors => ({
 
 export const clearErrors = () => ({
   type: CLEAR_ERRORS
-})
+});
 
 export const signUp = user => dispatch => (
   APIUtil.signUp(user).then(user => (
