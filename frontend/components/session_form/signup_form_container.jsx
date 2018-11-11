@@ -9,8 +9,8 @@ const msp = ({ errors }) => {
     errors: errors.session,
     formType: 'Welcome to BrokenFork!',
     submitButton: 'Create Account'
-  }
-}
+  };
+};
 
 const mdp = dispatch => {
   return {
@@ -20,7 +20,7 @@ const mdp = dispatch => {
     signIn: (user) => dispatch(signIn(user)),
     openModal: () => dispatch(openModal('signup')),
     clearErrors: () => dispatch(clearErrors())
-  }
-}
+  };
+};
 
 export default connect(msp, mdp)(SignUpForm);

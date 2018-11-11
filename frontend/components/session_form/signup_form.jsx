@@ -28,19 +28,8 @@ class SignUpForm extends React.Component {
 
   render() {
 
-      let errors = this.props.errors ? <p className='login-errors'>{this.props.errors}</p> : null
-      // <p className='login-errors'>{this.props.errors}</p>
-
-      let link;
-        if (this.props.formType === 'Please sign in') {
-          link = <div>
-              <span>New to BrokenFork?</span>
-              <button className='bottom-link' onClick={this.props.otherForm}>Create an account</button>
-            </div>;
-        } else {
-          link = null;
-        }
-
+    let errors = this.props.errors ? <p className='login-errors'>{this.props.errors}</p> : null;
+ 
     return (
       <div>
 
@@ -72,14 +61,10 @@ class SignUpForm extends React.Component {
               </button>
             </div>
           </div>
-          <div className='bottom-text'>
-            {link}
-          </div>
         </form>
       </div>
-    )
+    );
   }
 }
 
-// <button className='demo-login' onClick={this.demoLogin}>Demo Login</button>
 export default SignUpForm;
