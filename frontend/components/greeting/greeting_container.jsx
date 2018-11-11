@@ -15,7 +15,7 @@ const mdp = dispatch => {
     openModal: modal => dispatch(openModal(modal)),
     singIn: (user) => dispatch(signIn(user)),
     demoLogin: () => dispatch(signIn({email: 'DemoUser', password: 'starwars' }))
-  }
-}
+  };
+};
 
 export default connect(msp, mdp)(Greeting);

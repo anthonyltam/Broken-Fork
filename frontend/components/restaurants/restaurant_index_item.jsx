@@ -7,7 +7,6 @@ class RestaurantIndexItem extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     return (
 
       <>
@@ -29,7 +28,7 @@ class RestaurantIndexItem extends React.Component {
 
         <hr></hr>
       </>
-    )
+    );
   }
 }
 

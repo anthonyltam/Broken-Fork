@@ -8,7 +8,7 @@ class RestaurantShowItem extends React.Component {
 
   render() {
     if (this.props.restaurant === undefined) {
-      return null
+      return null;
     }
     // this.count ? this.count += 1 : this.count = 0;
 
@@ -25,7 +25,7 @@ class RestaurantShowItem extends React.Component {
         <li>Hours of Operation: {this.props.restaurant.hours_of_operation}</li>
         <li>Tables: {this.props.restaurant.tables}</li>
       </ul>
-    )
+    );
   }
 }
 
