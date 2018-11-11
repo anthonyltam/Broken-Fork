@@ -15,7 +15,7 @@ class TopCuisines extends React.Component {
             <div className='mexican-cuisine splash'>Mexican</div>
           </div>
       </>
-    )
+    );
   }
 }
 

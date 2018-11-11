@@ -14,7 +14,7 @@ class JoinUs extends React.Component {
           </div>
         </div>
       </>
-    )
+    );
   }
 }
 

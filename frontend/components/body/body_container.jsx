@@ -6,13 +6,13 @@ import Body from './body';
 const msp = state => {
   return {
     restaurants: Object.values(state.restaurants)
-  }
-}
+  };
+};
 
 const mdp = dispatch => {
   return {
     fetchRestaurants: () => dispatch(fetchRestaurants())
-  }
-}
+  };
+};
 
 export default connect(msp, mdp)(Body);

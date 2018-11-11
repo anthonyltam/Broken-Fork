@@ -7,8 +7,6 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-// import LogInFormContainer from './session_form/login_form_container';
-// import SignUpFormContainer from './session_form/signup_form_container';
 import NoMatch from './no_match';
 
 // NAV //
@@ -43,7 +41,7 @@ const App = () => (
     </Switch>
 
     <Route exact path='/' component={BodyContainer}/>
-    {/* <Route path='/' component={Footer}/> */}
+    <Route path='/' component={Footer}/>
   </div>
 
 );
