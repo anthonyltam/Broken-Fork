@@ -8,7 +8,8 @@ class RestaurantIndex extends React.Component {
   }
 
   render() {
-    return <>
+    return (
+      <>
         <div className="link-nav">
           <Link className="link-nav-child" to="/">
             Home
@@ -279,7 +280,9 @@ class RestaurantIndex extends React.Component {
             </ul>
           </div>
         </div>
-      </>;
+        
+      </>
+    );
   }
 }
 
