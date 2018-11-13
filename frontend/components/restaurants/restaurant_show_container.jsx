@@ -1,17 +1,18 @@
-import React from 'react';
 import { connect } from 'react-redux';
-import { fetchRestaurant } from '../../actions/restaurant_actions';
+import { fetchRestaurant, fetchReviews } from '../../actions/restaurant_actions';
 import RestaurantShowItem from './restaurant_show_item';
 
 const msp = (state, ownProps) => {
   return {
-    restaurant: state.restaurants[ownProps.match.params.id]
+    restaurant: state.restaurants[ownProps.match.params.id],
+    reviews: state.reviews[ownProps.match.params.id]
   };
 };
 
 const mdp = dispatch => {
   return {
-    fetchRestaurant: id => dispatch(fetchRestaurant(id))
+    fetchRestaurant: id => dispatch(fetchRestaurant(id)),
+    fetchReviews: id => dispatch(fetchReviews(id))
   };
 };
 

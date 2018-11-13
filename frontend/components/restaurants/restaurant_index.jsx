@@ -3,8 +3,22 @@ import RestaurantIndexItem from './restaurant_index_item';
 import { Link } from 'react-router-dom';
 
 class RestaurantIndex extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleRest = this.handleRest.bind(this);    
+  }
+
+  handleRest(e) {
+    e.preventDefault();
+    console.log('im in handleRest', e);
+    // console.log(e);
+    // this.props.fetchReviews();
+  }
+
   componentDidMount() {
     this.props.fetchRestaurants();
+    // this.props.fetchReviews();
   }
 
   render() {
@@ -58,7 +72,7 @@ class RestaurantIndex extends React.Component {
               </select>
             </div>
             <input className="box-search" type="text" placeholder="Location, Restaurant, or Cuisine" />
-            <button onClick={console.log("clicked on index button")} className="box-go">
+            <button className="box-go">
               Let's Go
             </button>
           </div>
@@ -275,7 +289,7 @@ class RestaurantIndex extends React.Component {
 
             <ul>
               {this.props.restaurants.map(restaurant => {
-                return <RestaurantIndexItem key={restaurant.id} restaurant={restaurant} />;
+                return <RestaurantIndexItem fetchReviews={this.props.fetchReviews} restaurantId={restaurant.id} onClick={this.handleRest} key={restaurant.id} restaurant={restaurant} />;
               })}
             </ul>
           </div>

@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
      store = configureStore();
    }
    window.review = { 
-      body: 'justin is the best',
+      body: 'ceces is the worst',
       author_id: 2,
-      restaurant_id: 5,
+      restaurant_id: 6,
       rating: 5
    };
 
