@@ -106,7 +106,6 @@ header span {
   padding-right: 5px;
 }
 
-
 .home-text {
   border: none;
   text-decoration: none;
@@ -185,16 +184,17 @@ p {
 }
 
 .date {
-  height: 49px;
+  height: 50px;
   width: 33%;
-  border-radius: 4px;
-  border: 0px;
+  border-radius: 4px 0px 0px 4px;
   padding: 0px;
   border: transparent;
   padding-left: 10px;
 }
 
 .time {
+  -webkit-appearance: none;
+  border-radius: 0px;
   height: 50px;
   width: 33%;
   font-size: 13px;
@@ -204,7 +204,8 @@ p {
 .box-num-guests {
   height: 50px;
   width: 33%;
-  /* border-radius: 4px; */
+  -webkit-appearance: none;
+  border-radius: 0px 5px 5px 0px;
   font-size: 13px;
   border: transparent;
 }
