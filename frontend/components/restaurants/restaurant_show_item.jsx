@@ -1,4 +1,5 @@
 import React from 'react';
+import Reviews from '../reviews/reviews';
 
 class RestaurantShowItem extends React.Component {
 
@@ -28,7 +29,11 @@ class RestaurantShowItem extends React.Component {
           <li>Tables: {this.props.restaurant.tables}</li>
         </ul>
 
-        
+        <div className='review-container'>
+          {this.props.reviews.map( review => {
+            return <Reviews key={ review.id } review={ review } />;
+          })}
+        </div>  
       </>
     );
   }
