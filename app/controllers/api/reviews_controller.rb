@@ -1,10 +1,11 @@
 class Api::ReviewsController < ApplicationController
-  before_action :require_logged_in
+  before_action :require_login
 
   def create
     @review = Review.new(review_params)
+
     
-    if @review.save
+    if @review.save!
       render :show
     else
       render json: @review.errors.full_messages, status: 422
@@ -12,10 +13,14 @@ class Api::ReviewsController < ApplicationController
     
   end
 
+  def index
+    @reviews = Review.where("restaurant_id = ?", params[:restaurant_id])
+  end
+
   private
 
   def review_params
-    params.require(:review).peremit(:body, :rating, :restaurant_id)
+    params.require(:review).permit(:body, :rating, :restaurant_id, :author_id)
   end
 
 end

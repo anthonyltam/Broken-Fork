@@ -3,6 +3,7 @@ import * as APIUtil from '../util/restaurant_api_util';
 export const RECEIVE_RESTAURANTS = 'RECEIVE_RESTAURANTS';
 export const RECEIVE_RESTAURANT = 'RECEIVE_RESTAURANT';
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
+export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
 
 export const fetchRestaurants = () => dispatch => {
    return APIUtil.fetchRestaurants().then(restaurants => {
@@ -22,10 +23,21 @@ export const fetchRestaurant = (id) => dispatch => {
   });
 };
 
-export const createReview = ( {review, author}) => dispatch => {
-  APIUtil.createReview(review).then(reviews => {
+export const createReview = (review) => dispatch => {
+  APIUtil.createReview(review).then(review => {
     dispatch({
       type: RECEIVE_REVIEW,
+      review
+    });
+  }, err => {
+    console.log(err);
+  }) ;
+};
+
+export const fetchReviews = (id) => dispatch => {
+  APIUtil.fetchReviews(id).then(reviews => {
+    dispatch({
+      type: RECEIVE_REVIEWS,
       reviews
     });
   });

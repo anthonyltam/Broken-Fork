@@ -19,3 +19,11 @@ export const createReview = (review) => {
     data: { review }
   });
 };
+
+export const fetchReviews = (restaurant_id) => {
+  return $.ajax({
+    method: "GET",
+    url: `api/reviews`,
+    data: { restaurant_id }
+  });
+};
