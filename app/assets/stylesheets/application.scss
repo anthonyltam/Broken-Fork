@@ -187,9 +187,11 @@ p {
   height: 50px;
   width: 33%;
   border-radius: 4px 0px 0px 4px;
-  padding: 0px;
-  border: transparent;
-  padding-left: 10px;
+  border: grey;
+  padding-left: 20px;
+  border-right-style: solid;
+  border-color: grey;
+  border-width: thin;
 }
 
 .time {
@@ -199,9 +201,14 @@ p {
   width: 33%;
   font-size: 13px;
   border: transparent;
+  padding-left: 20px;
+  border-right-style: solid;
+  border-color: grey;
+  border-width: thin;
 }
 
 .box-num-guests {
+  padding-left: 20px;
   height: 50px;
   width: 33%;
   -webkit-appearance: none;
