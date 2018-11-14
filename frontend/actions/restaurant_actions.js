@@ -34,6 +34,14 @@ export const createReview = (review) => dispatch => {
   }) ;
 };
 
+// export const createReview = (review) => dispatch => {
+//   APIUtil.createReview(review).then(reviews => {
+//     dispatch({
+//       type: RECEIVE_REVIEWS,
+//       reviews
+//     });
+// };
+
 export const fetchReviews = (id) => dispatch => {
   APIUtil.fetchReviews(id).then(reviews => {
     dispatch({

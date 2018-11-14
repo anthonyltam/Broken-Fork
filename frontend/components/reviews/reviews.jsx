@@ -4,17 +4,19 @@ import React from 'react';
 class Reviews extends React.Component {
 
   render() {
+    console.log("props", this.props.review)
     return <>
         <div className="review-box">
           <div className="review-user">
             <div className="review-icon">
-              {this.props.review.user.first_name[0].toUpperCase()}
+            {this.props.review.first_name[0].toUpperCase() ? this.props.review.first_name[0].toUpperCase() : ''}
             </div>
             <div className="review-name">
-              {this.props.review.user.first_name}
+              {this.props.review.first_name ? this.props.review.first_name : ''}
             </div>
             <div className="review-location">
-              {this.props.review.user.location}
+            {this.props.review.location ? this.props.review.location : ''} 
+              
             </div>
           </div>
 

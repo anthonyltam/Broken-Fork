@@ -9,6 +9,10 @@ class RestaurantShowItem extends React.Component {
     this.props.fetchReviews(this.props.match.params.id);
   }
 
+  componentWillReceiveProps(nextProps) {
+    console.log('nextprops:', nextProps);
+  }
+
   render() {
     if (this.props.restaurant === undefined) {
       return null;
@@ -16,7 +20,7 @@ class RestaurantShowItem extends React.Component {
 
     return (
       <>
-      {console.log(this.props)}
+      {/* {console.log(this.props)} */}
         <ul>
           <div className='show-top-background'>
             <img className='rest-image' src={this.props.restaurant.photo_url} ></img>
@@ -36,7 +40,7 @@ class RestaurantShowItem extends React.Component {
           })}
         </div>  
 
-        <ReviewFormContainer />
+        <ReviewFormContainer test={this.props} restaurant={this.props.restaurant}/>
       </>
     );
   }

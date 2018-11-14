@@ -5,17 +5,22 @@ class ReviewForm extends React.Component {
     super(props);
 
     this.state = {
-      rating: 5,
-      body: ''
+      rating: '',
+      body: '',
+      restaurant_id: this.props.restaurant.id,
+      author_id: Object.values(this.props.user)[0].id,
+      first_name: Object.values(this.props.user)[0].first_name,
+      location: Object.values(this.props.user)[0].location
     };
 
     this.handleClick = this.handleClick.bind(this);
-    // this.update = this.update.bind(this);
   }
 
   handleClick(e) {
-    e.preventDefault();
-    console.log('in handleclick');
+    // console.log(this.props.test);
+    e.preventDefault();    
+    this.props.createReview(this.state);
+    // this.props.test.history.push(`/restaurants/${this.props.restaurant.id}`);
   }
 
   update(field) {
@@ -23,6 +28,10 @@ class ReviewForm extends React.Component {
   }
 
   render() {
+    console.log('reviewform props:', this.props);
+    // console.log('state', this.state);
+
+
     return (
       <>
         <div className="review-form-container">
@@ -30,7 +39,7 @@ class ReviewForm extends React.Component {
 
             <label>Rating</label>
             <br/>
-            <input type="text" value={this.state.rating} onChange={this.update("rating")} />
+            <input type="text" value={this.state.rating} onChange={this.update("rating")} placeholder='1'/>
             <br/>
 
             <label>Review</label>
