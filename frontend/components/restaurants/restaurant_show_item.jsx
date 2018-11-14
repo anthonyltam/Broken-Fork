@@ -31,7 +31,7 @@ class RestaurantShowItem extends React.Component {
 
         <div className='review-container'>
           {this.props.reviews.map( review => {
-            return <Reviews key={ review.id } review={ review } />;
+            return <Reviews key={review.id} review={review} />;
           })}
         </div>  
       </>
