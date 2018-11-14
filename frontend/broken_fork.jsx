@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
      store = configureStore();
    }
    window.review = { 
-      body: 'ceces is the worst',
+      body: 'crooked spoon is an amazing restaurant! I love the atmosphere and the food! It\'s great! Can\'t wait to come back soon!',
       author_id: 2,
       restaurant_id: 6,
       rating: 5

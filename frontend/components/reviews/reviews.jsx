@@ -3,10 +3,12 @@ import React from 'react';
 class Reviews extends React.Component {
 
   render() {
+    // console.log(this.props.review.user.first_name)
     return (
       <>
         <div className="review-box">
 
+          <div>{this.props.review.user.first_name}</div>
           <div className='review-top-layer'>
             <div className='review-stars'></div> 
             <div className="dined-on">Dined on October 21st, 2018</div>
