@@ -1,5 +1,6 @@
 import React from 'react';
 import Reviews from '../reviews/reviews';
+import ReviewFormContainer from '../reviews/review_form_container';
 
 class RestaurantShowItem extends React.Component {
 
@@ -34,6 +35,8 @@ class RestaurantShowItem extends React.Component {
             return <Reviews key={review.id} review={review} />;
           })}
         </div>  
+
+        <ReviewFormContainer />
       </>
     );
   }
