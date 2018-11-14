@@ -4,19 +4,77 @@
   align-content: center;
   width: 50%;
   margin-right: 25%;
-  margin-left: 25%;
-  border: 1px solid black;
+  margin-left: 15%;
+  // border: 1px solid black;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .review-box {
-  height: 100px;
-  border: 1px solid red;
+  height: 130px;
+  font-family: Arial, Helvetica, sans-serif;
+  // border: 1px solid red;
+}
+
+.review-top-layer {
+  display: flex;
+}
+
+.review-stars {
+  background-image: url('https://s3-us-west-1.amazonaws.com/brokenfork-dev/4.5stars.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 120px;
+  margin-right: 5px;
+  // border: 1px solid blue;
 }
 
 .dined-on {
+  line-height: 3.25;
+  margin-left: 10px;
+  // border: 1px solid green;
+}
+
+.review-categ {
+  font-weight: 600;
+}
+
+.review-ratings {
+  color: red;
+}
+
+.review-body {
+  margin-top: 0.5%;
+}
+
+
+// REPORT /////////////
+
+.review-btm-right {
+  // border: 1px solid red;
+  display: flex;
+  color: rgba(0, 0, 0, 0.50);  
+  justify-content: flex-end;
+}
+
+.report-img {
+  background-image: url('https://s3-us-west-1.amazonaws.com/brokenfork-dev/report-flag.png');
+  background-size: cover;
+  height: 20px;
+  width: 20px;
+  margin: 0px 10px 0px 10px;
+}
+
+.helpful-img {
+  background-image: url('https://s3-us-west-1.amazonaws.com/brokenfork-dev/helpful-img.png');
+  background-size: cover;
+  height: 20px;
+  width: 20px;
+  margin: 0px 10px 0px 10px;
 }
 
 .review-hr {
   width: 100%;
 }
+
+
