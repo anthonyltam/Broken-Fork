@@ -10,17 +10,17 @@ class RestaurantShowItem extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log('nextprops:', nextProps);
+    // console.log('nextprops:', nextProps);
   }
 
   render() {
     if (this.props.restaurant === undefined) {
       return null;
     }
+    // console.log(this.props);
 
     return (
       <>
-      {/* {console.log(this.props)} */}
         <ul>
           <div className='show-top-background'>
             <img className='rest-image' src={this.props.restaurant.photo_url} ></img>
@@ -36,11 +36,11 @@ class RestaurantShowItem extends React.Component {
 
         <div className='review-container'>
           {this.props.reviews.map( review => {
-            return <Reviews key={review.id} review={review} />;
+            return <Reviews props={this.props} key={review.id} review={review} />;
           })}
         </div>  
 
-        <ReviewFormContainer test={this.props} restaurant={this.props.restaurant}/>
+        <ReviewFormContainer restaurant={this.props.restaurant}/>
       </>
     );
   }

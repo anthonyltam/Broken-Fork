@@ -29,18 +29,8 @@ export const createReview = (review) => dispatch => {
       type: RECEIVE_REVIEW,
       review
     });
-  }, err => {
-    console.log(err);
-  }) ;
+  });
 };
-
-// export const createReview = (review) => dispatch => {
-//   APIUtil.createReview(review).then(reviews => {
-//     dispatch({
-//       type: RECEIVE_REVIEWS,
-//       reviews
-//     });
-// };
 
 export const fetchReviews = (id) => dispatch => {
   APIUtil.fetchReviews(id).then(reviews => {

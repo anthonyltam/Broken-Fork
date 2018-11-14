@@ -28,7 +28,7 @@ class ReviewForm extends React.Component {
   }
 
   render() {
-    console.log('reviewform props:', this.props);
+    console.log('reviewformprops:', this.props);
     // console.log('state', this.state);
 
 

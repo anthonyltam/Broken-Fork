@@ -4,7 +4,7 @@ import React from 'react';
 class Reviews extends React.Component {
 
   render() {
-    console.log("props", this.props.review)
+    // console.log("props", this.props)
     return <>
         <div className="review-box">
           <div className="review-user">
