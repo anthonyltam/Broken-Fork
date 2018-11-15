@@ -1,6 +1,7 @@
 import React from 'react';
 import Reviews from '../reviews/reviews';
 import ReviewFormContainer from '../reviews/review_form_container';
+import ReservationFormContainer from '../reservations/reservation_form_container';
 
 class RestaurantShowItem extends React.Component {
 
@@ -10,14 +11,20 @@ class RestaurantShowItem extends React.Component {
   }
 
   render() {
-    // if (this.props.restaurant === undefined || this.props.reviews.length === 0) {
     if (this.props.restaurant === undefined) {
       return null;
     }
+
     let review;
     if (this.props.currentUser) {
-       review = 
-        <ReviewFormContainer restaurant={this.props.restaurant} />
+      review = 
+      <ReviewFormContainer restaurant={this.props.restaurant} />;
+    }
+    
+    let reservation;
+    if (this.props.currentUser) {
+      reservation = 
+      <ReservationFormContainer restaurant={this.props.restaurant} />;
     }
 
     return (
@@ -35,13 +42,13 @@ class RestaurantShowItem extends React.Component {
         Tables: {this.props.restaurant.tables}
 
         <div className='review-container'>
-          {this.props.reviews.map( review => {
-            console.log('this is a review', review);
-            return <Reviews props={this.props} key={review.id} review={review} />;
+          {this.props.reviews.map( rev => {
+            return <Reviews props={this.props} key={rev.id} review={rev}/>;
           })}
         </div>  
 
         { review }
+        { reservation }
       </>
     );
   }
