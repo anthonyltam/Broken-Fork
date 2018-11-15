@@ -11,6 +11,7 @@ class Api::ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.new(reservation_params)
+    @reservation.user_id = current_user.id
 
     if @reservation.save!
       render :show
@@ -20,8 +21,7 @@ class Api::ReservationsController < ApplicationController
 
   end
 
-  def delete
-
+  def destroy
     @reservation = current_user.reservations.find_by(id: params[:id])
 
     if @reservation.destroy
@@ -35,7 +35,7 @@ class Api::ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.require(:reservation).permit(:user_id, :restaurant_id, :start_time, :end_time)
+    params.require(:reservation).permit(:start_time, :end_time, :restaurant_id)
   end
 
 end
