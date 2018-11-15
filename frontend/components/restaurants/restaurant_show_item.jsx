@@ -10,7 +10,7 @@ class RestaurantShowItem extends React.Component {
   }
 
   render() {
-    if (this.props.restaurant === undefined) {
+    if (this.props.restaurant === undefined || this.props.reviews.length === 0) {
       return null;
     }
 
@@ -30,6 +30,7 @@ class RestaurantShowItem extends React.Component {
 
         <div className='review-container'>
           {this.props.reviews.map( review => {
+            console.log('this is a review', review);
             return <Reviews props={this.props} key={review.id} review={review} />;
           })}
         </div>  
