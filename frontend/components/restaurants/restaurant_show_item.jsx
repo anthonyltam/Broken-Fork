@@ -9,30 +9,24 @@ class RestaurantShowItem extends React.Component {
     this.props.fetchReviews(this.props.match.params.id);
   }
 
-  componentWillReceiveProps(nextProps) {
-    // console.log('nextprops:', nextProps);
-  }
-
   render() {
     if (this.props.restaurant === undefined) {
       return null;
     }
-    // console.log(this.props);
 
     return (
       <>
-        <ul>
-          <div className='show-top-background'>
-            <img className='rest-image' src={this.props.restaurant.photo_url} ></img>
-          </div>
+        <div className='show-top-background'>
+          <img className='rest-image' src={this.props.restaurant.photo_url} ></img>
+        </div>
 
-          <h2>{this.props.restaurant.name}</h2>
-          <li>Description: {this.props.restaurant.description}</li>
-          <li>Location: {this.props.restaurant.location}</li>
-          <li>Cuisines: {this.props.restaurant.cuisines}</li>
-          <li>Hours of Operation: {this.props.restaurant.hours_of_operation}</li>
-          <li>Tables: {this.props.restaurant.tables}</li>
-        </ul>
+        <div className='rest-page-title'>{this.props.restaurant.name}</div>
+
+        Description: {this.props.restaurant.description}
+        Location: {this.props.restaurant.location}
+        Cuisines: {this.props.restaurant.cuisines}
+        Hours of Operation: {this.props.restaurant.hours_of_operation}
+        Tables: {this.props.restaurant.tables}
 
         <div className='review-container'>
           {this.props.reviews.map( review => {
