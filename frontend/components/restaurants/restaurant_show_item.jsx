@@ -10,7 +10,8 @@ class RestaurantShowItem extends React.Component {
   }
 
   render() {
-    if (this.props.restaurant === undefined || this.props.reviews.length === 0) {
+    // if (this.props.restaurant === undefined || this.props.reviews.length === 0) {
+    if (this.props.restaurant === undefined) {
       return null;
     }
 
