@@ -29,7 +29,7 @@ rest1 = Restaurant.create(
     tables: 1,
   }
 )
-# rest1.photo.attach(io: File.open('app/assets/images/feebo-restaurant.jpg'), filename: 'feebo.jpg')
+rest1.photo.attach(io: File.open('app/assets/images/feebo-restaurant.jpg'), filename: 'feebo.jpg')
 
 rest2 = Restaurant.create(
   {
