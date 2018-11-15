@@ -5,7 +5,9 @@ import RestaurantShowItem from './restaurant_show_item';
 const msp = (state, ownProps) => {
   return {
     restaurant: state.restaurants[ownProps.match.params.id],
-    reviews: Object.values(state.reviews)
+    reviews: Object.values(state.reviews),
+    currentUser: state.session.id,
+
   };
 };
 

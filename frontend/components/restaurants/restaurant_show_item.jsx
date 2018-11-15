@@ -1,6 +1,7 @@
 import React from 'react';
 import Reviews from '../reviews/reviews';
 import ReviewFormContainer from '../reviews/review_form_container';
+import { ProtectedRoute } from "../../util/route_util";
 
 class RestaurantShowItem extends React.Component {
 
@@ -13,6 +14,11 @@ class RestaurantShowItem extends React.Component {
     // if (this.props.restaurant === undefined || this.props.reviews.length === 0) {
     if (this.props.restaurant === undefined) {
       return null;
+    }
+    let review;
+    if (this.props.currentUser) {
+       review = 
+        <ReviewFormContainer restaurant={this.props.restaurant} />
     }
 
     return (
@@ -36,7 +42,14 @@ class RestaurantShowItem extends React.Component {
           })}
         </div>  
 
-        <ReviewFormContainer restaurant={this.props.restaurant}/>
+        {/* <ProtectedRoute
+          path="/restaurants/:id"
+          component={ReviewFormContainer}
+        /> */}
+        {
+        review
+        // <ReviewFormContainer restaurant={this.props.restaurant}/>
+        }
       </>
     );
   }
