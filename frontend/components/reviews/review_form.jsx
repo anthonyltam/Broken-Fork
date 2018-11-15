@@ -26,9 +26,6 @@ class ReviewForm extends React.Component {
   }
 
   render() {
-    console.log('reviewformprops:', this.props);
-    // console.log('state', this.state);
-
 
     return <>
         <div className="review-form-container">

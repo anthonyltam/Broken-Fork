@@ -5,6 +5,7 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6, allow_nil: true }
 
   has_many :reviews
+  has_many :reservations
   
   attr_reader :password
 
