@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Reservation.destroy_all
+Review.destroy_all
+
 User.destroy_all
 User.create(
   {
@@ -66,3 +69,4 @@ rest4 = Restaurant.create(
   }
 )
 rest4.photo.attach(io: File.open('app/assets/images/gigis.jpg'), filename: 'gigis.jpg')
+

@@ -13,7 +13,6 @@ const reservationsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_RESERVATIONS:
-  
     return merge(newState, action.reservations);
     case RECEIVE_RESERVATION:
       newState[action.reservation.id] = action.reservation;
