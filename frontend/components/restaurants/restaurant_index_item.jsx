@@ -5,13 +5,8 @@ class RestaurantIndexItem extends React.Component {
   constructor(props) {
     super(props);
 
-    // this.handleClick = this.handleClick.bind(this);
   }
-
-  // handleClick(e) {
-  //   this.props.fetchReviews(this.props.restaurantId);
-  // }
-
+ 
   render() {
     return (
       <>

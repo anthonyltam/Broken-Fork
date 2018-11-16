@@ -24,9 +24,10 @@ class RestaurantShowItem extends React.Component {
     let reservation;
     if (this.props.currentUser) {
       reservation = 
-      <ReservationFormContainer restaurant={this.props.restaurant} />;
+      <ReservationFormContainer history={this.props.history} restaurant={this.props.restaurant} />;
     }
 
+    // console.log(this.props)
     return (
       <>
         <div className='show-top-background'>

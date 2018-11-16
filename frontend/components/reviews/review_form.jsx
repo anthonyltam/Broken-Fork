@@ -26,7 +26,6 @@ class ReviewForm extends React.Component {
   }
 
   render() {
-    // console.log(this.props);
     return <>
         <div className="review-form-container">
           <form className="review-form-content" onSubmit={this.handleClick}>

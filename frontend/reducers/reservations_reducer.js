@@ -8,9 +8,12 @@ import { merge } from 'lodash';
 
 const reservationsReducer = (state = {}, action) => {
   const newState = merge({}, state);
+  // console.log('action:', action);
+  // debugger
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_RESERVATIONS:
+  
     return merge(newState, action.reservations);
     case RECEIVE_RESERVATION:
       newState[action.reservation.id] = action.reservation;

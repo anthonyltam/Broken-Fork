@@ -5,6 +5,7 @@ import errors from './errors_reducer';
 import ui from './modal_reducer';
 import restaurants from './restaurants_reducer';
 import reviews from './reviews_reducer';
+import reservations from './reservations_reducer';
 
 
 export default combineReducers({
@@ -13,5 +14,6 @@ export default combineReducers({
   errors,
   ui,
   restaurants,
-  reviews
+  reviews,
+  reservations
 });

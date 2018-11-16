@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import { createReview, fetchReviews } from "./actions/restaurant_actions.js";
-import { createReservation, deleteReservation } from "./actions/reservation_actions.js";
+import { createReservation, deleteReservation, fetchReservations } from "./actions/reservation_actions.js";
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.createReservation = createReservation;
   window.deleteReservation = deleteReservation;
+  window.fetchReservations = fetchReservations;
 
   window.createReview = createReview;
   window.fetchReviews = fetchReviews;

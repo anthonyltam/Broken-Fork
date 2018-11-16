@@ -6,19 +6,15 @@ class RestaurantIndex extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handleRest = this.handleRest.bind(this);    
+    // this.handleRest = this.handleRest.bind(this);    
   }
 
-  handleRest(e) {
-    e.preventDefault();
-    console.log('im in handleRest', e);
-    // console.log(e);
-    // this.props.fetchReviews();
-  }
+  // handleRest(e) {
+  //   e.preventDefault();
+  // }
 
   componentDidMount() {
     this.props.fetchRestaurants();
-    // this.props.fetchReviews();
   }
 
   render() {
