@@ -16,7 +16,7 @@ class ReservationsIndex extends React.Component {
       <div>Reservations page</div> 
       <div>
         {this.props.reservations.map( res => {
-          return <ReservationShowItem key={res.id} fetchRestaurant={this.props.fetchRestaurant} reservation={res} />;
+          return <ReservationShowItem key={res.id} deleteReservation={this.props.deleteReservation} reservation={res} />;
         })}
       </div>
     </>;
