@@ -17,7 +17,9 @@ class ReservationForm extends React.Component {
   handleClick(e) {
     e.preventDefault();
     this.props.createReservation(this.state);
+
     this.props.history.push("/reservations");
+    
   }
 
   update(field) {
@@ -25,7 +27,7 @@ class ReservationForm extends React.Component {
   }
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     return <>
       <div>hello from the reservation form</div>
       <div className="reservation-form-container">
