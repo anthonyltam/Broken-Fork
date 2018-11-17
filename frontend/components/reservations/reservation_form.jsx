@@ -30,7 +30,7 @@ class ReservationForm extends React.Component {
   render() {
     console.log(this.state);
     return <>
-      <div>hello from the reservation form</div>
+      {/* <div>hello from the reservation form</div> */}
       <div className="reservation-form-container">
         <form className="reservation-form-content" onSubmit={this.handleClick}>
           <div className="reservation-form-title">Make A Reservation</div>
