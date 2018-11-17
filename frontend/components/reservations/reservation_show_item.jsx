@@ -6,10 +6,10 @@ class ReservationShowItem extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     return <>
       <h1>{this.props.reservation.restaurant_name}</h1>
       <ul>
+        <li>day: {this.props.reservation.day}</li>
         <li>start time: {this.props.reservation.start_time}</li>
         <li>end time: {this.props.reservation.end_time}</li>
       </ul>
