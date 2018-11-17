@@ -13,9 +13,7 @@ class ReservationsIndex extends React.Component {
     }
 
     return <>
-
-      <h1>Reservations page</h1> 
-      
+      <div>Reservations page</div> 
       <div>
         {this.props.reservations.map( res => {
           return <ReservationShowItem key={res.id} fetchRestaurant={this.props.fetchRestaurant} reservation={res} />;
