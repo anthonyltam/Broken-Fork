@@ -136,6 +136,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  // padding-left: 2%;
 }
 
 .filter-container {
@@ -233,21 +234,24 @@
 }
 
 .rest-container {
-  height: 170px;
+  height: 200px;
   width: 640px;
   display: flex;
-  padding: 14px;
+  padding-bottom: 2.5%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  margin-bottom: 2.5%;
 }
 
 .rest-name {
   color: #247f9e;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .rest-image {
-  height: 170px;
-  width: 170px;
+  height: 100%;
+  width: 200px;
   background-color: orange;
-  margin-right: 10px;
+  margin-right: 2%;
   border-radius: 4px;
 }

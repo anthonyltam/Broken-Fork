@@ -32,7 +32,6 @@ User.create(
 );
 
 
-
 ######## RESTAURANTS #########
 
 Restaurant.destroy_all
