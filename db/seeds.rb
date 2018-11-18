@@ -5,8 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Reservation.destroy_all
-Review.destroy_all
+
+
+
+########## USERS ###########
 
 User.destroy_all
 User.create(
@@ -15,9 +17,21 @@ User.create(
     first_name: 'Demo',
     last_name: 'User',
     password: 'starwars',
-    location: 'sf',
+    location: 'SF',
   }
 );
+
+User.create(
+  {
+    email: 'feebo',
+    first_name: 'feebo',
+    last_name: 'feebo',
+    password: 'starwars',
+    location: 'SF',
+  }
+);
+
+
 
 ######## RESTAURANTS #########
 
@@ -28,8 +42,8 @@ rest1 = Restaurant.create(
     description: 'The best food on the planet!',
     location: 'Millbrae',
     cuisines: 'Everything',
-    hours_of_operation: '12:00-1:00',
-    tables: 1,
+    hours_of_operation: '10:00 - 24:00',
+    tables: 52
   }
 )
 rest1.photo.attach(io: File.open('app/assets/images/feebo-restaurant.jpg'), filename: 'feebo.jpg')
@@ -40,8 +54,8 @@ rest2 = Restaurant.create(
     description: 'Pretty good food',
     location: 'San Francisco',
     cuisines: 'Italian',
-    hours_of_operation: '12:00-2:00',
-    tables: 2
+    hours_of_operation: '10:00 - 24:00',
+    tables: 36
   }
 )
 rest2.photo.attach(io: File.open('app/assets/images/italian.jpg'), filename: 'italian.jpg')
@@ -52,8 +66,8 @@ rest3 = Restaurant.create(
     description: 'Meh food',
     location: 'New York',
     cuisines: 'American',
-    hours_of_operation: '3:00-6:00',
-    tables: 3
+    hours_of_operation: '10:00 - 24:00',
+    tables: 120
   }
 )
 rest3.photo.attach(io: File.open('app/assets/images/spoon.jpg'), filename: 'spoon.jpg')
@@ -64,9 +78,12 @@ rest4 = Restaurant.create(
     description: 'do not eat here',
     location: 'Los Angeles',
     cuisines: 'Mexican',
-    hours_of_operation: '5:00-8:00',
-    tables: 4
+    hours_of_operation: '10:00 - 24:00',
+    tables: 20
   }
 )
 rest4.photo.attach(io: File.open('app/assets/images/gigis.jpg'), filename: 'gigis.jpg')
 
+
+Review.destroy_all
+Reservation.destroy_all
