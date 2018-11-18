@@ -36,13 +36,21 @@ class RestaurantShowItem extends React.Component {
           <div className="rest-page-title">
             {this.props.restaurant.name}
           </div>
+
+          <div className='review-stars-cont'>
+            <div className="review-stars"></div> 
+            <div className="review-stars-rating">4.4</div>
+          </div>
+
           <div className="rest-page-description">
             Description: {this.props.restaurant.description}
           </div>
-          Location: {this.props.restaurant.location}
-          Cuisines: {this.props.restaurant.cuisines}
-          Hours of Operation: {this.props.restaurant.hours_of_operation}
-          Tables: {this.props.restaurant.tables}
+
+          <div>Location: {this.props.restaurant.location}</div>
+          <div>Cuisines: {this.props.restaurant.cuisines}</div>
+          <div>Hours of Operation: {this.props.restaurant.hours_of_operation}</div>
+          <div>Tables: {this.props.restaurant.tables}</div>
+
         </div>
 
         <div className="review-container">
