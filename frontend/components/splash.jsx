@@ -27,13 +27,22 @@ class Splash extends React.Component {
             <input className='date' type='date'></input>
 
             <select className='time'>
+              <option value=''>Select A Time</option>
+              <option value='10:00'>10:00</option>
+              <option value='11:00'>11:00</option>
               <option value='12:00'>12:00</option>
-              <option value='12:30'>12:30</option>
               <option value='1:00'>1:00</option>
-              <option value='1:30'>1:30</option>
               <option value='2:00'>2:00</option>
-              <option value='2:30'>2:30</option>
               <option value='3:00'>3:00</option>
+              <option value='4:00'>4:00</option>
+              <option value='5:00'>5:00</option>
+              <option value='6:00'>6:00</option>
+              <option value='7:00'>7:00</option>
+              <option value='8:00'>8:00</option>
+              <option value='9:00'>9:00</option>
+              <option value='10:00'>10:00</option>
+              <option value='11:00'>11:00</option>
+              <option value='12:00'>12:00</option>
             </select>
 
             <select className='box-num-guests'>
@@ -41,6 +50,10 @@ class Splash extends React.Component {
               <option value="2">2 people</option>
               <option value="3">3 people</option>
               <option value="4">4 people</option>
+              <option value="5">5 people</option>
+              <option value="6">6 people</option>
+              <option value="7">7 people</option>
+              <option value="8">8 people</option>
             </select>
 
         </div>
