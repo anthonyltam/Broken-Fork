@@ -7,19 +7,20 @@ class ReservationShowItem extends React.Component {
 
   render() {
     return <>
-      <h1>{this.props.reservation.restaurant_name}</h1>
-      <ul>
-        <li>day: {this.props.reservation.day}</li>
-        <li>start time: {this.props.reservation.start_time}</li>
-        <li>end time: {this.props.reservation.end_time}</li>
-      </ul>
+        <div className="reservation-item">
+          <div className="reservation-info">
+            <h3>{this.props.reservation.restaurant_name}</h3>
+            <div>
+              <div>Day: {this.props.reservation.day}</div>
+              <div>Time: {this.props.reservation.start_time}:00</div>
+            </div>
 
-      <button 
-        className='delete-reservation'
-        onClick={ () => this.props.deleteReservation(this.props.reservation.id)}>
-        X
-      </button>
-    </>;
+            <button className="delete-reservation" onClick={() => this.props.deleteReservation(this.props.reservation.id)}>
+              X
+            </button>
+          </div>
+        </div>
+      </>;
   }
 }
 

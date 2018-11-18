@@ -13,7 +13,7 @@ class ReservationsIndex extends React.Component {
     }
 
     return <>
-      <div>Reservations page</div> 
+      <h1 className='all-reservations'>All Reservations</h1> 
       <div>
         {this.props.reservations.map( res => {
           return <ReservationShowItem key={res.id} deleteReservation={this.props.deleteReservation} reservation={res} />;
