@@ -14,8 +14,7 @@ class RestaurantIndex extends React.Component {
   }
 
   render() {
-    return (
-      <>
+    return <>
         <div className="link-nav">
           <Link className="link-nav-child" to="/">
             Home
@@ -24,11 +23,11 @@ class RestaurantIndex extends React.Component {
         </div>
 
         <div className="index-nav">
-          <div className="box-form">
-            <div className="box-dropdowns">
-              <input className="date" type="date" />
+          <div className="rest-box-form">
+            <div className="rest-box-dropdowns">
+              <input className="rest-date" type="date" />
 
-              <select className="time">
+              <select className="rest-box-time">
                 <option value="12:00">12:00</option>
                 <option value="12:30">12:30</option>
                 <option value="1:00">1:00</option>
@@ -52,7 +51,7 @@ class RestaurantIndex extends React.Component {
                 <option value="10:00">10:00</option>
               </select>
 
-              <select className="box-num-guests">
+              <select className="rest-box-num-guests">
                 <option value="1">1 person</option>
                 <option value="2">2 people</option>
                 <option value="3">3 people</option>
@@ -63,16 +62,16 @@ class RestaurantIndex extends React.Component {
                 <option value="8">8 people</option>
               </select>
             </div>
-            <input className="box-search" type="text" placeholder="Location, Restaurant, or Cuisine" />
-            <button className="box-go">
-              Let's Go
-            </button>
+            
+            <input className="rest-box-search" type="text" placeholder="Location, Restaurant, or Cuisine" />
+            <button className="rest-box-go">Let's Go</button>
+
           </div>
         </div>
 
         <div className="parent-container">
           <RestaurantFilter />
-          
+
           <div className="results-container">
             <div className="tables-match">
               <span className="rest-available">
@@ -92,9 +91,7 @@ class RestaurantIndex extends React.Component {
             </ul>
           </div>
         </div>
-        
-      </>
-    );
+      </>;
   }
 }
 

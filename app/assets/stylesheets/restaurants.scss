@@ -26,7 +26,7 @@
   font-size: 14.4px;
   font-weight: 600;
   color: rgb(45, 51, 63);
-  padding-left: 5%;
+  padding-left: 2.5%;
   width: 300px;
 }
 
@@ -324,4 +324,63 @@
   text-align: center;
   line-height: 2.6;
   font-size: 14px;
+}
+
+
+
+// SEARCH BAR REST INDEX
+
+
+.rest-box-form {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  height: 50%;
+}
+
+.rest-box-dropdowns {
+  display: flex;
+  width: 40%;
+}
+
+.rest-box-num-guests {
+  -webkit-appearance: none;
+  height: 100%;
+  width: 33.3%;
+  border: transparent;
+  border-radius: 0px 4px 4px 0px;
+  padding-left: 2.5%;
+}
+
+.rest-box-time {
+  -webkit-appearance: none;
+  height: 100%;
+  width: 33.3%;
+  border-right-style: solid;
+  border-color: lightgray;
+  border-width: thin;
+  border-radius: 0px;
+  padding-left: 2.5%;
+}
+
+.rest-date {
+  -webkit-appearance: none;
+  width: 33.3%;
+  border: transparent;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.rest-box-search {
+  border-radius: 4px;
+  width: 25%;
+  padding-left: 2.5%;
+  border: transparent;
+}
+
+.rest-box-go {
+  color: white;
+  background-color: #da3743;
+  border-radius: 4px;
+  border: transparent;
+  width: 15%;
 }

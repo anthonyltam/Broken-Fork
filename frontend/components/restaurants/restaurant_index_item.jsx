@@ -30,11 +30,11 @@ class RestaurantIndexItem extends React.Component {
               </div>
 
               <div className='rest-reservation-cont-row'>
-                <div className='rest-reserve-time'>6:30 PM</div>
-                <div className='rest-reserve-time'>6:45 PM</div>
-                <div className='rest-reserve-time'>7:00 PM </div>
-                <div className='rest-reserve-time'>7:15 PM </div>
-                <div className='rest-reserve-time'>7:30 PM</div>
+                <div className='rest-reserve-time'>6:00 PM</div>
+                <div className='rest-reserve-time'>7:00 PM</div>
+                <div className='rest-reserve-time'>8:00 PM </div>
+                <div className='rest-reserve-time'>9:00 PM </div>
+                <div className='rest-reserve-time'>10:00 PM</div>
               </div>
 
             </div>
