@@ -36,7 +36,7 @@ class ReservationForm extends React.Component {
   }
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     return <>
         <div className="reservation-form-container">
           <form className="reservation-form-content" onSubmit={this.handleClick}>
@@ -84,7 +84,7 @@ class ReservationForm extends React.Component {
           </div>
             <input className="reservation-submit-button" type="submit" value="Find A Table"></input>
 
-            <div className="booked-times">Booked 10 times today</div>
+            {/* <div className="booked-times">Booked 10 times today</div> */}
           </form>
         </div>
       </>;

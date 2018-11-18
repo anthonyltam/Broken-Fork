@@ -30,14 +30,12 @@
 .reservation-time-cont {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  border-top: 1px solid #0000001f;
   padding-bottom: 2.5%;
   padding-top: 2.5%;
 }
 
 .reservation-time-text {
-  // border-top: 1px solid rgba(0, 0, 0, 0.12);
   padding-top: 2.5%;
   font-weight: bold;
 }
@@ -46,7 +44,7 @@
   -webkit-appearance: none;
   border: 1p solid rgba(0, 0, 0, 0.12);
   align-content: center;
-  height: 10%;
+  height: 15%;
   width: 35%;
   padding-left: 3.5%;
   margin-bottom: 2.5%;
@@ -54,11 +52,14 @@
 }
 
 .reservation-submit-button {
+  cursor: pointer;
   width: 100%;
   height: 10%;
   color: white;
-  background-color: #da3743;;
+  background-color: #da3743;
   border-radius: 5px;
+  font-size: 16px;
+  border: transparent;
 }
 
 .booked-times {
