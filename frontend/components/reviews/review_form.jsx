@@ -14,7 +14,6 @@ class ReviewForm extends React.Component {
     };
 
     this.handleClick = this.handleClick.bind(this);
-    // this.update = this.update.bind(this);
   }
 
   handleClick(e) {
@@ -32,7 +31,6 @@ class ReviewForm extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     return <>
         <div className="review-form-container">
           <form className="review-form-content" onSubmit={this.handleClick}>

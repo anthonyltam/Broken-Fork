@@ -40,7 +40,7 @@ const App = () => (
       <Route exact path="/" component={Splash} />
       <Route exact path="/restaurants" component={RestaurantContainer} />
       <Route path="/restaurants/:id" component={RestaurantShowContainer} />
-    <Route exact path='/reservations' component={ReservationsContainer} />
+      <Route exact path='/reservations' component={ReservationsContainer} />
       <Route path="/" component={NoMatch} />
     </Switch>
 

@@ -15,43 +15,45 @@ class RestaurantShowItem extends React.Component {
       return null;
     }
 
-    let review;
+    let reviewForm;
     if (this.props.currentUser) {
-      review = 
+      reviewForm = 
       <ReviewFormContainer restaurant={this.props.restaurant} />;
     }
     
-    let reservation;
+    let reservationForm;
     if (this.props.currentUser) {
-      reservation = 
+      reservationForm = 
       <ReservationFormContainer history={this.props.history} restaurant={this.props.restaurant} />;
     }
 
-    // console.log(this.props)
-    return (
-      <>
-        <div className='show-top-background'>
-          <img className='rest-image' src={this.props.restaurant.photo_url} ></img>
+    return <>
+        <div className="show-top-background">
+          <img className="rest-image" src={this.props.restaurant.photo_url} />
         </div>
 
-        <div className='rest-page-title'>{this.props.restaurant.name}</div>
+        <div className="rest-show-container">
+          <div className="rest-page-title">
+            {this.props.restaurant.name}
+          </div>
+          <div className="rest-page-description">
+            Description: {this.props.restaurant.description}
+          </div>
+          Location: {this.props.restaurant.location}
+          Cuisines: {this.props.restaurant.cuisines}
+          Hours of Operation: {this.props.restaurant.hours_of_operation}
+          Tables: {this.props.restaurant.tables}
+        </div>
 
-        Description: {this.props.restaurant.description}
-        Location: {this.props.restaurant.location}
-        Cuisines: {this.props.restaurant.cuisines}
-        Hours of Operation: {this.props.restaurant.hours_of_operation}
-        Tables: {this.props.restaurant.tables}
-
-        <div className='review-container'>
-          {this.props.reviews.map( rev => {
-            return <Reviews props={this.props} key={rev.id} review={rev}/>;
+        <div className="review-container">
+          {this.props.reviews.map(rev => {
+            return <Reviews props={this.props} key={rev.id} review={rev} />;
           })}
-        </div>  
+        </div>
 
-        { review }
-        { reservation }
-      </>
-    );
+        {reviewForm}
+        {reservationForm}
+      </>;
   }
 }
 

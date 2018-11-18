@@ -3,7 +3,7 @@ import { signOut, signIn } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
 import Greeting from './greeting';
 
-const msp = ({ session, entities: { users } }) => {
+const msp = ({ session, history, entities: { users } }) => {
   return {
     currentUser: users[session.id]
   };
@@ -13,7 +13,7 @@ const mdp = dispatch => {
   return {
     signOut: () => dispatch(signOut()),
     openModal: modal => dispatch(openModal(modal)),
-    singIn: (user) => dispatch(signIn(user)),
+    signIn: (user) => dispatch(signIn(user)),
     demoLogin: () => dispatch(signIn({email: 'DemoUser', password: 'starwars' }))
   };
 };

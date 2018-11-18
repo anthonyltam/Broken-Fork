@@ -8,11 +8,27 @@
 }
 
 .rest-image {
-  height: inherit;
+  // height: inherit;
+}
+
+.rest-show-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 45%;
+  margin-right: 25%;
+  margin-left: 15%;
+  font-family: Arial, Helvetica, sans-serif;
+
+  border: 1px solid black;
 }
 
 .rest-page-title {
-  border: 1px solid black;
-  height: 5%;
-  width: 100%;
+  font-weight: bold;
+  font-size: 40px;
+  color: rgb(24, 24, 24);
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
+

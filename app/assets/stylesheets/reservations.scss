@@ -1,4 +1,6 @@
 .all-reservations {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  padding-top: 2.5%;
   margin-top: 5%;
   margin-bottom: 2.5%;
   text-align: center;
@@ -32,7 +34,7 @@
 
 .delete-reservation {
   cursor: pointer;
-  color: red;
+  color: #da3743;
   font-weight: 600;
   font-size: 40px;
   -webkit-appearance: none;

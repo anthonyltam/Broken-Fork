@@ -1,7 +1,6 @@
 import React from 'react';
 import DropDownProfile from '../dropdowns/dropdown_profile';
 
-// const Greeting = ({ currentUser, signOut, signIn, openModal, demoLogin }) => {
 class Greeting extends React.Component {
   constructor(props) {
     super(props);
@@ -27,9 +26,8 @@ class Greeting extends React.Component {
 
     const personalGreeting = (
       <header>
-
         <div className="profile-dropdown" onClick={ (e) => this.handleDropDown(e) }>Hi, {currentUser && currentUser.first_name}
-          {this.state.dropdown && <DropDownProfile signOut={signOut} />}
+          {this.state.dropdown && <DropDownProfile props={this.props} signOut={signOut} />}
         </div>
 
       </header>
