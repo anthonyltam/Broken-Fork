@@ -29,7 +29,7 @@ class RestaurantShowItem extends React.Component {
 
     return <>
         <div className="show-top-background">
-          <img className="rest-image" src={this.props.restaurant.photo_url} />
+          <img className="show-page-rest-image" src={this.props.restaurant.photo_url} />
         </div>
 
         {/*  */}

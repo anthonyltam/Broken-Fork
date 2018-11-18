@@ -1,5 +1,5 @@
 .show-top-background {
-  height: 200px;
+  height: 300px;
   width: 100%;
   background-color: #2d333f;
   display: flex;
@@ -7,8 +7,10 @@
   align-items: center;
 }
 
-.rest-image {
-  // height: inherit;
+
+.show-page-rest-image {
+  height: 100%;
+  width: 45%;
 }
 
 .rest-show-container {
@@ -20,7 +22,6 @@
   margin-left: 15%;
   font-family: Arial, Helvetica, sans-serif;
   color: #2d333f;
-  // border: 1px solid black;
 }
 
 .rest-page-title {
