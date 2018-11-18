@@ -39,7 +39,8 @@ Restaurant.destroy_all
 rest1 = Restaurant.create(
   {
     name: 'Feebos',
-    description: 'The best food on the planet!',
+    description: 'All types of Cuisine Done With Precision"-New York Times A Blend Of Local, Seasonal 
+    and Organic Ingredients Prepared Using Classic and Modern Technique. The best food on the planet!',
     location: 'Millbrae',
     cuisines: 'Everything',
     hours_of_operation: '10:00 - 24:00',
@@ -51,7 +52,10 @@ rest1.photo.attach(io: File.open('app/assets/images/feebo-restaurant.jpg'), file
 rest2 = Restaurant.create(
   {
     name: 'Ceces',
-    description: 'Pretty good food',
+    description: 'Ceces, bringing a taste of Italy to San Francisco. With a focus on the regions of Rome 
+    and Tuscany we offer fresh, house made pastas and pizzas, both available gluten free, house cured meats, 
+    seafood crudo and many other delicacies. We feature hand crafted cocktails and soft drinks in our full bar. 
+    We offer patio dining with views of the estuary.',
     location: 'San Francisco',
     cuisines: 'Italian',
     hours_of_operation: '10:00 - 24:00',
@@ -63,7 +67,9 @@ rest2.photo.attach(io: File.open('app/assets/images/italian.jpg'), filename: 'it
 rest3 = Restaurant.create(
   {
     name: 'The Crooked Spoon',
-    description: 'Meh food',
+    description: 'Rising Star Chef Nominee by the Feebo Phoebe Foundation, Founder Chef Anthony, 
+    at The Crooked Spoon has received many accolades from five consecutive years on the Chronicle\'s 
+    Top 100 American Restaurant List to the Top 40 in Zagat. This is a restaurant not to be missed in New York.',
     location: 'New York',
     cuisines: 'American',
     hours_of_operation: '10:00 - 24:00',
@@ -75,7 +81,11 @@ rest3.photo.attach(io: File.open('app/assets/images/spoon.jpg'), filename: 'spoo
 rest4 = Restaurant.create(
   {
     name: 'Gigis',
-    description: 'do not eat here',
+    description: 'Gigi\'s diverse menu celebrates the unique and layered gastronomy of Mexico. 
+    Using traditional ingredients and techniques, Chef Gigi presents both new and familiar Mexican 
+    flavors with an inspired, modern perspective. Gigi\'s offers a full bar with an extensive 
+    tequila and mezcal collection, as well as innovative cocktails. Come enjoy the spirit of Mexico 
+    in an artistic, comfortable environment in Los Angeles!',
     location: 'Los Angeles',
     cuisines: 'Mexican',
     hours_of_operation: '10:00 - 24:00',
