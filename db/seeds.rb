@@ -23,11 +23,21 @@ User.create(
 
 User.create(
   {
-    email: 'feebo',
+    email: 'Feebo',
     first_name: 'feebo',
     last_name: 'feebo',
     password: 'starwars',
-    location: 'SF',
+    location: 'Millbrae',
+  }
+);
+
+User.create(
+  {
+    email: 'Meggy',
+    first_name: 'meggy',
+    last_name: 'meggy',
+    password: 'starwars',
+    location: 'NY',
   }
 );
 
@@ -46,7 +56,7 @@ rest1 = Restaurant.create(
     tables: 52
   }
 )
-rest1.photo.attach(io: File.open('app/assets/images/feebo-restaurant.jpg'), filename: 'feebo.jpg')
+rest1.photo.attach(io: File.open('app/assets/images/feebo-rest.jpg'), filename: 'feebo.jpg')
 
 rest2 = Restaurant.create(
   {
@@ -92,6 +102,33 @@ rest4 = Restaurant.create(
   }
 )
 rest4.photo.attach(io: File.open('app/assets/images/gigis.jpg'), filename: 'gigis.jpg')
+
+rest5 = Restaurant.create(
+  {
+    name: 'Fiery Restaurant',
+    description: 'A new kind of Argentinian steakhouse that combines Latin American flavors with 
+    Californian sensibilities.',
+    location: 'San Francisco',
+    cuisines: 'Argentenian',
+    hours_of_operation: '10:00 - 24:00',
+    tables: 50
+  }
+)
+rest5.photo.attach(io: File.open('app/assets/images/argen.jpg'), filename: 'argen.jpg')
+
+
+rest6 = Restaurant.create(
+  {
+    name: 'SEASIDE',
+    description: 'At SEASIDE, Chef AndTony serves coastal cuisine with French influence. The menu changes daily depending on what\'s fresh. Expect exciting combinations and show-stopping execution.',
+    location: 'San Francisco',
+    cuisines: 'Seafood',
+    hours_of_operation: '10:00 - 24:00',
+    tables: 24
+  }
+)
+rest6.photo.attach(io: File.open('app/assets/images/watery-rest.jpg'), filename: 'watery-rest.jpg')
+
 
 
 Review.destroy_all
