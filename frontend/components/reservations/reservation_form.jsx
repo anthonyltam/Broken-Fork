@@ -1,7 +1,5 @@
 import React from 'react';
 import DayPicker from "react-day-picker";
-// import "react-day-picker/lib/style.css";
-import TimePicker from "rc-time-picker";
 
 class ReservationForm extends React.Component {
   constructor(props) {
@@ -20,11 +18,8 @@ class ReservationForm extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-    console.log('blue')
     this.props.createReservation(this.state);
-
     this.props.history.push("/reservations");
-    
   }
 
   update(event) {
@@ -54,7 +49,8 @@ class ReservationForm extends React.Component {
               />
             </div>
 
-            {/* <div className="reservation-time-cont"> */}
+            <div className="reservation-time-cont">
+           
             <label className="reservation-time-text">Reservation Time</label>
             {/* <input type="time" value={this.state.start_time} onChange={this.update("start_time")} placeholder="12" /> */}
             <select className="reservation-time-option" onChange={ e => this.update(e)}>
@@ -68,7 +64,7 @@ class ReservationForm extends React.Component {
               <option value="7">7:00</option>
               <option value="8">8:00</option>
             <option value="9">9:00</option> */}
-              <option value="" selected>Please Select A Time</option>
+              <option value="" selected>Select A Time</option>
               <option value="10">10:00</option>
               <option value="11">11:00</option>
               <option value="12">12:00</option>
@@ -85,8 +81,7 @@ class ReservationForm extends React.Component {
               <option value="23">23:00</option>
               <option value="24">24:00</option>
             </select>
-            {/* </div> */}
-
+          </div>
             <input className="reservation-submit-button" type="submit" value="Find A Table"></input>
 
             <div className="booked-times">Booked 10 times today</div>
