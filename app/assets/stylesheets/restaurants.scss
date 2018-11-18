@@ -202,6 +202,7 @@
 }
 
 .time-pin {
+  // border: 1px solid black;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url('https://s3-us-west-1.amazonaws.com/brokenfork-dev/clock.png');
@@ -219,6 +220,9 @@
   margin-right: 2%;
 }
 
+// .pin {
+//   justify-content: center;
+// }
 
 //////////////////////////////////////////////////////
 ////////////////// RESTAURANTS ///////////////////////

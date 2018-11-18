@@ -32,28 +32,57 @@ class RestaurantShowItem extends React.Component {
           <img className="rest-image" src={this.props.restaurant.photo_url} />
         </div>
 
+        {/*  */}
+        {/* RESTAURANT INFO */}
+        {/*  */}
         <div className="rest-show-container">
           <div className="rest-page-title">
             {this.props.restaurant.name}
           </div>
 
-          <div className='review-stars-cont'>
+          <div className='review-stars-cont margin-bot-pleasee'>
             <div className="review-stars"></div> 
-            <div className="review-stars-rating">4.4</div>
+            <div className="review-stars-rating">4.4 Average Rating</div>
           </div>
 
-          <div className="rest-page-description">
+          <div className="rest-page-description margin-bot-pleasee">
             Description: {this.props.restaurant.description}
           </div>
 
-          <div>Location: {this.props.restaurant.location}</div>
-          <div>Cuisines: {this.props.restaurant.cuisines}</div>
-          <div>Hours of Operation: {this.props.restaurant.hours_of_operation}</div>
-          <div>Tables: {this.props.restaurant.tables}</div>
+
+
+          <div className="rest-info-section">
+            <div className="region-pin pin"></div>
+          <div className="next-to-pin">Location</div>
+          </div>
+          <div className="margin-bot-please">{this.props.restaurant.location}</div>
+
+          <div className="rest-info-section">
+            <div className="cuisine-pin pin "></div>
+            <div className="next-to-pin">Cuisine</div>
+          </div>
+          <div className="margin-bot-please">{this.props.restaurant.cuisines}</div>       
+ 
+          <div className="rest-info-section">
+            <div className="seats-pin pin"></div>
+            <div className="next-to-pin">Number of Tables</div>
+          </div>
+          <div className="margin-bot-please">{this.props.restaurant.tables}</div>
+
+          <div className="rest-info-section">
+            <div className="time-pin pin"></div>
+            <div className="next-to-pin">Hours of Operation</div>
+          </div>
+          <div className="margin-bot-please">{this.props.restaurant.hours_of_operation}</div>
 
         </div>
 
+        {/*  */}
+        {/* REVIEWS */}
+        {/*  */}
         <div className="review-container">
+          <div className="reviews-rest-show-title">Reviews</div>
+
           {this.props.reviews.map(rev => {
             return <Reviews props={this.props} key={rev.id} review={rev} />;
           })}
