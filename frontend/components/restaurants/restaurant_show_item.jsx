@@ -46,7 +46,7 @@ class RestaurantShowItem extends React.Component {
           </div>
 
           <div className="rest-page-description margin-bot-pleasee">
-            Description: {this.props.restaurant.description}
+            {this.props.restaurant.description}
           </div>
 
 
