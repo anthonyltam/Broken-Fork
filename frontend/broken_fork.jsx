@@ -4,9 +4,11 @@ import configureStore from './store/store';
 import Root from './components/root';
 import { createReview, fetchReviews, fetchRestaurant} from "./actions/restaurant_actions.js";
 import { createReservation, deleteReservation, fetchReservations } from "./actions/reservation_actions.js";
+import { searchRestaurants } from './util/restaurant_api_util';
 
 
 document.addEventListener('DOMContentLoaded', () => {
+  window.search = searchRestaurants; 
   let store;
    if (window.currentUser) {
      const preloadedState = {

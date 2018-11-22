@@ -51,7 +51,7 @@ rest1 = Restaurant.create(
     description: 'All types of Cuisine Done With Precision"-New York Times A Blend Of Local, Seasonal 
     and Organic Ingredients Prepared Using Classic and Modern Technique. The best food on the planet!',
     location: 'Millbrae',
-    cuisines: 'Everything',
+    cuisines: 'everything',
     hours_of_operation: '10:00 - 24:00',
     tables: 52
   }
@@ -66,7 +66,7 @@ rest2 = Restaurant.create(
     seafood crudo and many other delicacies. We feature hand crafted cocktails and soft drinks in our full bar. 
     We offer patio dining with views of the estuary.',
     location: 'San Francisco',
-    cuisines: 'Italian',
+    cuisines: 'italian',
     hours_of_operation: '10:00 - 24:00',
     tables: 36
   }
@@ -80,7 +80,7 @@ rest3 = Restaurant.create(
     at The Crooked Spoon has received many accolades from five consecutive years on the Chronicle\'s 
     Top 100 American Restaurant List to the Top 40 in Zagat. This is a restaurant not to be missed in New York.',
     location: 'New York',
-    cuisines: 'American',
+    cuisines: 'american',
     hours_of_operation: '10:00 - 24:00',
     tables: 120
   }
@@ -96,7 +96,7 @@ rest4 = Restaurant.create(
     tequila and mezcal collection, as well as innovative cocktails. Come enjoy the spirit of Mexico 
     in an artistic, comfortable environment in Los Angeles!',
     location: 'Los Angeles',
-    cuisines: 'Mexican',
+    cuisines: 'mexican',
     hours_of_operation: '10:00 - 24:00',
     tables: 20
   }
@@ -109,7 +109,7 @@ rest5 = Restaurant.create(
     description: 'A new kind of Argentinian steakhouse that combines Latin American flavors with 
     Californian sensibilities.',
     location: 'San Francisco',
-    cuisines: 'Argentenian',
+    cuisines: 'argentenian',
     hours_of_operation: '10:00 - 24:00',
     tables: 50
   }
@@ -122,7 +122,7 @@ rest6 = Restaurant.create(
     name: 'SEASIDE',
     description: 'At SEASIDE, Chef AndTony serves coastal cuisine with French influence. The menu changes daily depending on what\'s fresh. Expect exciting combinations and show-stopping execution.',
     location: 'San Francisco',
-    cuisines: 'Seafood',
+    cuisines: 'seafood',
     hours_of_operation: '10:00 - 24:00',
     tables: 24
   }
