@@ -154,11 +154,16 @@
 }
 
 .filter-box {
+  cursor: pointer;
   height: 15px;
   width: 15px;
   border: 2px solid black;
   border-radius: 4px;
   margin-right: 2%;
+}
+
+.filter-box:active {
+  background-color: black;
 }
 
 .filter-section {

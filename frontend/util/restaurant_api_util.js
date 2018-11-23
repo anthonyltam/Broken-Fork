@@ -28,13 +28,13 @@ export const fetchReviews = restaurant_id => {
   });
 };
 
-export const fetchCuisine = cuisines => {
-  return $.ajax({
-    method: "GET",
-    url: `api/restaurants`,
-    data: { cuisines }
-  });
-};
+// export const fetchCuisine = cuisines => {
+//   return $.ajax({
+//     method: "GET",
+//     url: `api/restaurants`,
+//     data: { cuisines }
+//   });
+// };
 
 export const searchRestaurants = search => {
   return $.ajax({

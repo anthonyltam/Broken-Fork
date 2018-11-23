@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-import { createReview, fetchReviews, fetchRestaurant} from "./actions/restaurant_actions.js";
+import { createReview, fetchReviews, fetchRestaurant, searchRestaurants} from "./actions/restaurant_actions.js";
 import { createReservation, deleteReservation, fetchReservations } from "./actions/reservation_actions.js";
-import { searchRestaurants } from './util/restaurant_api_util';
+
+// import { searchRestaurants } from './util/restaurant_api_util';
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  window.search = searchRestaurants; 
+document.addEventListener('DOMContentLoaded', () => {  
   let store;
    if (window.currentUser) {
      const preloadedState = {
@@ -39,6 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
     restaurant_id: 6,
     rating: 5
   };
+  
+  window.search = searchRestaurants; 
+
 
   window.createReservation = createReservation;
   window.deleteReservation = deleteReservation;
