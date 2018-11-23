@@ -10,7 +10,7 @@ class RestaurantIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchRestaurants();
+    // this.props.fetchRestaurants();
   }
 
   render() {

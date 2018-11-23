@@ -43,10 +43,10 @@ export const fetchReviews = (id) => dispatch => {
 };
 
 export const searchRestaurants = (search) => dispatch => {
-  APIUtil.searchRestaurants(search).then(rests => {
+  APIUtil.searchRestaurants(search).then(restaurants => {
     dispatch({
       type: RECEIVE_RESTAURANTS,
-      rests
+      restaurants
     });
   });
 };

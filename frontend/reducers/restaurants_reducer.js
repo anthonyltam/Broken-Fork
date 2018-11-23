@@ -7,7 +7,9 @@ const restaurantsReducer = (state = {}, action) => {
   let newState = merge({}, state);
   switch (action.type) {
     case RECEIVE_RESTAURANTS:
-      return merge(newState, action.restaurants);
+      // debugger
+      // return merge(newState, action.restaurants);
+      return action.restaurants;
     case RECEIVE_RESTAURANT:
       newState[action.restaurant.id] = action.restaurant;
       return newState;
