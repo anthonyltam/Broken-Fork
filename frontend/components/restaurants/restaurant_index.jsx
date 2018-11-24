@@ -4,10 +4,9 @@ import RestaurantIndexItem from './restaurant_index_item';
 import RestaurantFilter from './restaurant_filter';
 
 class RestaurantIndex extends React.Component {
-  constructor(props) {
-    super(props);
-
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   componentDidMount() {
     this.props.fetchRestaurants();
@@ -53,7 +52,7 @@ class RestaurantIndex extends React.Component {
               </select>
             </div>
 
-            <input className="rest-box-search" type="text" placeholder="Location, Restaurant, or Cuisine" />
+            <input className="rest-box-search" type="text" placeholder="Cuisine" />
             <button className="rest-box-go">Let's Go</button>
 
           </div>

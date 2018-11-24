@@ -13,7 +13,7 @@ class SearchBar extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log('hello from searchBar');
+    // console.log('hello from searchBar');
     this.props.searchRestaurants(this.state);
     this.props.history.push(`/restaurants?search=${this.state.cuisines}`);
   }
@@ -25,7 +25,7 @@ class SearchBar extends React.Component {
   render() {
     return (
       <>
-        <input className='box-search' type='text' placeholder='Location, Restaurant, or Cuisine' value={this.state.body} onChange={ this.update('cuisines')}></input>
+        <input className='box-search' type='text' placeholder='Cuisine' value={this.state.body} onChange={ this.update('cuisines')}></input>
         <button onClick={this.handleSubmit.bind(this)} className='box-go'>Let's Go</button>
       </>
     );
