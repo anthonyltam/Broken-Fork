@@ -262,12 +262,15 @@
 }
 
 .rest-image {
+  position: relative;
   height: 100%;
   width: 200px;
   background-color: orange;
   margin-right: 2%;
   border-radius: 4px;
+  max-width: 100%;
 }
+
 
 .rest-star-cont {
   display: flex;

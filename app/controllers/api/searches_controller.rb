@@ -1,8 +1,8 @@
 class Api::SearchesController < ApplicationController
 
   def index     
+    # debugger
     search = search_params['cuisines']
-    # p search.downcase
     @restaurants = Restaurant.where( 'cuisines' => search )
     if @restaurants 
       render :index

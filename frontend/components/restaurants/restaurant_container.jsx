@@ -8,9 +8,9 @@ const msp = state => {
   };
 };
 
-const mdp = dispatch => {
+const mdp = (dispatch, ownProps) => {
   return {
-    fetchRestaurants: () => dispatch(fetchRestaurants())
+    fetchRestaurants: () => dispatch(fetchRestaurants(ownProps.location.search))
   };
 };
 

@@ -1,8 +1,14 @@
-export const fetchRestaurants = () => {
-  return $.ajax({
-    method: "GET",
-    url: `api/restaurants`
-  });
+export const fetchRestaurants = (search='') => {
+  const data = search.slice(1).split('=');
+  const dataObj = {};
+  // for (let i = 0; i < data.length; i += 2) {
+    dataObj.cuisines = data[1];
+  // }
+
+  if (!dataObj.cuisines) {
+    return $.ajax({ method: "GET", url: `api/restaurants` });
+  } 
+  return searchRestaurants(dataObj);
 };
 
 export const fetchRestaurant = id => {
@@ -27,14 +33,6 @@ export const fetchReviews = restaurant_id => {
     data: { restaurant_id }
   });
 };
-
-// export const fetchCuisine = cuisines => {
-//   return $.ajax({
-//     method: "GET",
-//     url: `api/restaurants`,
-//     data: { cuisines }
-//   });
-// };
 
 export const searchRestaurants = search => {
   return $.ajax({

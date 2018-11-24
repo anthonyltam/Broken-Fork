@@ -8,7 +8,6 @@ const restaurantsReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_RESTAURANTS:
       // debugger
-      // return merge(newState, action.restaurants);
       return action.restaurants;
     case RECEIVE_RESTAURANT:
       newState[action.restaurant.id] = action.restaurant;

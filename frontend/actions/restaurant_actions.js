@@ -4,10 +4,9 @@ export const RECEIVE_RESTAURANTS = 'RECEIVE_RESTAURANTS';
 export const RECEIVE_RESTAURANT = 'RECEIVE_RESTAURANT';
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
-// export const SEARCH_RESTAURANTS = "SEARCH_RESTAURANTS";
 
-export const fetchRestaurants = () => dispatch => {
-   return APIUtil.fetchRestaurants().then(restaurants => {
+export const fetchRestaurants = (search) => dispatch => {
+   return APIUtil.fetchRestaurants(search).then(restaurants => {
     dispatch({
       type: RECEIVE_RESTAURANTS,
       restaurants
