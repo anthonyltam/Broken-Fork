@@ -131,7 +131,7 @@ rest6.photo.attach(io: File.open('app/assets/images/watery-rest.jpg'), filename:
 
 rest7 = Restaurant.create(
   {
-    name: 'Paddy\'s,'
+    name: 'Paddy\'s',
     description: 'We are the Bay Area’s leading fish house and we offer fresh, sustainable seafood with Pacific flavors in a decidedly WestCoast style. Our focus is on quality seafood with a unique perspective, inspired by the Pacific and prepared by our chefs in our scratch kitchen.',
     location: 'San Francisco',
     cuisines: 'seafood',
