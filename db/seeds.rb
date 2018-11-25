@@ -191,6 +191,119 @@ rest11 = Restaurant.create(
 rest11.photo.attach(io: File.open('app/assets/images/osteria.jpg'), filename: 'osteria.jpg')
 
 
+rest12 = Restaurant.create(
+  {
+    name: 'Frances',
+    description: 'Frances, the namesake of Chef / Owner Melissa Perello`s grandmother, is nestled between Noe and Sanchez on 17th Street in the heart of the Castro. This new addition to a bustling neighborhood hopes to lend a warm and comfortable space in which to enjoy its ingredient-driven dishes paired with a tall glass of wine. The menu changes frequently, ever-aiming to showcase the season’s finest offerings. Frances supports the shortest distance between the source and the table, bringing its guests local, sustainable and organic products when available.',
+    location: 'New York',
+    cuisines: 'greek',
+    hours_of_operation: '10:00 - 24:00',
+    tables: 50
+  }
+)
+rest12.photo.attach(io: File.open('app/assets/images/frances.jpg'), filename: 'frances.jpg')
+
+
+rest13 = Restaurant.create(
+  {
+    name: 'Salt & Pepper',
+    description: 'Fresh house-made pasta, wood-fired pizza, and house-cured meats. It’s all about simple and authentic Italian food rooted in the south, executed with skill, expertise and old world standards of care. The defining goal of the restaurant for its ambiance and style of service is to make everyone feel welcome. We feel very strongly about creating a come as you are atmosphere in the restaurant.',
+    location: 'Los Angeles',
+    cuisines: 'italian',
+    hours_of_operation: '10:00 - 24:00',
+    tables: 70
+  }
+)
+rest13.photo.attach(io: File.open('app/assets/images/Twisted-knife.JPG'), filename: 'twisted-knife.jpg')
+
+
+rest14 = Restaurant.create(
+  {
+    name: 'Neeebu',
+    description: 'Centrally located on the corner of 18th St. and Dolores St. in the Mission District; Namu Gaji is a family run restaurant that is dedicated to serving its community and neighborhood through personal, ingredient-driven food, much of which comes from our very own Namu Farm! 
+    Health, happiness, community, and responsibility are some of our core values.',
+    location: 'San Francisco',
+    cuisines: 'japanese',
+    hours_of_operation: '10:00 - 24:00',
+    tables: 80
+  }
+)
+rest14.photo.attach(io: File.open('app/assets/images/neeebu.jpg'), filename: 'neeebu.jpg')
+
+rest15 = Restaurant.create(
+  {
+    name: 'THE ELEPHANT ROOM',
+    description: 'Elephant Room Restaurant is a scratch-kitchen specializing in globally-inspired dishes and traditional, American fare. Our food is all made from scratch using the best, locally-sourced ingredients available. All of our cocktails are made fresh when you order, handcrafted in-house by our mixologists.',
+    location: 'San Francisco',
+    cuisines: 'greek',
+    hours_of_operation: '10:00 - 24:00',
+    tables: 100
+  }
+)
+rest15.photo.attach(io: File.open('app/assets/images/elephant-room.jpg'), filename: 'elephant-room.jpg')
+
+rest16 = Restaurant.create(
+  {
+    name: 'Puzzles',
+    description: 'Maybe that\'s the puzzle',
+    location: 'New York',
+    cuisines: 'american',
+    hours_of_operation: '10:00 - 24:00',
+    tables: 30
+  }
+)
+rest16.photo.attach(io: File.open('app/assets/images/puzzles.jpg'), filename: 'puzzles.jpg')
+
+rest17 = Restaurant.create(
+  {
+    name: 'Green Room',
+    description: 'Freshly grown, all of our dishes are comprised of ingredients grown locally from both markets and in-house.',
+    location: 'San Francisco',
+    cuisines: 'vegetarian',
+    hours_of_operation: '10:00 - 24:00',
+    tables: 20
+  }
+)
+rest17.photo.attach(io: File.open('app/assets/images/the-green-room.jpg'), filename: 'green-room.jpg')
+
+rest18 = Restaurant.create(
+  {
+    name: 'Blue Garden',
+    description: 'Blue Garden is a progressive Indian Table and Bar located in the heart of San Francisco’s burgeoning SoMa district. Meaning soul or spirit, Rooh brings the spirit of India to San Francisco through the restaurant experience. Renowned Executive Chef, Sujan Sarkar, delicately balances rich traditional flavors with fresh local ingredients prepared with modern techniques.',
+    location: 'San Mateo',
+    cuisines: 'indian',
+    hours_of_operation: '10:00 - 24:00',
+    tables: 26
+  }
+)
+rest18.photo.attach(io: File.open('app/assets/images/blue-garden.jpg'), filename: 'blue-garden.jpg')
+
+rest19 = Restaurant.create(
+  {
+    name: 'Emporium',
+    description: 'TBD.',
+    location: 'San Francisco',
+    cuisines: 'indian',
+    hours_of_operation: '10:00 - 24:00',
+    tables: 30
+  }
+)
+rest19.photo.attach(io: File.open('app/assets/images/emporium.png'), filename: 'emporium.png')
+
+rest20 = Restaurant.create(
+  {
+    name: 'The Lobby',
+    description: 'The Lobby is housed in an Art Deco architectural gem in the Uptown district of Oakland. We serve a selection of reinvented American classics accompanied by an extensive menu of prohibition era cocktails. Fauna is our sister bar next door! Corkage fee is $20 per bottle and 18% gratuity is added to parties of 6 or more.',
+    location: 'San Francisco',
+    cuisines: 'american',
+    hours_of_operation: '10:00 - 24:00',
+    tables: 40
+  }
+)
+rest20.photo.attach(io: File.open('app/assets/images/the-lobby.jpg'), filename: 'lobby.jpg')
+
+
+
 
 Review.destroy_all
 Reservation.destroy_all
