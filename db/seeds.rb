@@ -317,7 +317,7 @@ rest21.photo.attach(io: File.open('app/assets/images/bota.jpg'), filename: 'bota
 rest22 = Restaurant.create(
   {
     name: 'The Divide',
-    description: 'Located in LA, The Divide serves Eastern Mediterranean food that stays true to its origin. Our menu, changing daily, is focused on the less known edibles of the region, traditionally prepared at home. Bringing forth the common cuisine of Turkey, Greece, the Levant and Iran, a commonality driven by regional proximity and a shared history. Our dishes are made with seasonal produce, and locally sourced, sustainibly raised and caught meats and seafood.'
+    description: 'Located in LA, The Divide serves Eastern Mediterranean food that stays true to its origin. Our menu, changing daily, is focused on the less known edibles of the region, traditionally prepared at home. Bringing forth the common cuisine of Turkey, Greece, the Levant and Iran, a commonality driven by regional proximity and a shared history. Our dishes are made with seasonal produce, and locally sourced, sustainibly raised and caught meats and seafood.',
     location: 'Los Angeles',
     cuisines: 'greek',
     hours_of_operation: '10:00 - 24:00',
@@ -329,7 +329,7 @@ rest22.photo.attach(io: File.open('app/assets/images/the-divide.jpg'), filename:
 rest23 = Restaurant.create(
   {
     name: 'Broadway',
-    description: 'A family owned and operated business since 1970. Broadway is known as one of Oakland’s finest lunch and dinner houses. We can accommodate private as well as semi-private banquet rooms. Formerly a brothel, Broadway offers an ambiance that is warm, intimate and unique to the Bay Area.'
+    description: 'A family owned and operated business since 1970. Broadway is known as one of Oakland’s finest lunch and dinner houses. We can accommodate private as well as semi-private banquet rooms. Formerly a brothel, Broadway offers an ambiance that is warm, intimate and unique to the Bay Area.',
     location: 'San Francisco',
     cuisines: 'american',
     hours_of_operation: '10:00 - 24:00',
@@ -341,7 +341,7 @@ rest23.photo.attach(io: File.open('app/assets/images/broadway.jpg'), filename: '
 rest24 = Restaurant.create(
   {
     name: 'Jasmines',
-    description: 'Located in Seattle, Jasmines is an Seafood restaurant with a surprising Japanese twist. Here in the heart of "little Italy," chef and owner Joe Lin creatively weaves together Italian and Japanese culinary traditions by building on the elements that unite them: simplicity and quality. '
+    description: 'Located in Seattle, Jasmines is an Seafood restaurant with a surprising Japanese twist. Here in the heart of "little Italy," chef and owner Joe Lin creatively weaves together Italian and Japanese culinary traditions by building on the elements that unite them: simplicity and quality.',
     location: 'Seattle',
     cuisines: 'seafood',
     hours_of_operation: '10:00 - 24:00',
@@ -353,7 +353,7 @@ rest24.photo.attach(io: File.open('app/assets/images/jasmines.jpg'), filename: '
 rest25 = Restaurant.create(
   {
     name: 'Familias',
-    description: 'Just like the small family-owned trattorias of Italy, Familias is simple, rustic, and generous in spirit. Executive Chef, Robert Holt, draws his inspiration from Southern-Italy, with an emphasis on wood-fired Neapolitan pizza.'
+    description: 'Just like the small family-owned trattorias of Italy, Familias is simple, rustic, and generous in spirit. Executive Chef, Robert Holt, draws his inspiration from Southern-Italy, with an emphasis on wood-fired Neapolitan pizza.',
     location: 'New York',
     cuisines: 'italian',
     hours_of_operation: '10:00 - 24:00',
@@ -365,7 +365,7 @@ rest25.photo.attach(io: File.open('app/assets/images/family-room.jpg'), filename
 rest26 = Restaurant.create(
   {
     name: 'Yoshi',
-    description: 'Japanese Omakase.'
+    description: 'Japanese Omakase.',
     location: 'New York',
     cuisines: 'japanese',
     hours_of_operation: '10:00 - 24:00',
@@ -378,7 +378,7 @@ rest26.photo.attach(io: File.open('app/assets/images/yoshis.jpg'), filename: 'yo
 rest27 = Restaurant.create(
   {
     name: 'Barrel House',
-    description: 'Comtemporary styled fusion cuisine restaurant place.'
+    description: 'Comtemporary styled fusion cuisine restaurant place.',
     location: 'New York',
     cuisines: 'american',
     hours_of_operation: '10:00 - 24:00',
@@ -390,7 +390,7 @@ rest27.photo.attach(io: File.open('app/assets/images/barrel-house.jpg'), filenam
 rest28 = Restaurant.create(
   {
     name: 'STOOL',
-    description: 'BAR.'
+    description: 'BAR.',
     location: 'New York',
     cuisines: 'bar',
     hours_of_operation: '16:00 - 24:00',
@@ -402,7 +402,7 @@ rest28.photo.attach(io: File.open('app/assets/images/STOOL.jpg'), filename: 'STO
 rest29 = Restaurant.create(
   {
     name: 'Roti',
-    description: 'A modern Indian restaurant named for the date commemorating India’s independence from British rule. Located in the heart of San Francisco’s Civic Center neighborhood, we invite our guests to explore the nuances of Indian cuisine rarely seen in the West.'
+    description: 'A modern Indian restaurant named for the date commemorating India’s independence from British rule. Located in the heart of San Francisco’s Civic Center neighborhood, we invite our guests to explore the nuances of Indian cuisine rarely seen in the West.',
     location: 'San Mateo',
     cuisines: 'indian',
     hours_of_operation: '10:00 - 24:00',
@@ -414,7 +414,7 @@ rest29.photo.attach(io: File.open('app/assets/images/the-basement.jpg'), filenam
 rest30 = Restaurant.create(
   {
     name: 'The Library',
-    description: 'The Library is a modern American take on the classic German biergarten, featuring 31 taps of craft and import beer and Modern American Gourmet Comfort Food from Executive Chef Colby M Reade.'
+    description: 'The Library is a modern American take on the classic German biergarten, featuring 31 taps of craft and import beer and Modern American Gourmet Comfort Food from Executive Chef Colby M Reade.',
     location: 'San Francisco',
     cuisines: 'bar',
     hours_of_operation: '16:00 - 24:00',
@@ -426,7 +426,7 @@ rest30.photo.attach(io: File.open('app/assets/images/library.jpg'), filename: 'l
 rest31 = Restaurant.create(
   {
     name: 'COOORKED',
-    description: 'Located in the heart of NY. We are a bar focusing on craft beer (25 on tap), whiskey and cocktails, live music, and great company. We got you covered.'
+    description: 'Located in the heart of NY. We are a bar focusing on craft beer (25 on tap), whiskey and cocktails, live music, and great company. We got you covered.',
     location: 'New York',
     cuisines: 'bar',
     hours_of_operation: '16:00 - 24:00',
