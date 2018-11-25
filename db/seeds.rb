@@ -305,7 +305,7 @@ rest20.photo.attach(io: File.open('app/assets/images/the-lobby.jpg'), filename: 
 rest21 = Restaurant.create(
   {
     name: 'Bota',
-    description: 'Bota is an authentic Spanish style tapas and paella bar located in the heart of Union Square in San Francisco. A place to go to share food, savor rustic flavors and enjoy Spanish wine in a casual, yet chic, environment. Inspired by the concept behind our name “BOTA”, a vessel to share wine with the people around you.'
+    description: 'Bota is an authentic Spanish style tapas and paella bar located in the heart of Union Square in San Francisco. A place to go to share food, savor rustic flavors and enjoy Spanish wine in a casual, yet chic, environment. Inspired by the concept behind our name “BOTA”, a vessel to share wine with the people around you.',
     location: 'San Francisco',
     cuisines: 'vegetarian',
     hours_of_operation: '10:00 - 24:00',
