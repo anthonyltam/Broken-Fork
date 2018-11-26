@@ -38,11 +38,11 @@ class SignUpForm extends React.Component {
           <hr></hr>
           {errors}
             <div className='input-field'>
-              <input className='field email' onChange={ this.update('email')} type='text' value={this.state.email} placeholder='email'/>
-              <input className='field first_name' onChange={ this.update('first_name')} type='text' value={this.state.first_name} placeholder='first name'/>
-              <input className='field last_name' onChange={ this.update('last_name')} type='text' value={this.state.last_name} placeholder='last name'/>
-              <input className='field location' onChange={ this.update('location')} type='text' value={this.state.location} placeholder='primary dining location'/>
-              <input className='field pw' onChange={ this.update('password')} type='password' value={this.state.password} placeholder='password'/>
+            <input className='field email' onChange={this.update('email')} type='text' value={this.state.email} placeholder='email' required/>
+              <input className='field first_name' onChange={ this.update('first_name')} type='text' value={this.state.first_name} placeholder='first name' required/>
+              <input className='field last_name' onChange={ this.update('last_name')} type='text' value={this.state.last_name} placeholder='last name' required/>
+              <input className='field location' onChange={ this.update('location')} type='text' value={this.state.location} placeholder='primary dining location' required/>
+              <input className='field pw' onChange={ this.update('password')} type='password' value={this.state.password} placeholder='password' required/>
               <a className='view-github' href="https://github.com/anthonyltam/Broken-Fork">View the Github Repo</a>
               <button className="submit-button">{this.props.submitButton}</button>
             </div>

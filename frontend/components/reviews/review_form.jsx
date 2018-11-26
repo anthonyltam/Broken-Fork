@@ -50,7 +50,7 @@ class ReviewForm extends React.Component {
 
             <div className='review-rating-container'>
               <label className="review-rating-text">Review:</label>
-              <textarea className="review-rating-review" value={this.state.body} onChange={this.update("body")} placeholder="Write your review here."/>
+              <textarea className="review-rating-review" value={this.state.body} onChange={this.update("body")} placeholder="Write your review here." required/>
             </div>
             <input className="review-submit-button" type="submit" />
           

@@ -57,8 +57,8 @@ class SessionForm extends React.Component {
           <hr></hr>
             <span className='sign-errors'>{this.props.errors}</span>
             <div className='input-field'>
-              <input className='field email' onChange={ this.update('email')} type='text' placeholder='email' value={this.state.email}/>
-              <input className='field pw' onChange={ this.update('password')} type='password' placeholder='password' value={this.state.password}/>
+              <input className='field email' onChange={ this.update('email')} type='text' placeholder='email' value={this.state.email} required/>
+              <input className='field pw' onChange={ this.update('password')} type='password' placeholder='password' value={this.state.password} required/>
               <a className = 'view-github' href="https://github.com/anthonyltam/Broken-Fork">View the Github Repo</a>
               <button className="submit-button">{this.props.submitButton}</button>
               <button className='signin-demo-login' onClick={this.handleDemoLogin}>Demo</button>
