@@ -4,9 +4,6 @@ import RestaurantIndexItem from './restaurant_index_item';
 import RestaurantFilter from './restaurant_filter';
 
 class RestaurantIndex extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
 
   componentDidMount() {
     this.props.fetchRestaurants();

@@ -7,7 +7,6 @@ import { createReservation, deleteReservation, fetchReservations } from "./actio
 
 // import { searchRestaurants } from './util/restaurant_api_util';
 
-
 document.addEventListener('DOMContentLoaded', () => {  
   let store;
    if (window.currentUser) {

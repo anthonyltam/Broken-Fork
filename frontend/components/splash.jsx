@@ -2,11 +2,7 @@ import React from 'react';
 import SearchContainer from './search_container';
 
 class Splash extends React.Component {
-  constructor(props) {
-    super(props);
-
-  }
-
+  
   handleSubmit(e) {
     e.preventDefault();
     this.props.history.push('/restaurants');

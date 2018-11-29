@@ -8,12 +8,10 @@ class SearchBar extends React.Component {
     this.state = {
       cuisines: ''
     };
-    
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    // console.log('hello from searchBar');
     this.props.searchRestaurants(this.state);
     this.props.history.push(`/restaurants?search=${this.state.cuisines}`);
   }

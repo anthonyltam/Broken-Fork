@@ -19,6 +19,8 @@ class RestaurantShowItem extends React.Component {
     if (this.props.currentUser) {
       reviewForm = 
       <ReviewFormContainer restaurant={this.props.restaurant} />;
+    } else {
+      reviewForm = <div className="not-signed-in">You must be signed in to leave a review/make a reservation.</div>;
     }
     
     let reservationForm;
