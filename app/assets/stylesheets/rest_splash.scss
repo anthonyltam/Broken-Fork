@@ -50,11 +50,13 @@
 
 .rest-star-review {
   display: flex;
+  justify-content: space-between;
   margin-bottom: 5px;
 }
 
 .num-reviews {
   font-size: 13px;
+  padding-right: 2%;
 }
 
 .rest-star-icon {
