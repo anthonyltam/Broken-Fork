@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import RestaurantIndexItem from './restaurant_index_item';
 import RestaurantFilter from './restaurant_filter';
+import SearchContainer from '../search_container';
 
 class RestaurantIndex extends React.Component {
 
@@ -48,9 +49,9 @@ class RestaurantIndex extends React.Component {
                 <option value="8">8 people</option>
               </select>
             </div>
-
-            <input className="rest-box-search" type="text" placeholder="Find By Cuisine" />
-            <button className="rest-box-go">Let's Go</button>
+            <SearchContainer />
+            {/* <input className="rest-box-search" type="text" placeholder="Find By Cuisine" /> */}
+            {/* <button className="rest-box-go">Let's Go</button> */}
 
           </div>
         </div>

@@ -46,8 +46,7 @@
 }
 
 .index-nav {
-  height: 80px;
-  // border: 1px solid blue;
+  height: 90px;
   background-color: grey;
   background-image: url('https://us.123rf.com/450wm/masyaka/masyaka1705/masyaka170500007/77905103-black-wooden-background-horizontal-textured-oak-planks.jpg?ver=6');
   display: flex;
@@ -349,6 +348,8 @@
 .rest-box-dropdowns {
   display: flex;
   width: 45%;
+  height: 49px;
+  margin-right: 2%;
 }
 
 .rest-box-num-guests {
