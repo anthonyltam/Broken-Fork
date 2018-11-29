@@ -30,7 +30,7 @@
     linear-gradient(
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.2)
-    ), url('https://s3-us-west-1.amazonaws.com/brokenfork-dev/italian-cuisine.jpg');
+    ), url('https://s3-us-west-1.amazonaws.com/brokenfork-dev/ita-cuisine.jpg');
   text-align: center;
 }
 
@@ -44,12 +44,12 @@
   text-align: center;
 }
 
-.mexican-cuisine {
+.seafood-cuisine {
   cursor: pointer;
   background-image:
     linear-gradient(
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
-    ), url('https://s3-us-west-1.amazonaws.com/brokenfork-dev/chipotle.jpg');
+    ), url('https://s3-us-west-1.amazonaws.com/brokenfork-dev/seafood-cuisine.jpg');
   text-align: center;
 }
