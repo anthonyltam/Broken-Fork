@@ -53,11 +53,11 @@ class SignUpForm extends React.Component {
             <div className='other-links'>
               <button className='link-but-facebook'>
                 <div className='facebook-logo'></div>
-                <p>Continue with Facebook</p>
+                <p className='google-facebook'>Continue with Facebook</p>
               </button>
               <button className='link-but-google'>
                 <div className='google-logo'></div>
-                <p>Continue with Google</p>
+                <p className='google-facebook'>Continue with Google</p>
               </button>
             </div>
           </div>

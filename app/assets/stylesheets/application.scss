@@ -152,29 +152,26 @@ header span {
 }
 
 .box-container {
-  padding: 10px;
-  margin: 10px;
-  text-align: center;
-  justify-content: center;
   width: 90%;
   margin: auto;
 }
 
 .box-message {
+  color: white;
+  text-align: center;
   font-size: 2.8rem;
   font-weight: bold;
 }
 
-p {
+.google-facebook {
   font-family: sans-serif;
   color: white;
 }
 
 .box-form {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   flex-wrap: wrap;
-  margin-left: 14%;
 }
 
 .box-dropdowns {

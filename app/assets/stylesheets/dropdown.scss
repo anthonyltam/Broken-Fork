@@ -1,16 +1,35 @@
 .dropdown-content {
-  display: flex;
-  // border: 1px solid black;
   position: absolute;
-  right: 0px;
+  display: flex;
   flex-direction: column;
+  right: 0px;
   width: inherit;
   padding-left: 0px;
-  border-radius: 4px;
+  margin-right: 0.5%;
 }
 
-.dd-content {
+.dd-content1 {
+  cursor: pointer;
+  -webkit-appearance: none;
+  height: 25px;
   z-index: 1;
+  margin-bottom: -1px;
+  border-radius: 5px 5px 0px 0px;
+}
+.dd-content2 {
+  cursor: pointer;
+  -webkit-appearance: none;
+  height: 25px;
+  z-index: 1;
+  margin-bottom: -1px;
+}
+.dd-content3 {
+  cursor: pointer;
+  -webkit-appearance: none;
+  height: 25px;
+  z-index: 1;
+  margin-bottom: -1px;
+  border-radius: 0px 0px 5px 5px;
 }
 
 .profile-dropdown {

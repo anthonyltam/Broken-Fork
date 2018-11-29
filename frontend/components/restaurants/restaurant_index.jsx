@@ -49,7 +49,7 @@ class RestaurantIndex extends React.Component {
               </select>
             </div>
 
-            <input className="rest-box-search" type="text" placeholder="Cuisine" />
+            <input className="rest-box-search" type="text" placeholder="Find By Cuisine" />
             <button className="rest-box-go">Let's Go</button>
 
           </div>
