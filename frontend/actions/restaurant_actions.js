@@ -51,18 +51,6 @@ export const searchRestaurants = (search) => dispatch => {
 };
 
 
-// export const receiveRestaurant = restaurant => ({
-//   type: RECEIVE_RESTAURANT,
-//   restaurant
-// });
-
-// export const fetchRestaurant = (id) => dispatch => (
-//   APIUtil.fetchRestaurant(id).then(rest => (
-//     dispatch(receiveRestaurant(rest))
-//   ))
-// );
-
-
 // export const receiveReview = ({ review, average_rating, author }) => ({
 //   type: RECEIVE_REVIEW,
 //   review,

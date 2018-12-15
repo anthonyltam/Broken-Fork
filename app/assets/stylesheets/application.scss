@@ -148,8 +148,10 @@ header span {
   display: flex;
   height: 420px;
   width: 100%;
-  background-image: image-url('snadp-dining-0103-hor-feat.jpg');
+  background-image: image-url('broken-splash.jpg');
   background-size: cover;
+  // background-size: contain;
+  // background-repeat: no-repeat;
 }
 
 .box-container {
