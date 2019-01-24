@@ -7,7 +7,7 @@ class ReservationForm extends React.Component {
 
     this.state = {
       day: '',
-      start_time: '',
+      time: '',
       user_id: this.props.currentUser,
       restaurant_id: this.props.restaurant.id
     };
@@ -24,19 +24,15 @@ class ReservationForm extends React.Component {
 
   update(event) {
     let value = event.target.value;
-    this.setState( { start_time: value });
+    this.setState( { time: value });
   }
-
-  // update(field) {
-  //   return e => this.setState( { [field]: e.currentTarget.value });
-  // }
 
   handleDayClick(date, { selected }) {
     this.setState({ day: date });
   }
 
   render() {
-    // console.log(this.state);
+    const { day, time } = this.state;
     return <>
         <div className="reservation-form-container">
           <form className="reservation-form-content" onSubmit={this.handleClick}>
@@ -52,18 +48,7 @@ class ReservationForm extends React.Component {
             <div className="reservation-time-cont">
            
             <label className="reservation-time-text">Reservation Time</label>
-            {/* <input type="time" value={this.state.start_time} onChange={this.update("start_time")} placeholder="12" /> */}
-            <select className="reservation-time-option" onChange={ e => this.update(e)}>
-              {/* <option value="0">0:00</option>
-              <option value="1">1:00</option>
-              <option value="2">2:00</option>
-              <option value="3">3:00</option>
-              <option value="4">4:00</option>
-              <option value="5">5:00</option>
-              <option value="6">6:00</option>
-              <option value="7">7:00</option>
-              <option value="8">8:00</option>
-            <option value="9">9:00</option> */}
+            <select className="reservation-time-option" onChange={ e => this.update(e)} required>
               <option value="" selected>Select A Time</option>
               <option value="10">10:00</option>
               <option value="11">11:00</option>
@@ -83,8 +68,7 @@ class ReservationForm extends React.Component {
             </select>
           </div>
             <input className="reservation-submit-button" type="submit" value="Find A Table"></input>
-
-            {/* <div className="booked-times">Booked 10 times today</div> */}
+            {day.length < 1 && <div className='please-select'>Please select a date and time.</div>}
           </form>
         </div>
       </>;

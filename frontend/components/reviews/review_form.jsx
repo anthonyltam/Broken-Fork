@@ -38,7 +38,7 @@ class ReviewForm extends React.Component {
 
             <div className='review-rating-container'>
             <label className="review-rating-text">Rating:</label>
-            <select className="review-rating-score" onChange={ e => this.select(e)}>
+            <select className="review-rating-score" onChange={ e => this.select(e)} required>
               <option value="" selected>Please Rate</option>
               <option value="1">1</option>
               <option value="2">2</option>
