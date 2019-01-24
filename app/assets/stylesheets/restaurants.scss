@@ -147,11 +147,18 @@
 
 .text-filter-selection {
   display: flex;
+  flex-direction: column;
   margin-bottom: 5%;
 }
 
 .text-filter {
+  margin-left: 2%;
   font-weight: 400;
+}
+
+.radio-section {
+  display: flex;
+  margin-bottom: 2.5%;
 }
 
 .filter-box {
@@ -227,9 +234,7 @@
   margin-right: 2%;
 }
 
-// .pin {
-//   justify-content: center;
-// }
+
 
 //////////////////////////////////////////////////////
 ////////////////// RESTAURANTS ///////////////////////
