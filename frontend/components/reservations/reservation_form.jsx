@@ -7,7 +7,7 @@ class ReservationForm extends React.Component {
 
     this.state = {
       day: '',
-      time: '',
+      start_time: '',
       user_id: this.props.currentUser,
       restaurant_id: this.props.restaurant.id
     };
@@ -18,13 +18,18 @@ class ReservationForm extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
+    
+    if (!this.state.day) {
+      return;
+    }
+
     this.props.createReservation(this.state);
     this.props.history.push("/reservations");
   }
 
   update(event) {
     let value = event.target.value;
-    this.setState( { time: value });
+    this.setState( { start_time: value });
   }
 
   handleDayClick(date, { selected }) {
@@ -68,7 +73,7 @@ class ReservationForm extends React.Component {
             </select>
           </div>
             <input className="reservation-submit-button" type="submit" value="Find A Table"></input>
-            {day.length < 1 && <div className='please-select'>Please select a date and time.</div>}
+            {day.length < 1 && <div className='please-select'>Please select a date.</div>}
           </form>
         </div>
       </>;
