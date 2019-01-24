@@ -18,10 +18,7 @@ class ReservationForm extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-    
-    if (!this.state.day) {
-      return;
-    }
+    if (!this.state.day) return;
 
     this.props.createReservation(this.state);
     this.props.history.push("/reservations");
@@ -37,7 +34,7 @@ class ReservationForm extends React.Component {
   }
 
   render() {
-    const { day, time } = this.state;
+    const { day } = this.state;
     return <>
         <div className="reservation-form-container">
           <form className="reservation-form-content" onSubmit={this.handleClick}>

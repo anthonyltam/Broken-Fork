@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchRestaurants } from '../../actions/restaurant_actions';
+import { fetchRestaurants, searchRestaurants } from '../../actions/restaurant_actions';
 import RestaurantIndex from './restaurant_index';
 
 const msp = state => {
@@ -9,9 +9,9 @@ const msp = state => {
 };
 
 const mdp = (dispatch, ownProps) => {
-  return {
-    fetchRestaurants: () => dispatch(fetchRestaurants(ownProps.location.search))
-  };
+  return { 
+    fetchRestaurants: () => dispatch(fetchRestaurants(ownProps.location.search)), 
+    searchRestaurants: search => dispatch(searchRestaurants(search)) };
 };
 
 export default connect(msp, mdp)(RestaurantIndex);

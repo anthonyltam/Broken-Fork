@@ -11,14 +11,12 @@ class SearchBar extends React.Component {
   }
 
   handleSubmit() {
-    // debugger;
     // e.preventDefault();
     this.props.searchRestaurants(this.state);
     this.props.history.push(`/restaurants?search=${this.state.cuisines}`);
   }
 
   update(field) {
-    // debugger;
     return e => this.setState( { [field]: e.currentTarget.value });
   }
 

@@ -52,12 +52,11 @@ class RestaurantIndex extends React.Component {
             <SearchContainer />
             {/* <input className="rest-box-search" type="text" placeholder="Find By Cuisine" /> */}
             {/* <button className="rest-box-go">Let's Go</button> */}
-
           </div>
         </div>
 
         <div className="parent-container">
-          <RestaurantFilter />
+          <RestaurantFilter searchRestaurants={this.props.searchRestaurants} fetchRestaurants={this.props.fetchRestaurants}/>
 
           <div className="results-container">
             <div className="tables-match">
@@ -65,9 +64,8 @@ class RestaurantIndex extends React.Component {
                 {this.props.restaurants.length} RESTAURANTS AVAILABLE
               </span>
               <select className="right-filter">
-                <option value="Best Match">Best Match</option>
+              <option value="" selected>Select A Filter</option>
                 <option value="A-Z">A-Z</option>
-                <option value="Highest Rated">Highest Rated</option>
               </select>
             </div>
 
