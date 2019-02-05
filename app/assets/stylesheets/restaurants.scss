@@ -265,6 +265,7 @@
   font-size: 18px;
   font-weight: bold;
   text-align: start;
+  padding-bottom: 1%;
 }
 
 .rest-image {
@@ -280,17 +281,18 @@
 
 .rest-star-cont {
   display: flex;
-  line-height: 1.5;
+  line-height: .25;
   font-size: 14px;
 }
 
 .rest-yellow-stars {
-  height: 35px;
-  width: 125px;
-  background-image: url('https://s3-us-west-1.amazonaws.com/brokenfork-dev/rest-yellow-stars.png');
-  background-size: cover;
+  height: 25px;
+  width: 115px;
+  // background-image: url('https://s3-us-west-1.amazonaws.com/brokenfork-dev/yellow-stars-index-page.png');
+  background-image: url('https://s3-us-west-1.amazonaws.com/brokenfork-dev/5-stars.jpg');
+  background-size: contain;
   background-repeat: no-repeat;
-  margin-left: -4%;
+  // margin-left: -4%;
   margin-top: -3%;
 }
 
