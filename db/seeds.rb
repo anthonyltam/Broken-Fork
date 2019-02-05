@@ -21,7 +21,7 @@ User.create(
   }
 );
 
-User.create(
+auth1 = User.create(
   {
     email: 'Feebo',
     first_name: 'feebo',
@@ -173,7 +173,7 @@ rest9 = Restaurant.create(
     tables: 12
   }
 )
-rest9.photo.attach(io: File.open('app/assets/images/chipotle1.jpg'), filename: 'chipotle1.jpg')
+rest9.photo.attach(io: File.open('app/assets/images/chipotle.jpg'), filename: 'chipotle.jpg')
 
 rest10 = Restaurant.create(
   {
@@ -485,12 +485,14 @@ rest34.photo.attach(io: File.open('app/assets/images/boba.jpg'), filename: 'boba
 
 
 Review.destroy_all
+
 rev1 = Review.create(
   {
-    body: 'What a restaurant!'
+    body: 'What a restaurant!',
     rating: 5,
-    restaurant_id: '1',
-    author_id: 2
+    restaurant_id: rest1.id,
+    author_id: auth1.id,
+    first_name: auth1.first_name
   }
 )
 
