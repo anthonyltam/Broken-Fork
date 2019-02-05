@@ -21,17 +21,11 @@ class Reviews extends React.Component {
           <div>
             <div className="review-top-layer">
               <div className="review-stars" />
-              <div className="dined-on">Dined on October 21st, 2018</div>
+              <div className="dined-on">Confirmed Diner.</div>
             </div>
 
             <div className="review-categ">
-              Overall<span className="review-ratings"> 5 </span>| Food<span className="review-ratings">
-                {" "}
-                5{" "}
-              </span>| Service<span className="review-ratings">
-                {" "}
-                3{" "}
-              </span>| Ambience<span className="review-ratings"> 5 </span>
+              Rating<span className="review-ratings"> 5 </span>
             </div>
 
             <div className="review-body">{this.props.review.body}</div>

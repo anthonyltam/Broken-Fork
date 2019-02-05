@@ -37,27 +37,28 @@
   margin-bottom: 10%;
 }
 
-// .review-location {
-// }
+.review-location {
+  color: grey;
+}
 
 .review-top-layer {
   display: flex;
+  width: 500px;
 }
 
 .review-stars {
-  background-image: url('https://s3-us-west-1.amazonaws.com/brokenfork-dev/4.5stars.png');
-  background-size: cover;
+  background-image: url('stars-rating.png');
+  background-size: contain;
   background-repeat: no-repeat;
   height: 50px;
   width: 120px;
   margin-right: 5px;
-  // border: 1px solid blue;
+  margin-top: 3%;
 }
 
 .dined-on {
-  line-height: 3.25;
-  margin-left: 10px;
-  // border: 1px solid green;
+  line-height: 3.5;
+  margin-left: 2.5%;
 }
 
 .review-categ {

@@ -44,7 +44,7 @@ class RestaurantShowItem extends React.Component {
 
           <div className='review-stars-cont margin-bot-pleasee'>
             <div className="review-stars"></div> 
-            <div className="review-stars-rating">4.4 Average Rating</div>
+            <div className="review-stars-rating">5.0 Average Rating</div>
           </div>
 
           <div className="rest-page-description margin-bot-pleasee">
