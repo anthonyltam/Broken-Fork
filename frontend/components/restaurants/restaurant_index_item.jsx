@@ -26,7 +26,7 @@ class RestaurantIndexItem extends React.Component {
 
               <div className="booked-times-cont">
                 <div className="trend-arrow"></div>
-                <div>Booked # times today.</div>
+                <div>Book Today</div>
               </div>
 
               <div className='rest-reservation-cont-row'>
