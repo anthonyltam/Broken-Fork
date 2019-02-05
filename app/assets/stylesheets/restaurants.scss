@@ -285,12 +285,13 @@
 }
 
 .rest-yellow-stars {
-  height: 17px;
-  width: 95px;
-  background-image: url('https://s3-us-west-1.amazonaws.com/brokenfork-dev/yellow-stars.png');
-  background-size: contain;
+  height: 35px;
+  width: 125px;
+  background-image: url('https://s3-us-west-1.amazonaws.com/brokenfork-dev/rest-yellow-stars.png');
+  background-size: cover;
   background-repeat: no-repeat;
-  margin-right: 2%;
+  margin-left: -4%;
+  margin-top: -3%;
 }
 
 .rest-loc-cui-row {
