@@ -70,21 +70,17 @@ rest1 = Restaurant.create(
 )
 rest1.photo.attach(io: File.open('app/assets/images/feebo-rest.jpg'), filename: 'feebo.jpg')
 
-
 rest2 = Restaurant.create(
   {
-    name: 'Ceces',
-    description: 'Ceces, bringing a taste of Italy to San Francisco. With a focus on the regions of Rome 
-    and Tuscany we offer fresh, house made pastas and pizzas, both available gluten free, house cured meats, 
-    seafood crudo and many other delicacies. We feature hand crafted cocktails and soft drinks in our full bar. 
-    We offer patio dining with views of the estuary.',
+    name: "Milk",
+    description: 'We serve tapioca and stuff.',
     location: 'San Francisco',
-    cuisines: 'italian',
-    hours_of_operation: '10:00 - 24:00',
-    tables: 36
+    cuisines: 'boba',
+    hours_of_operation: '16:00 - 24:00',
+    tables: 12
   }
 )
-rest2.photo.attach(io: File.open('app/assets/images/italian.jpg'), filename: 'italian.jpg')
+rest2.photo.attach(io: File.open('app/assets/images/boba.jpg'), filename: 'boba.jpeg')
 
 rest3 = Restaurant.create(
   {
@@ -473,15 +469,18 @@ rest33.photo.attach(io: File.open('app/assets/images/coffee-house.jpg'), filenam
 
 rest34 = Restaurant.create(
   {
-    name: "Milk",
-    description: 'Tapioca.',
+    name: 'Ceces',
+    description: 'Ceces, bringing a taste of Italy to San Francisco. With a focus on the regions of Rome 
+    and Tuscany we offer fresh, house made pastas and pizzas, both available gluten free, house cured meats, 
+    seafood crudo and many other delicacies. We feature hand crafted cocktails and soft drinks in our full bar. 
+    We offer patio dining with views of the estuary.',
     location: 'San Francisco',
-    cuisines: 'boba',
-    hours_of_operation: '16:00 - 24:00',
-    tables: 12
+    cuisines: 'italian',
+    hours_of_operation: '10:00 - 24:00',
+    tables: 36
   }
 )
-rest34.photo.attach(io: File.open('app/assets/images/boba.jpg'), filename: 'boba.jpeg')
+rest34.photo.attach(io: File.open('app/assets/images/italian.jpg'), filename: 'italian.jpg')
 
 ######## ######## ######## 
 ######## REVIEWS #########
@@ -512,12 +511,23 @@ Review.create(
 
 Review.create(
   {
-    body: 'Wow, What a restaurant!',
+    body: "My new boba spot! Yum!",
+    rating: 5,
+    restaurant_id: rest2.id,
+    author_id: auth2.id,
+    first_name: auth2.first_name,
+    location: auth2.location
+  }
+)
+
+Review.create(
+  {
+    body: "Great!",
     rating: 5,
     restaurant_id: rest2.id,
     author_id: auth1.id,
-    first_name: auth1.first_name,
-    location: auth1.location
+    first_name: auth3.first_name,
+    location: auth3.location
   }
 )
 
@@ -897,18 +907,7 @@ Review.create(
 
 Review.create(
   {
-    body: "My new boba spot! Yum!",
-    rating: 5,
-    restaurant_id: rest34.id,
-    author_id: auth2.id,
-    first_name: auth2.first_name,
-    location: auth2.location
-  }
-)
-
-Review.create(
-  {
-    body: "Great!",
+    body: 'Wow, What a restaurant!',
     rating: 5,
     restaurant_id: rest34.id,
     author_id: auth1.id,
@@ -916,7 +915,6 @@ Review.create(
     location: auth1.location
   }
 )
-
 
 
 
