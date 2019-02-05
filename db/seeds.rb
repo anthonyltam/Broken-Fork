@@ -41,6 +41,16 @@ User.create(
   }
 );
 
+User.create(
+  {
+    email: 'Rick',
+    first_name: 'rick',
+    last_name: 'rick',
+    password: 'starwars',
+    location: 'SF',
+  }
+);
+
 
 ######## RESTAURANTS #########
 
@@ -76,8 +86,8 @@ rest2.photo.attach(io: File.open('app/assets/images/italian.jpg'), filename: 'it
 
 rest3 = Restaurant.create(
   {
-    name: 'SEASIDE',
-    description: 'At SEASIDE, Chef AndTony serves coastal cuisine with French influence. The menu changes daily depending on what\'s fresh. Expect exciting combinations and show-stopping execution.',
+    name: 'Seaside',
+    description: 'At Seaside, Chef AndTony serves coastal cuisine with French influence. The menu changes daily depending on what\'s fresh. Expect exciting combinations and show-stopping execution.',
     location: 'New York',
     cuisines: 'seafood',
     hours_of_operation: '10:00 - 24:00',
@@ -122,7 +132,7 @@ rest6 = Restaurant.create(
     at The Crooked Spoon has received many accolades from five consecutive years on the Chronicle\'s 
     Top 100 American Restaurant List to the Top 40 in Zagat. This is a restaurant not to be missed in New York.',
     location: 'New York',
-    cuisines: 'american',
+    cuisines: 'steak',
     hours_of_operation: '10:00 - 24:00',
     tables: 120
   }
@@ -207,9 +217,9 @@ rest12.photo.attach(io: File.open('app/assets/images/frances.jpg'), filename: 'f
 rest13 = Restaurant.create(
   {
     name: 'Salt & Pepper',
-    description: 'Fresh house-made pasta, wood-fired pizza, and house-cured meats. It’s all about simple and authentic Italian food rooted in the south, executed with skill, expertise and old world standards of care. The defining goal of the restaurant for its ambiance and style of service is to make everyone feel welcome. We feel very strongly about creating a come as you are atmosphere in the restaurant.',
+    description: 'Fresh house-made french food, wood-fired french food, and house-cured meats. It’s all about simple and authentic French food rooted in the south, executed with skill, expertise and old world standards of care. The defining goal of the restaurant for its ambiance and style of service is to make everyone feel welcome. We feel very strongly about creating a come as you are atmosphere in the restaurant.',
     location: 'Los Angeles',
-    cuisines: 'italian',
+    cuisines: 'french',
     hours_of_operation: '10:00 - 24:00',
     tables: 70
   }
@@ -418,7 +428,7 @@ rest30 = Restaurant.create(
     location: 'San Francisco',
     cuisines: 'bar',
     hours_of_operation: '16:00 - 24:00',
-    tables: 0
+    tables: 42
   }
 )
 rest30.photo.attach(io: File.open('app/assets/images/library.jpg'), filename: 'library.jpg')
@@ -430,13 +440,59 @@ rest31 = Restaurant.create(
     location: 'New York',
     cuisines: 'bar',
     hours_of_operation: '16:00 - 24:00',
-    tables: 0
+    tables: 20
   }
 )
 rest31.photo.attach(io: File.open('app/assets/images/corked.jpeg'), filename: 'library.jpeg')
+
+rest32 = Restaurant.create(
+  {
+    name: "Ming's Diner",
+    description: 'Located in the heart of ChinaTown. Even better than Panda Express!',
+    location: 'New York',
+    cuisines: 'chinese',
+    hours_of_operation: '16:00 - 24:00',
+    tables: 10
+  }
+)
+rest32.photo.attach(io: File.open('app/assets/images/mings.jpg'), filename: 'mings.jpg')
+
+rest33 = Restaurant.create(
+  {
+    name: "Coffee House",
+    description: 'Hard time waking up? Stop by and try some of our best brews!',
+    location: 'Atlanta',
+    cuisines: 'coffee',
+    hours_of_operation: '16:00 - 24:00',
+    tables: 1
+  }
+)
+rest33.photo.attach(io: File.open('app/assets/images/coffee-house.jpg'), filename: 'coffee.jpeg')
+
+rest34 = Restaurant.create(
+  {
+    name: "Milk",
+    description: 'Tapioca.',
+    location: 'San Francisco',
+    cuisines: 'boba',
+    hours_of_operation: '16:00 - 24:00',
+    tables: 12
+  }
+)
+rest34.photo.attach(io: File.open('app/assets/images/boba.jpg'), filename: 'boba.jpeg')
 
 
 
 
 Review.destroy_all
+rev1 = Review.create(
+  {
+    body: 'What a restaurant!'
+    rating: 5,
+    restaurant_id: '1',
+    author_id: 2
+  }
+)
+
+
 Reservation.destroy_all
