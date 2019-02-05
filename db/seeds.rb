@@ -7,11 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-
+######## ######## ######## 
 ########## USERS ###########
+######## ######## ######## 
 
 User.destroy_all
-User.create(
+auth0 = User.create(
   {
     email: 'DemoUser',
     first_name: 'Demo',
@@ -31,7 +32,7 @@ auth1 = User.create(
   }
 );
 
-User.create(
+auth2 = User.create(
   {
     email: 'Meggy',
     first_name: 'meggy',
@@ -41,7 +42,7 @@ User.create(
   }
 );
 
-User.create(
+auth3 = User.create(
   {
     email: 'Rick',
     first_name: 'rick',
@@ -51,8 +52,9 @@ User.create(
   }
 );
 
-
+######## ######## ######## 
 ######## RESTAURANTS #########
+######## ######## ######## 
 
 Restaurant.destroy_all
 rest1 = Restaurant.create(
@@ -481,20 +483,442 @@ rest34 = Restaurant.create(
 )
 rest34.photo.attach(io: File.open('app/assets/images/boba.jpg'), filename: 'boba.jpeg')
 
-
-
+######## ######## ######## 
+######## REVIEWS #########
+######## ######## ######## 
 
 Review.destroy_all
-
-rev1 = Review.create(
+Review.create(
   {
     body: 'What a restaurant!',
     rating: 5,
     restaurant_id: rest1.id,
     author_id: auth1.id,
-    first_name: auth1.first_name
+    first_name: auth1.first_name,
+    location: auth1.location
   }
 )
+
+Review.create(
+  {
+    body: "Great Atmosphere!",
+    rating: 5,
+    restaurant_id: rest1.id,
+    author_id: auth2.id,
+    first_name: auth2.first_name,
+    location: auth2.location
+  }
+)
+
+Review.create(
+  {
+    body: 'Wow, What a restaurant!',
+    rating: 5,
+    restaurant_id: rest2.id,
+    author_id: auth1.id,
+    first_name: auth1.first_name,
+    location: auth1.location
+  }
+)
+
+Review.create(
+  {
+    body: 'I have tasted heaven!',
+    rating: 5,
+    restaurant_id: rest2.id,
+    author_id: auth2.id,
+    first_name: auth2.first_name,
+    location: auth2.location
+  }
+)
+
+Review.create(
+  {
+    body: "Can't wait to come back",
+    rating: 5,
+    restaurant_id: rest3.id,
+    author_id: auth2.id,
+    first_name: auth2.first_name,
+    location: auth2.location
+  }
+)
+
+Review.create(
+  {
+    body: "I feel alive again!",
+    rating: 5,
+    restaurant_id: rest3.id,
+    author_id: auth3.id,
+    first_name: auth3.first_name,
+    location: auth3.location
+  }
+)
+
+Review.create(
+  {
+    body: 'My wife has found her new favorite restaurant!',
+    rating: 5,
+    restaurant_id: rest4.id,
+    author_id: auth3.id,
+    first_name: auth3.first_name,
+    location: auth3.location
+  }
+)
+
+Review.create(
+  {
+    body: 'I think I found mine too!',
+    rating: 5,
+    restaurant_id: rest4.id,
+    author_id: auth1.id,
+    first_name: auth1.first_name,
+    location: auth1.location
+  }
+)
+
+Review.create(
+  {
+    body: 'So Good!',
+    rating: 5,
+    restaurant_id: rest5.id,
+    author_id: auth3.id,
+    first_name: auth3.first_name,
+    location: auth3.location
+  }
+)
+
+Review.create(
+  {
+    body: "Can't wait to come back!",
+    rating: 5,
+    restaurant_id: rest6.id,
+    author_id: auth1.id,
+    first_name: auth1.first_name,
+    location: auth1.location
+  }
+)
+
+Review.create(
+  {
+    body: "Can't wait to come back!",
+    rating: 5,
+    restaurant_id: rest7.id,
+    author_id: auth2.id,
+    first_name: auth2.first_name,
+    location: auth2.location
+  }
+)
+
+Review.create(
+  {
+    body: "Can't wait to come back!",
+    rating: 5,
+    restaurant_id: rest8.id,
+    author_id: auth3.id,
+    first_name: auth3.first_name,
+    location: auth3.location
+  }
+)
+
+Review.create(
+  {
+    body: "Can't wait to come back!",
+    rating: 5,
+    restaurant_id: rest9.id,
+    author_id: auth3.id,
+    first_name: auth3.first_name,
+    location: auth3.location
+  }
+)
+
+Review.create(
+  {
+    body: "Can't wait to come back!",
+    rating: 5,
+    restaurant_id: rest10.id,
+    author_id: auth1.id,
+    first_name: auth1.first_name,
+    location: auth1.location
+  }
+)
+
+Review.create(
+  {
+    body: "Can't wait to come back!",
+    rating: 5,
+    restaurant_id: rest11.id,
+    author_id: auth1.id,
+    first_name: auth1.first_name,
+    location: auth1.location
+  }
+)
+
+Review.create(
+  {
+    body: "SO GOOD!",
+    rating: 5,
+    restaurant_id: rest12.id,
+    author_id: auth2.id,
+    first_name: auth2.first_name,
+    location: auth2.location
+  }
+)
+
+Review.create(
+  {
+    body: "SO GOOD",
+    rating: 5,
+    restaurant_id: rest13.id,
+    author_id: auth3.id,
+    first_name: auth3.first_name,
+    location: auth3.location
+  }
+)
+
+Review.create(
+  {
+    body: "SO GOOD",
+    rating: 5,
+    restaurant_id: rest14.id,
+    author_id: auth1.id,
+    first_name: auth1.first_name,
+    location: auth1.location
+  }
+)
+
+Review.create(
+  {
+    body: "WOW",
+    rating: 5,
+    restaurant_id: rest15.id,
+    author_id: auth3.id,
+    first_name: auth3.first_name,
+    location: auth3.location
+  }
+)
+
+Review.create(
+  {
+    body: "whoooooooooooooo!",
+    rating: 5,
+    restaurant_id: rest16.id,
+    author_id: auth2.id,
+    first_name: auth2.first_name,
+    location: auth2.location
+  }
+)
+
+Review.create(
+  {
+    body: "Great Environment!",
+    rating: 5,
+    restaurant_id: rest17.id,
+    author_id: auth1.id,
+    first_name: auth1.first_name,
+    location: auth1.location
+  }
+)
+
+Review.create(
+  {
+    body: "Great Atmosphere!",
+    rating: 5,
+    restaurant_id: rest18.id,
+    author_id: auth2.id,
+    first_name: auth2.first_name,
+    location: auth2.location
+  }
+)
+
+Review.create(
+  {
+    body: "Great Atmosphere!",
+    rating: 5,
+    restaurant_id: rest19.id,
+    author_id: auth1.id,
+    first_name: auth1.first_name,
+    location: auth1.location
+  }
+)
+
+Review.create(
+  {
+    body: "Great!",
+    rating: 5,
+    restaurant_id: rest20.id,
+    author_id: auth2.id,
+    first_name: auth2.first_name,
+    location: auth2.location
+  }
+)
+
+Review.create(
+  {
+    body: "Great!",
+    rating: 5,
+    restaurant_id: rest21.id,
+    author_id: auth3.id,
+    first_name: auth3.first_name,
+    location: auth3.location
+  }
+)
+
+Review.create(
+  {
+    body: "Great!",
+    rating: 5,
+    restaurant_id: rest22.id,
+    author_id: auth1.id,
+    first_name: auth1.first_name,
+    location: auth1.location
+  }
+)
+
+Review.create(
+  {
+    body: "Amazing food and company!",
+    rating: 5,
+    restaurant_id: rest23.id,
+    author_id: auth2.id,
+    first_name: auth2.first_name,
+    location: auth2.location
+  }
+)
+
+Review.create(
+  {
+    body: "I can't wait to come back!",
+    rating: 5,
+    restaurant_id: rest24.id,
+    author_id: auth2.id,
+    first_name: auth2.first_name,
+    location: auth2.location
+  }
+)
+
+Review.create(
+  {
+    body: "I can't wait to come back!",
+    rating: 5,
+    restaurant_id: rest25.id,
+    author_id: auth3.id,
+    first_name: auth3.first_name,
+    location: auth3.location
+  }
+)
+
+Review.create(
+  {
+    body: "Whoever doesn't rate this place 5 stars is crazy!!",
+    rating: 5,
+    restaurant_id: rest26.id,
+    author_id: auth2.id,
+    first_name: auth2.first_name,
+    location: auth2.location
+  }
+)
+
+Review.create(
+  {
+    body: "Whoever doesn't rate this place 5 stars is crazy!!",
+    rating: 5,
+    restaurant_id: rest27.id,
+    author_id: auth3.id,
+    first_name: auth3.first_name,
+    location: auth3.location
+  }
+)
+
+Review.create(
+  {
+    body: "I can't wait to come back!",
+    rating: 5,
+    restaurant_id: rest28.id,
+    author_id: auth1.id,
+    first_name: auth1.first_name,
+    location: auth1.location
+  }
+)
+
+Review.create(
+  {
+    body: "Please keep up the amazing work!",
+    rating: 5,
+    restaurant_id: rest29.id,
+    author_id: auth2.id,
+    first_name: auth2.first_name,
+    location: auth2.location
+  }
+)
+
+Review.create(
+  {
+    body: "I wish they were open 24 hours!",
+    rating: 5,
+    restaurant_id: rest30.id,
+    author_id: auth1.id,
+    first_name: auth1.first_name,
+    location: auth1.location
+  }
+)
+
+Review.create(
+  {
+    body: "The staff and food are amazing. Cannot wait to come back!",
+    rating: 5,
+    restaurant_id: rest31.id,
+    author_id: auth2.id,
+    first_name: auth2.first_name,
+    location: auth2.location
+  }
+)
+
+Review.create(
+  {
+    body: "The staff even remembered me! Talk about service!",
+    rating: 5,
+    restaurant_id: rest32.id,
+    author_id: auth3.id,
+    first_name: auth3.first_name,
+    location: auth3.location
+  }
+)
+
+Review.create(
+  {
+    body: "The staff and food are amazing. Cannot wait to come back!",
+    rating: 5,
+    restaurant_id: rest33.id,
+    author_id: auth1.id,
+    first_name: auth1.first_name,
+    location: auth1.location
+  }
+)
+
+Review.create(
+  {
+    body: "My new boba spot! Yum!",
+    rating: 5,
+    restaurant_id: rest34.id,
+    author_id: auth2.id,
+    first_name: auth2.first_name,
+    location: auth2.location
+  }
+)
+
+Review.create(
+  {
+    body: "Great!",
+    rating: 5,
+    restaurant_id: rest34.id,
+    author_id: auth1.id,
+    first_name: auth1.first_name,
+    location: auth1.location
+  }
+)
+
+
+
 
 
 Reservation.destroy_all
