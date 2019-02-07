@@ -12,6 +12,10 @@ class RestaurantFilter extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   
+  componentDidMount() {
+    window.scroll(0, 0);
+  }
+  
   handleSubmit() {
     this.props.searchRestaurants(this.state);
   }

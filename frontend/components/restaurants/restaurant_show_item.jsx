@@ -6,6 +6,7 @@ import ReservationFormContainer from '../reservations/reservation_form_container
 class RestaurantShowItem extends React.Component {
 
   componentDidMount() {
+    window.scroll(0,0);
     this.props.fetchRestaurant(this.props.match.params.id);
     this.props.fetchReviews(this.props.match.params.id);
   }
