@@ -11,13 +11,15 @@ class RestaurantIndex extends React.Component {
     this.sortRestaurants = this.sortRestaurants.bind(this);
   }
 
-  componentDidMount() {
-    this.props.fetchRestaurants();
+  sortRestaurants() {
+    let rests = this.props.restaurants;
+    rests.sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : ((b.name.toLowerCase() > a.name.toLowerCase()) ? -1 : 0)); 
+    console.log(rests);
+    this.setState( {restaurants: rests});
   }
 
-  sortRestaurants() {
-    console.log('in sorting restaurants function')
-    console.log('state after clicking', this.state);
+  componentDidMount() {
+    this.props.fetchRestaurants();
   }
 
   render() {
@@ -73,7 +75,7 @@ class RestaurantIndex extends React.Component {
               <span className="rest-available">
                 {this.props.restaurants.length} RESTAURANTS AVAILABLE
               </span>
-              <select className="right-filter" >
+              <select className="right-filter" onChange={this.sortRestaurants}>
                 <option value="" selected>Select A Filter</option>                
                 <option value="A-Z" onClick={this.sortRestaurants}>A-Z</option>
               </select>
