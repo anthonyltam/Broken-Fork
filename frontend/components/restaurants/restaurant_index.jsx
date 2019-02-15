@@ -8,18 +8,30 @@ class RestaurantIndex extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = { 
+      sorted: '' 
+    };
+
+    this.update = this.update.bind(this);
     this.sortRestaurants = this.sortRestaurants.bind(this);
+  }
+  
+  componentDidMount() {
+    this.props.fetchRestaurants();
+  }
+  
+  update(event) {
+    let value = event.target.value;
+    this.setState({ sorted: value}, this.sortRestaurants);
   }
 
   sortRestaurants() {
     let rests = this.props.restaurants;
-    rests.sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : ((b.name.toLowerCase() > a.name.toLowerCase()) ? -1 : 0)); 
-    console.log(rests);
+    if (this.state.sorted) {
+      rests.sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : ((b.name.toLowerCase() > a.name.toLowerCase()) ? -1 : 0)); 
+    }
     this.setState( {restaurants: rests});
-  }
-
-  componentDidMount() {
-    this.props.fetchRestaurants();
+    // this.setState( {sorted: ''});
   }
 
   render() {
@@ -75,9 +87,9 @@ class RestaurantIndex extends React.Component {
               <span className="rest-available">
                 {this.props.restaurants.length} RESTAURANTS AVAILABLE
               </span>
-              <select className="right-filter" onChange={this.sortRestaurants}>
+            <select className="right-filter" onChange={ e => this.update(e)}>
                 <option value="" selected>Select A Filter</option>                
-                <option value="A-Z" onClick={this.sortRestaurants}>A-Z</option>
+                <option value="A-Z">A-Z</option>
               </select>
             </div>
 

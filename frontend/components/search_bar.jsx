@@ -11,7 +11,6 @@ class SearchBar extends React.Component {
   }
 
   handleSubmit() {
-    // e.preventDefault();
     this.props.searchRestaurants(this.state);
     this.props.history.push(`/restaurants?search=${this.state.cuisines}`);
   }
