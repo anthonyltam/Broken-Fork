@@ -14,11 +14,11 @@ class Greeting extends React.Component {
   }
 
   render() {
-    const { currentUser, signOut, signIn, openModal, demoLogin } = this.props;
+    const { currentUser, signOut, openModal, demoLogin } = this.props;
 
     const sessionLinks = (
       <nav className="login-buttons">
-        <button className='demo-login' onClick={demoLogin}>Demo</button>
+        <button className='demo-login' onClick={ demoLogin }>Demo</button>
         <button className='sign-up'onClick={ () => openModal('signup') }  >Sign up</button>
         <button className='sign-in' onClick={ () => openModal('login') } >Sign in</button>
       </nav>
