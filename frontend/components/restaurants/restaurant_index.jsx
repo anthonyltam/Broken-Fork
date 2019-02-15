@@ -5,9 +5,19 @@ import RestaurantFilter from './restaurant_filter';
 import SearchContainer from '../search_container';
 
 class RestaurantIndex extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.sortRestaurants = this.sortRestaurants.bind(this);
+  }
 
   componentDidMount() {
     this.props.fetchRestaurants();
+  }
+
+  sortRestaurants() {
+    console.log('in sorting restaurants function')
+    console.log('state after clicking', this.state);
   }
 
   render() {
@@ -63,9 +73,9 @@ class RestaurantIndex extends React.Component {
               <span className="rest-available">
                 {this.props.restaurants.length} RESTAURANTS AVAILABLE
               </span>
-              <select className="right-filter">
-              <option value="" selected>Select A Filter</option>
-                <option value="A-Z">A-Z</option>
+              <select className="right-filter" >
+                <option value="" selected>Select A Filter</option>                
+                <option value="A-Z" onClick={this.sortRestaurants}>A-Z</option>
               </select>
             </div>
 
